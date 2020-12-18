@@ -10,6 +10,7 @@ import { IFSuccessNotification } from '../../components/If-Design-System/Notific
 import GrowthTreeMock, { GrowthTreeMockColumn } from '../../components/Custom/GrowthTree';
 import { Dunno } from '../../components/Custom/Dunno';
 
+import { UspItem, UspList } from '../../components/If-Design-System/Usps';
 /*
 
 https://www.klarna.com/careers/personal-stories/alexandre-borel/
@@ -19,6 +20,7 @@ https://www.klarna.com/careers/personal-stories/alexandre-borel/
 import RoleListBlock from './RoleListBlock';
 import PersonalStoriesListBlock from './PersonalStoriesListBlock';
 import ArticlesListBlock from './ArticlesListBlock';
+import WhoWeAreBlock from '../../components/Custom/WhoWeAre';
 
 const OurCoreValues = () => {
   
@@ -40,8 +42,25 @@ const JoinUsPage = () => (
 
   // style={{paddingTop: "5%"}} inside container
    <IFMain>
-
-<div className="if block">
+    <section className="if hero">
+      <div className="if container">
+        <div className="if content">
+          <h1 className="if heading larger">If developer community</h1>
+          <p className="if text lead" id="hero_intro">
+            Here we showcase what we are passionate about, our tech stack
+            how we work with personal growth and who we are looking for to join our teams.&nbsp;
+          </p>
+          <p className="if text lead">Interested in life at If?</p>
+          <a href="/large-enterprises/insight/risk-consulting-magazine/risk-consulting-2020-4" target="" className="if button primary  removerightmargin ">
+            Goto our blog
+            <span className="if white icon ui arrow-right"></span>
+          </a>
+        </div>
+        <div className="if image  ecmt-IFS-05865" style={{backgroundImage: "url(\"https://v.imgi.no/2l4bfymlr5-MOODBOARD/2042\")"}}></div>
+      </div>
+    </section>
+   
+{/* <div className="if block">
   <section className="if hero">
       <div className="if container" style={{paddingTop: "5%"}}>
         <div className="content" style={{width: "80%"}}>
@@ -53,19 +72,57 @@ const JoinUsPage = () => (
           </div>
       </div> 
   </section>
+</div> */}
+
+<a href="https://www.klarna.com/careers/" target="" className="if">
+  (klarna careers example)
+</a>
+
+
+<div className="if block">
+  <div className="if container center"> 
+  <h2 className="if heading larger center">Benefits</h2>
+    <UspList>
+
+
+      {/*
+        Company wide bonus compensation policies
+        Lunch contribution
+        Support for parents
+        
+      */}
+      <UspItem title="Monthlty Developer Forum" text="Take part in our knowledge sharing events across our tech community." />
+
+      <UspItem title="A generous personal development budget" text="We are always investing in our people." />
+      <UspItem title="A generous personal development budget" text="Yearly developer conference in Riga." />
+      <UspItem title="ShareIT@If regular" text="Internal and external competence sharing meetups." />
+      <UspItem title="Generous bonus compensation" text="Two yearly UX community conferences." />
+      <UspItem title="Generous bonus compensation" text="..." />
+      <UspItem title="Employee benefits" text="">Reduces lunch prices</UspItem>
+      <UspItem title="Support for parents" text="Don't choose between work and family." />
+    </UspList>
+  </div>
 </div>
 
-  <div className="if block">
-    <div className="if container">
-    <div className="editorial-text-container"><h2>We are constantly looking for new talents</h2>
-    <p>At If we are working to offer highest quality insurances and services to our 3.6 million customers throughout the Nordic Region. We are constantly working to improve our services and contribute to a positive social development. Our employees' skills and dedication are part of our absolute strengths and we are constantly looking for new talents.</p>
-    <h2>Work environment and quality of life in focus</h2>
-    <p>We are a modern and versatile workplace that offers a wide range of services and career opportunities. Our duties and roles require the right person for the job, while the educational background and experience may vary. The organization meets mathematicians, IT developers, lawyers, economists, salesmen, police officers, nurses, engineers and many other professions. The working culture is open and inclusive, honest and trustworthy, with clear expectations that everyone takes responsibility and initiative. We encourage creativity, innovation and internal mobility.</p>
-    <p>We want our employees to feel good, enjoy and have fun at work. Our regular employee surveys show that. We also contribute to a good balance between work and privacy, taking into account the different phases of life. In addition to exciting work tasks and a nice workplace, we offer good employee benefits.</p>
-    <h2>Follow us on LinkedIn</h2>
-    <p>See who you know at If and network with us. Follow us on <a href="https://www.linkedin.com/company/if-p&amp;c-insurance" title="linkedIn" target="_blank">LinkedIn</a></p></div>
+<div className="if block light  block-padding-bottom-none">
+  <div className="if container">
+      <div className="if text layout columns">
+        <div className="if text body">
+          <div className="editorial-text-container"><h2>Our Tech Stack</h2>
+            <p>Cyber threats are testing companies’ risk management. This is a particularly tough test, because a networked threat environment requires a networked defence – and a global threat requires global risk management.</p>
+            <p><a href="/large-enterprises/insight/risk-consulting-magazine/risk-consulting-2018-1/more-cyber-attacks" title="summary from risk management day seminar 2018">Read the whole article</a></p></div>
+          </div>
+          <div className="if text body">
+            <figure className="if">
+              <img className="if image responsively-lazy" alt="fingers on computer key board" src="https://v.imgi.no/vv6pd2gajh-CONTENT/940" 
+              data-srcset="https://v.imgi.no/vv6pd2gajh-CONTENT/940 940w, https://v.imgi.no/vv6pd2gajh-CONTENT/890 890w, https://v.imgi.no/vv6pd2gajh-CONTENT/670 670w, https://v.imgi.no/vv6pd2gajh-CONTENT/610 610w, https://v.imgi.no/vv6pd2gajh-CONTENT/360 360w, https://v.imgi.no/vv6pd2gajh-CONTENT/320 320w, https://v.imgi.no/vv6pd2gajh-CONTENT/300 300w"/>
+            </figure>
+        </div>
+      </div>
     </div>
   </div>
+
+ 
 
 {/* <section className="if hero">
     <div className="if container">
@@ -83,11 +140,11 @@ const JoinUsPage = () => (
 {/* <div className="ecmt-block ecmt-block-image ecmt-image ecmt-moodboard-other-stamholmen" style={{overflow: }}="overflow:visible">
     <div className="ecmt-page-container">
         <div className="ecmt-image-box  " style="position: relative;">
-                <header className="ecmt-block-header">
+                <IFHeader className="ecmt-block-IFHeader">
                     
                     <h1 className="if heading larger">Work at If - in a versatile workplace</h1>
                     
-                </header>
+                </IFHeader>
             <p className="if text lead">We offer a wide range career opportunities, creating great possibilities for every employee to build their own career.</p>
 
     <a href="https://if.wd3.myworkdayjobs.com/Careers" target="" className="if button primary  removerightmargin ">
@@ -193,10 +250,23 @@ const JoinUsPage = () => (
         <OurCoreValues />
 
 
+        <div className="if block">
+          <div className="if container">
+          <div className="editorial-text-container"><h2>We are constantly looking for new talents</h2>
+          <p>At If we are working to offer highest quality insurances and services to our 3.6 million customers throughout the Nordic Region. We are constantly working to improve our services and contribute to a positive social development. Our employees' skills and dedication are part of our absolute strengths and we are constantly looking for new talents.</p>
+          <h2>Work environment and quality of life in focus</h2>
+          <p>We are a modern and versatile workplace that offers a wide range of services and career opportunities. Our duties and roles require the right person for the job, while the educational background and experience may vary. The organization meets mathematicians, IT developers, lawyers, economists, salesmen, police officers, nurses, engineers and many other professions. The working culture is open and inclusive, honest and trustworthy, with clear expectations that everyone takes responsibility and initiative. We encourage creativity, innovation and internal mobility.</p>
+          <p>We want our employees to feel good, enjoy and have fun at work. Our regular employee surveys show that. We also contribute to a good balance between work and privacy, taking into account the different phases of life. In addition to exciting work tasks and a nice workplace, we offer good employee benefits.</p>
+          {/* <h2>Follow us on LinkedIn</h2>
+          <p>See who you know at If and network with us. Follow us on <a href="https://www.linkedin.com/company/if-p&amp;c-insurance" title="linkedIn" target="_blank">LinkedIn</a></p> */}
+          </div>
+          </div>
+        </div>
+              
+
         <div className="if banner claims">
           <div className="if container">
-            <span className="if title">Har du råkat ut för en skada eller olycka?</span>
-            <a className="if standalone" href="/asdsd">Till skadeanmällan</a>
+            <p>See who you know at If and network with us. Follow us on <a href="https://www.linkedin.com/company/if-p&amp;c-insurance" title="linkedIn" target="_blank">LinkedIn</a></p>
           </div>
         </div>
 
@@ -204,7 +274,7 @@ const JoinUsPage = () => (
          {/*
             Single Small Hero Block /w video
          */}
-        <IFHeader size="large" level={1}>Single small hero board</IFHeader>
+        <IFHeader size="large" level={1}>This section should probably be in a different page "About If" or "Our Culture"</IFHeader>
 
         <IFBlock>
           <section className="if split small">

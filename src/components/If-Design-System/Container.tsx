@@ -28,7 +28,7 @@ export const IFBlock : React.FC<IProps> = ({
   children=null,
   ...props
 }) => {
-  return (<section className={`if block${(className ? " " + className : "")}`} {...props}>{children}</section>);
+  return (<section className={`if block${className ? ` ${className}` : ""}`} {...props}>{children}</section>);
 }
 
 export const IFMobileContainer : React.FC<IProps> = ({

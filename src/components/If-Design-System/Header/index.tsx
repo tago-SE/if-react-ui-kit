@@ -20,3 +20,5 @@ export const IFHeader: React.FC<IProps>= ({
   const Header: any = "h" + level;
   return <Header className={`if heading ${size} ${trailingClassName}`} {...props}>{children}</Header>;
 };
+
+export default IFHeader;

@@ -46,7 +46,13 @@ In Finland
 
 Would you like to contribute? Get in touch with Per Ol-Ers.
 */
-    return (
+    return (<>
+    
+<a href="https://www.klarna.com/careers/life-at-klarna/" target="" className="if">
+  (Klarna blog article list page example)
+  This would be a teaser section to the ArticleList page...
+</a>
+
         <IFBlock>
           <div className="if container center">
             <IFHeader level={2} size="large" trailingClassName="center" style={{ bottomMargin: "4rem"}}>Community</IFHeader>
@@ -60,7 +66,7 @@ Would you like to contribute? Get in touch with Per Ol-Ers.
             </TeaserContainer>
           </div>    
       </IFBlock>
-    );
+    </>);
 }
 
 export default ArticlesListBlock;
