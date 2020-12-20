@@ -113,8 +113,12 @@ function App() {
     <div className="if block">
       <div className="if container">
 
-        <Heading size="largest" focusColor="blue" justifyContent="center" onClick={() => { alert("hello");}}>This is a header</Heading>
-
+        <Heading rank={1} size="largest" focusColor="blue" justifyContent="center" onClick={() => { alert("hello");}}>Largest</Heading>
+        <Heading size="larger" focusColor="blue" justifyContent="center" onClick={() => { alert("hello");}}>Larger</Heading>
+        <Heading size="large" focusColor="blue" justifyContent="center" onClick={() => { alert("hello");}}>Large</Heading>
+        <Heading size="medium" focusColor="blue" justifyContent="center" onClick={() => { alert("hello");}}>Medium</Heading>
+        <Heading size="small" focusColor="blue" justifyContent="center" onClick={() => { alert("hello");}}>Small</Heading>
+        <Heading size="smallest" focusColor="blue" justifyContent="center" onClick={() => { alert("hello");}}>smallest</Heading>
         <StudioCrosslinkContainer variant="two">
           <StudioCrosslink title="hello" description="abc" href="/abc" imageSrc="https://if-design-cdn.azureedge.net/images/documentation/studio/If-studio-documents-IFS-04772_PNG.PNG" />
           <StudioCrosslink title="hello" description="abc" href="/abc" imageSrc="https://if-design-cdn.azureedge.net/images/documentation/studio/If-studio-documents-IFS-04772_PNG.PNG" />

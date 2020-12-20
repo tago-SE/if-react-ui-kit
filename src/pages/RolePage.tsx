@@ -76,7 +76,7 @@ const RolePage = () => {
                 <Heading size="largest" rank={1} trailingClassName="center">{role.name}</Heading>
 
                 <p className="if text lead center">Spara till barnen och ge bort en tryggare framtid</p>
-                <Heading size="smaller" rank={5} trailingClassName="center"><b>{role.name}</b></Heading>
+                <Heading size="smallest" rank={5} trailingClassName="center"><b>{role.name}</b></Heading>
                 <p className="if text body">
                     Column 1
                     Nu är semestertiden över för de flesta av oss och förhoppningsvis har ni haft en härlig sommar. Utöver
