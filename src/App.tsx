@@ -113,7 +113,7 @@ function App() {
     <div className="if block">
       <div className="if container">
 
-        <Header size="largest" focusColor="blue" center>QQQQ</Header>
+        <Header size="largest" focusColor="blue" center onClick={() => { alert("hello");}}>This is a header</Header>
 
         <StudioCrosslinkContainer variant="two">
           <StudioCrosslink title="hello" description="abc" href="/abc" imageSrc="https://if-design-cdn.azureedge.net/images/documentation/studio/If-studio-documents-IFS-04772_PNG.PNG" />

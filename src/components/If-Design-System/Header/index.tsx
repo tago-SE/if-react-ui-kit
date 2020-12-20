@@ -2,16 +2,19 @@ import React from 'react';
 import styled from 'styled-components';
 
 const HeadingStyle = styled.div<{textColor?: string, focusColor: string}>`
-    & .if.heading {
-      color: ${props => props.textColor};
-      &:hover {
-        color: ${props => props.focusColor};
-      }
+  & .if.heading {
+    max-width: fit-content;
+    &:hover {
+      color: ${props => props.focusColor};
     }
+  }
+  & .if.heading.center {
+    justify-content: center;
+  }
 `
 
 interface IProps {
-    center?: any,
+    center?: boolean, 
     rank?: number,
     size?: string,
     children?: any,
@@ -37,7 +40,9 @@ export const Header: React.FC<IProps>= ({
   const Header: any = "h" + rank;
   return (
     <HeadingStyle textColor={textColor} focusColor={focusColor}>
-      <Header className={`if heading${size}${center ? " center" : ""}`} {...props}>{children}</Header>
+      <Header className={`if heading${size}${center ? " center" : ""}`} {...props}>
+        {children}
+      </Header>
     </HeadingStyle>
   );
 };
