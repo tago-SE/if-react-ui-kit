@@ -19,7 +19,7 @@ import Home from './boiler-plates/BHome';
 
 // Styled components test
 
-import { Header } from './components/If-Design-System/Header';
+import { Heading } from './components/If-Design-System/Heading';
 import { Navbar, ListMenu, ListMenuItem} from './components/NavBar';
 
 import { 
@@ -113,7 +113,7 @@ function App() {
     <div className="if block">
       <div className="if container">
 
-        <Header size="largest" focusColor="blue" center onClick={() => { alert("hello");}}>This is a header</Header>
+        <Heading size="largest" focusColor="blue" justifyContent="center" onClick={() => { alert("hello");}}>This is a header</Heading>
 
         <StudioCrosslinkContainer variant="two">
           <StudioCrosslink title="hello" description="abc" href="/abc" imageSrc="https://if-design-cdn.azureedge.net/images/documentation/studio/If-studio-documents-IFS-04772_PNG.PNG" />

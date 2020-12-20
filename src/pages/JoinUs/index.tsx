@@ -4,7 +4,7 @@ import { IFBlock, IFContainer} from '../../components/If-Design-System/Container
 import { IFContent } from "../../components/If-Design-System/Content";
 import { IFMain, IFMainApp } from '../../components/If-Design-System/Main';
 import { IFVideoContent } from '../../components/If-Design-System/Video';
-import { Header } from '../../components/If-Design-System/Header';
+import { Heading } from '../../components/If-Design-System/Heading';
 import { IFButton, IFButtonPrimary} from '../../components/If-Design-System/Button';
 import { IFSuccessNotification } from '../../components/If-Design-System/Notification';
 import GrowthTreeMock, { GrowthTreeMockColumn } from '../../components/Custom/GrowthTree';
@@ -275,13 +275,13 @@ const JoinUsPage = () => (
          {/*
             Single Small Hero Block /w video
          */}
-        <Header size="large" rank={1}>This section should probably be in a different page "About If" or "Our Culture"</Header>
+        <Heading size="large" rank={1}>This section should probably be in a different page "About If" or "Our Culture"</Heading>
 
         <IFBlock>
           <section className="if split small">
             <IFContainer>
               <IFContent>
-              <Header size="medium" rank={3}>Why If?</Header>
+              <Heading size="medium" rank={3}>Why If?</Heading>
                 <p className="if text body">
                   Insurance is a vital part of a well-functioning and evolving society. We make sure our customers are correctly insured and feel confident enough to face risks and build for the future.
                   When something happens, we help them rebuild and recover. We are there both at defining moments and for everyday matters. Our actions today have a big impact on our customers' future lives and businesses.
@@ -302,7 +302,7 @@ const JoinUsPage = () => (
           <section className="if split">
             <IFContainer>
               <IFContent>
-                <Header size="largest" rank={1}>Purpose</Header>
+                <Heading size="largest" rank={1}>Purpose</Heading>
                 <p className="if text body">
                   Insurance is a vital part of a well-functioning and evolving society. We make sure our customers are correctly insured and feel confident enough to face risks and build for the future.
                   When something happens, we help them rebuild and recover. We are there both at defining moments and for everyday matters. Our actions today have a big impact on our customers' future lives and businesses.
@@ -322,7 +322,7 @@ const JoinUsPage = () => (
           <section className="if hero">
             <div className="if container">
               <div className="if content">
-                <Header size="medium" rank={3}>Purpose</Header>
+                <Heading size="medium" rank={3}>Purpose</Heading>
                 <p className="if text body">
                   Insurance is a vital part of a well-functioning and evolving society. We make sure our customers are correctly insured and feel confident enough to face risks and build for the future.
                   When something happens, we help them rebuild and recover. We are there both at defining moments and for everyday matters. Our actions today have a big impact on our customers' future lives and businesses.

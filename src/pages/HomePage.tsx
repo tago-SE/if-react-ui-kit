@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { IFMain } from '../components/If-Design-System/Main';
-import { Header } from '../components/If-Design-System/Header'
+import { Heading } from '../components/If-Design-System/Heading'
 import { Row, Column } from '../components/If-Design-System/Grid';
 
 const HomePage = () => (
@@ -9,9 +9,9 @@ const HomePage = () => (
 
         <div className="if block">
             <div className="if container">
-                <Header size="largest" rank={1} trailingClassName="center">
+                <Heading size="largest" rank={1} trailingClassName="center">
                     Body text modules
-                </Header>
+                </Heading>
 
                 <Row>
                     <Column trailingClassName="-6--xs col-6--md">

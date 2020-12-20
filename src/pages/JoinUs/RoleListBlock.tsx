@@ -3,7 +3,7 @@ import React from 'react';
 import { IFBlock, IFContainer} from '../../components/If-Design-System/Container';
 import { IFContent } from "../../components/If-Design-System/Content";
 import { IFVideoContent } from '../../components/If-Design-System/Video';
-import { Header } from '../../components/If-Design-System/Header';
+import { Heading } from '../../components/If-Design-System/Heading';
 import { IFButton, IFButtonPrimary} from '../../components/If-Design-System/Button';
 import { IFSuccessNotification } from '../../components/If-Design-System/Notification';
 import GrowthTreeMock, { GrowthTreeMockColumn } from '../../components/Custom/GrowthTree';
@@ -47,7 +47,7 @@ const RoleListBlock = () => {
     return (
         <IFBlock>
             <IFContainer>
-                <Header rank={2} size="large" trailingClassName="center" style={{ bottomMargin: "4rem"}}>Roles that we usually look for</Header>
+                <Heading rank={2} size="large" trailingClassName="center" style={{ bottomMargin: "4rem"}}>Roles that we usually look for</Heading>
                 <ul className="if crosslinks studio three" data-anatomy="outline right">
                     {roles.map(role => <>
                     <li className="if">
