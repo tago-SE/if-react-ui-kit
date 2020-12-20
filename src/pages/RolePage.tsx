@@ -4,7 +4,6 @@ import React from 'react';
 
 import { IFMain } from '../components/If-Design-System/Main';
 import { Heading } from '../components/If-Design-System/Heading';
-import { IFContent } from '../components/If-Design-System/Content';
 import { IFBlock, IFContainer } from '../components/If-Design-System/Container';
 import { IFClaimsBanner } from '../components/If-Design-System/Banner';
 import { Teaser, TeaserContainer} from '../components/If-Design-System/Teasers';
@@ -12,9 +11,9 @@ import { Teaser, TeaserContainer} from '../components/If-Design-System/Teasers';
 const role = {
     name: "Full stack developer",
     path: "https://if.wd3.myworkdayjobs.com/Careers/3/refreshFacet/318c8bb6f553100021d223d9780d30be"
-}
+};
 
-const TwoColumTextBlock = () => {
+export const TwoColumTextBlock = () => {
     return (
         <IFBlock>
             <IFContainer>

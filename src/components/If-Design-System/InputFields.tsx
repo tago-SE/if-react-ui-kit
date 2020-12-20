@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import React from 'react';
 
 /**
  *  With given attributes (data-size), you can vary the length of the input field. 

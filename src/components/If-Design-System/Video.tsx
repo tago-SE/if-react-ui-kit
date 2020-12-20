@@ -27,10 +27,7 @@ export const IFVideoContent : React.FC<IProps> = ({
   posterUrl="",
   coverTitle="",
   coverDescription="",
-  className="",
   playButtonTooltip="Play",
-  children=null,
-  ...props
 }) => {
 
   const [state, setState] = useState(VideoState.NotStarted);

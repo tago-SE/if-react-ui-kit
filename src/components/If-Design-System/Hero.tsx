@@ -1,6 +1,4 @@
-import { IFVideoContent } from './Video';
-import { IFContent } from './Content';
-
+import React from 'react';
 // Should be able to take Content, Video, Image, and Form as far as I've seen 
 // See: https://design.if.eu/components/hero
 

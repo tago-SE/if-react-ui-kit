@@ -1,5 +1,3 @@
-import React from 'react';
-
 const WhyUsPage = () => (
   <div className="if block">
     <div className="if container">

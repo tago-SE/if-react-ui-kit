@@ -14,9 +14,9 @@ const HeadingStyle = styled.section<{textColor?: string, focusColor: string, jus
 `
 
 interface IProps {
-  rank?: 1 | 2 | 3 | 4 | 5 | 6,
+  children: ReactNode,
   size?: 'largest' | 'larger' | 'large' | 'medium' | 'small' | 'smallest',
-  children?: ReactNode,
+  rank?: 1 | 2 | 3 | 4 | 5 | 6,
   justifyContent?: string,
   textColor?: string,
   focusColor?: string,
@@ -24,20 +24,20 @@ interface IProps {
 }
 
 export const Heading: React.FC<IProps>= ({
+  children,
   rank = 1, 
   size = "largest",
-  children = null,
   justifyContent = "",
   textColor = "",
   focusColor = "",
   ...props
 }) => {
-  const Header: any = "h" + rank;
+  const Heading: any = "h" + rank;
   return (
     <HeadingStyle textColor={textColor} focusColor={focusColor} justifyContent={justifyContent}>
-      <Header className={`if heading ${size}`} {...props}>
+      <Heading className={`if heading ${size}`} {...props}>
         {children}
-      </Header>
+      </Heading>
     </HeadingStyle>
   );
 };

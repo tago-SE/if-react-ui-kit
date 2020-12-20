@@ -1,13 +1,7 @@
 import React from 'react';
 
 import { IFBlock, IFContainer} from '../../components/If-Design-System/Container';
-import { IFContent } from "../../components/If-Design-System/Content";
-import { IFVideoContent } from '../../components/If-Design-System/Video';
 import { Heading } from '../../components/If-Design-System/Heading';
-import { IFButton, IFButtonPrimary} from '../../components/If-Design-System/Button';
-import { IFSuccessNotification } from '../../components/If-Design-System/Notification';
-import GrowthTreeMock, { GrowthTreeMockColumn } from '../../components/Custom/GrowthTree';
-import { Dunno } from '../../components/Custom/Dunno';
 
 
 
