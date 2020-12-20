@@ -4,7 +4,7 @@ import { IFBlock, IFContainer} from '../../components/If-Design-System/Container
 import { IFContent } from "../../components/If-Design-System/Content";
 import { IFMain, IFMainApp } from '../../components/If-Design-System/Main';
 import { IFVideoContent } from '../../components/If-Design-System/Video';
-import { IFHeader } from '../../components/If-Design-System/Header';
+import { Header } from '../../components/If-Design-System/Header';
 import { IFButton, IFButtonPrimary} from '../../components/If-Design-System/Button';
 import { IFSuccessNotification } from '../../components/If-Design-System/Notification';
 import GrowthTreeMock, { GrowthTreeMockColumn } from '../../components/Custom/GrowthTree';
@@ -21,6 +21,7 @@ import RoleListBlock from './RoleListBlock';
 import PersonalStoriesListBlock from './PersonalStoriesListBlock';
 import ArticlesListBlock from './ArticlesListBlock';
 import WhoWeAreBlock from '../../components/Custom/WhoWeAre';
+import { FieldSize } from '../../components/If-Design-System/InputFields';
 
 const OurCoreValues = () => {
   
@@ -274,13 +275,13 @@ const JoinUsPage = () => (
          {/*
             Single Small Hero Block /w video
          */}
-        <IFHeader size="large" level={1}>This section should probably be in a different page "About If" or "Our Culture"</IFHeader>
+        <Header size="large" rank={1}>This section should probably be in a different page "About If" or "Our Culture"</Header>
 
         <IFBlock>
           <section className="if split small">
             <IFContainer>
               <IFContent>
-              <IFHeader size="medium">Why If?</IFHeader>
+              <Header size="medium" rank={3}>Why If?</Header>
                 <p className="if text body">
                   Insurance is a vital part of a well-functioning and evolving society. We make sure our customers are correctly insured and feel confident enough to face risks and build for the future.
                   When something happens, we help them rebuild and recover. We are there both at defining moments and for everyday matters. Our actions today have a big impact on our customers' future lives and businesses.
@@ -301,7 +302,7 @@ const JoinUsPage = () => (
           <section className="if split">
             <IFContainer>
               <IFContent>
-                <IFHeader size="medium">Purpose</IFHeader>
+                <Header size="largest" rank={1}>Purpose</Header>
                 <p className="if text body">
                   Insurance is a vital part of a well-functioning and evolving society. We make sure our customers are correctly insured and feel confident enough to face risks and build for the future.
                   When something happens, we help them rebuild and recover. We are there both at defining moments and for everyday matters. Our actions today have a big impact on our customers' future lives and businesses.
@@ -321,7 +322,7 @@ const JoinUsPage = () => (
           <section className="if hero">
             <div className="if container">
               <div className="if content">
-                <IFHeader size="medium">Purpose</IFHeader>
+                <Header size="medium" rank={3}>Purpose</Header>
                 <p className="if text body">
                   Insurance is a vital part of a well-functioning and evolving society. We make sure our customers are correctly insured and feel confident enough to face risks and build for the future.
                   When something happens, we help them rebuild and recover. We are there both at defining moments and for everyday matters. Our actions today have a big impact on our customers' future lives and businesses.

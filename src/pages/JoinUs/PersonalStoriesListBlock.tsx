@@ -3,7 +3,7 @@ import React from 'react';
 import { IFBlock, IFContainer} from '../../components/If-Design-System/Container';
 import { IFContent } from "../../components/If-Design-System/Content";
 import { IFVideoContent } from '../../components/If-Design-System/Video';
-import { IFHeader } from '../../components/If-Design-System/Header';
+import { Header } from '../../components/If-Design-System/Header';
 import { IFButton, IFButtonPrimary} from '../../components/If-Design-System/Button';
 import { IFSuccessNotification } from '../../components/If-Design-System/Notification';
 import GrowthTreeMock, { GrowthTreeMockColumn } from '../../components/Custom/GrowthTree';
@@ -37,7 +37,7 @@ const PersonalStoriesListBlock = () => {
     return (
         <IFBlock className="dark">
           <div className="if container center">
-            <IFHeader level={2} size="large" trailingClassName="center" style={{ bottomMargin: "4rem"}}>Here you will meet all kinds of people</IFHeader>
+            <Header rank={2} size="large" trailingClassName="center" style={{ bottomMargin: "4rem"}}>Here you will meet all kinds of people</Header>
             <TeaserContainer>
               {profiles.map(profile => <Teaser 
                   title={profile.name} 

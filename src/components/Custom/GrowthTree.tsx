@@ -1,5 +1,5 @@
 import React from 'react';
-import { IFHeader } from '../If-Design-System/Header';
+import { Header } from '../If-Design-System/Header';
 
 /*
     Todo add clickable mini buttons as is shown under
@@ -87,7 +87,7 @@ export const GrowthTreeMockColumn = () => {
             <div className="if image" style={{backgroundImage: "url(https://test.developer.ifext.biz/content/grown_in_if.jpg)"}}></div>
             {/* Hero content! */}
             <div className="if content">
-                <IFHeader level={2} size="large" trailingClassName="center" style={{ bottomMargin: "4rem"}}>How you grow in a tear at If</IFHeader>
+                <Header rank={2} size="large" trailingClassName="center" style={{ bottomMargin: "4rem"}}>How you grow in a tear at If</Header>
                 <ul className="if crosslinks studio one" data-anatomy="outline right">
                 {points.map(listItemData => <>
                     <li className="if">

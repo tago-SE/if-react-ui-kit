@@ -25,7 +25,7 @@ export const StudioCrosslink: React.FC<IStudioProps> = ({
                     <span className="if">
                         {title}
                         <span className="if inline-nowrap">
-                            <span className="if arrow"></span>
+                            <span className="if arrow" />
                         </span>
                     </span>
                 </p>

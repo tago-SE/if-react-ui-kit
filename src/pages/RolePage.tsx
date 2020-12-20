@@ -3,7 +3,7 @@ import React from 'react';
 
 
 import { IFMain } from '../components/If-Design-System/Main';
-import { IFHeader } from '../components/If-Design-System/Header';
+import { Header } from '../components/If-Design-System/Header';
 import { IFContent } from '../components/If-Design-System/Content';
 import { IFBlock, IFContainer } from '../components/If-Design-System/Container';
 import { IFClaimsBanner } from '../components/If-Design-System/Banner';
@@ -18,7 +18,7 @@ const TwoColumTextBlock = () => {
     return (
         <IFBlock>
             <IFContainer>
-                <IFHeader size="largest" trailingClassName="center" style={{marginBottom: "100px    "}}>{role.name}</IFHeader>
+                <Header size="largest" rank={1} trailingClassName="center" style={{marginBottom: "100px    "}}>{role.name}</Header>
                 <p className="if text lead center">Spara till barnen och ge bort en tryggare framtid</p>
         
                 <div className="if row">
@@ -73,10 +73,10 @@ const RolePage = () => {
     return (<IFMain>
         <div className="if block">
             <div className="if container" style={{width: "40%"}}>
-                <IFHeader size="largest" trailingClassName="center">{role.name}</IFHeader>
+                <Header size="largest" rank={1} trailingClassName="center">{role.name}</Header>
 
                 <p className="if text lead center">Spara till barnen och ge bort en tryggare framtid</p>
-                <IFHeader size="small" trailingClassName="center"><b>{role.name}</b></IFHeader>
+                <Header size="smaller" rank={5} trailingClassName="center"><b>{role.name}</b></Header>
                 <p className="if text body">
                     Column 1
                     Nu är semestertiden över för de flesta av oss och förhoppningsvis har ni haft en härlig sommar. Utöver
@@ -98,9 +98,9 @@ const RolePage = () => {
         </div>
         <IFBlock>
           <div className="if container center">
-            <IFHeader level={2} size="large" trailingClassName="center" style={{ bottomMargin: "4rem"}}>
+            <Header rank={2} size="large" trailingClassName="center" style={{ bottomMargin: "4rem"}}>
                 Here you will meet all kinds of people
-            </IFHeader>
+            </Header>
             <TeaserContainer>
               <Teaser 
                   title={profile.name} 

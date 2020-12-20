@@ -1,24 +1,45 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const HeadingStyle = styled.div<{textColor?: string, focusColor: string}>`
+    & .if.heading {
+      color: ${props => props.textColor};
+      &:hover {
+        color: ${props => props.focusColor};
+      }
+    }
+`
 
 interface IProps {
-    size: string,
-    level?: number,
-    trailingClassName?: string,
+    center?: any,
+    rank?: number,
+    size?: string,
     children?: any,
+    textColor?: string,
+    focusColor?: string,
     [x: string]: any
 }
 
-export const IFHeader: React.FC<IProps>= ({
-  size="[smallest|small|medium|large|larger|largest",
-  level=1, 
-  trailingClassName="",
-  children=null,
+const SIZES = ["largest", "larger", "large", "medium", "small", "smallest"];
+
+export const Header: React.FC<IProps>= ({
+  rank = 1, 
+  size = "",
+  center = false,
+  children = null,
+  textColor = "",
+  focusColor = "",
   ...props
 }) => {
-  if (level < 0) level = 1;
-  if (level > 6) level = 6;
-  const Header: any = "h" + level;
-  return <Header className={`if heading ${size} ${trailingClassName}`} {...props}>{children}</Header>;
+  if (rank < 0) rank = 1;
+  else if (rank > 6) rank = 6;
+  size = " " + (SIZES.includes(size) ? size : SIZES[rank - 1]);
+  const Header: any = "h" + rank;
+  return (
+    <HeadingStyle textColor={textColor} focusColor={focusColor}>
+      <Header className={`if heading${size}${center ? " center" : ""}`} {...props}>{children}</Header>
+    </HeadingStyle>
+  );
 };
 
-export default IFHeader;
+export default Header;
