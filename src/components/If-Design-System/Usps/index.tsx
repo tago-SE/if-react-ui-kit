@@ -1,10 +1,10 @@
+import React from 'react';
+
 /**
  * References:
  * 1) https://design.if.eu/components/usps
  * 2) https://dev.azure.com/if-it/If%20Design%20Hub/_git/if-design-system?path=%2Fpackages%2Fusps
  */
-
-import React from 'react';
 
 interface IProps {
     title?: string,

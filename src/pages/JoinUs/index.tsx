@@ -179,7 +179,6 @@ const JoinUsPage = () => (
         </section>
       </div>
 
-
       <div className="if block">
         <section className="if split">
           <div className="if container">
@@ -201,13 +200,6 @@ const JoinUsPage = () => (
         </section>
       </div>
    
-  
-  
-  
-  
-  
-  
-  
         <div className="if banner claims" data-anatomy="outline top">
           <div className="if container">
             <span className="if title">Start your next career at If.</span>
