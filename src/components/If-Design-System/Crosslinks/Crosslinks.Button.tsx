@@ -32,5 +32,5 @@ export const ButtonCrosslinkContainer: React.FC<IButtonContainerProps> = ({
     columns = 0,
     ...props
 }) => {
-    return (<ul role="presentation" className={`if crosslinks ${COLUMNS[columns]}`}  {...props}>{children}</ul>);
+    return (<ul role="presentation" className={`if crosslinks ${COLUMNS[columns]}`} {...props}>{children}</ul>);
 }
