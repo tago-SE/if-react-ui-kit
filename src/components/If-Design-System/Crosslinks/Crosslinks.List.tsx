@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 
 interface IListProps {
     title:string,
@@ -25,7 +25,7 @@ interface IListContainerProps {
     [x: string]: any,
 }
 
-export const ListCrosslinkContainer: React.FC<IListContainerProps> = ({
+export const ListColumnCrosslink: React.FC<IListContainerProps> = ({
     children = null,
     title = "",
     titleSize = "medium",
@@ -39,7 +39,31 @@ export const ListCrosslinkContainer: React.FC<IListContainerProps> = ({
     );
 }
 
+// const COLUMNS = ["", "one", "two", "three", "four"];
+
+interface IContainerProps {
+  children: ReactNode,  
+  [x: string]: any,
+}
+
+export const ListColumCrosslinkContainer: React.FC<IContainerProps> = ({
+  children = null,
+  ...props
+}) => {
+  return (
+      <div className="if container wide" {...props}>
+        {children}
+      </div> 
+  );
+}
+
 /*
+<div class="if [grid OR container] [fluid|across|wide]">
+  <div class="if row">
+    <div class="if col-[1-12]--[xxs|xs|smlr|sm|md|lg|xl|xxl|huge|huger]">..</div>
+  </div>
+</div>
+
 <div class="if row">
       <div class="if col">
         <h2 class="if heading medium">Innehålstittel</h2>

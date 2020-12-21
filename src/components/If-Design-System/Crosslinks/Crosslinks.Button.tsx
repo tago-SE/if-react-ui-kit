@@ -19,16 +19,18 @@ export const ButtonCrosslink: React.FC<IButtonProps> = ({
     );
 }
 
+const COLUMNS = ["", "one", "two", "three", "four"];
+
 interface IButtonContainerProps {
     children: any,
-    varian?: string,
+    columns?: 1 | 2 | 3 | 4,
     [x: string]: any,
 }
 
 export const ButtonCrosslinkContainer: React.FC<IButtonContainerProps> = ({
     children = null,
-    variant = "",
+    columns = 0,
     ...props
 }) => {
-    return (<ul role="presentation" className={`if crosslinks ${variant}`} {...props}>{children}</ul>);
+    return (<ul role="presentation" className={`if crosslinks ${COLUMNS[columns]}`}  {...props}>{children}</ul>);
 }

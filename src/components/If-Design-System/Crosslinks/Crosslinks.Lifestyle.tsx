@@ -1,10 +1,10 @@
 import React from 'react';
 
 interface ILifestyleProps {
-    title:string,
+    title: string,
     href: string
     imageSrc: string,
-    alt?: string,               // Should be empty if the image is decoration, otherwise provide an image description
+    alt?: string,               // Accessability: Should be empty if the image is decoration, otherwise provide an image description
     [x: string]: any,
 }
 
@@ -25,17 +25,19 @@ export const LifestyleCrosslink: React.FC<ILifestyleProps> = ({
     );
 }
 
+const COLUMNS = ["", "one", "two", "three", "four"];
+
 interface ILifestyleContainerProps {
     children: any,
     role?: string,
-    variant?: string,
+    columns?: 1 | 2 | 3 | 4,
     [x: string]: any,
 }
 
 export const LifestyleCrosslinkContainer: React.FC<ILifestyleContainerProps> = ({
-    children=null,
-    variant = "",
+    children = null,
+    columns = 0,
     ...props
 }) => {
-    return (<ul role="presentation" className={`if crosslinks lifestyle ${variant}`} {...props}>{children}</ul>);
+    return (<ul role="presentation" className={`if crosslinks lifestyle ${COLUMNS[columns]}`} {...props}>{children}</ul>);
 }

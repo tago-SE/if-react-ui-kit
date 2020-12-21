@@ -5,7 +5,7 @@ interface IStudioProps {
     description: string,
     href: string
     imageSrc: string,
-    alt?: string,               // Should be empty or explain the image
+    alt?: string,               // Accessability: Should be empty if the image is decoration, otherwise provide an image description
     [x: string]: any,
 }
 
@@ -35,18 +35,20 @@ export const StudioCrosslink: React.FC<IStudioProps> = ({
     );
 }
 
+const COLUMNS = ["", "one", "two", "three"];
+
 interface IStudioContainerProps {
     children: any,
-    varian?: string,
+    columns?: 1 | 2 | 3,
     role?: string,
     [x: string]: any,
 }
 
 export const StudioCrosslinkContainer: React.FC<IStudioContainerProps> = ({
-    children=null,
-    variant = "",
+    children = null,
+    columns = 0,
     role = "presentation",
     ...props
 }) => {
-    return (<ul role={role} className={`if crosslinks studio ${variant}`} {...props}>{children}</ul>);
+    return (<ul role={role} className={`if crosslinks studio ${COLUMNS[columns]}`} {...props}>{children}</ul>);
 }
