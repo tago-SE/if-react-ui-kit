@@ -13,7 +13,7 @@ interface IProps {
   [x: string]: any
 }
 
-export const Loader: React.FC<IProps> = ({
+export const HorizontalLoader: React.FC<IProps> = ({
   isLoading = true,
   size = "small",
   color = "brown",
@@ -34,4 +34,4 @@ export const Loader: React.FC<IProps> = ({
   );
 }
 
-export default Loader;
+export default HorizontalLoader;

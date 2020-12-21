@@ -1,10 +1,10 @@
 import React from 'react';
-import Loader from './Loader/Loader';
+import HorizontalLoader from './Loader/HorizontalLoader';
 import IFButton from './Button';
 
 export const IFButtonSpinner = ({ children=null, className, isLoading = true, color = 'blue', ...props }) => (
   <IFButton className={`button ${className} ${isLoading ? 'is-loading' : ''}`} {...props}>
-    <Loader isLoading={isLoading} color={color} className="small" /> 
+    <HorizontalLoader isLoading={isLoading} color={color} className="small" /> 
     {children}
   </IFButton>
 );
