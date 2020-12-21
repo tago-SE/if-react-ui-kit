@@ -19,9 +19,9 @@ export const ListCrosslink: React.FC<IListProps> = ({
 }
 
 interface IListContainerProps {
-    children: any,
-    title: string,
-    titleSize: string,
+    children?: ReactNode,
+    title?: string,
+    titleSize?: 'largest' | 'larger' | 'large' | 'medium' | 'small' | 'smallest',
     [x: string]: any,
 }
 
@@ -39,91 +39,35 @@ export const ListColumnCrosslink: React.FC<IListContainerProps> = ({
     );
 }
 
-// const COLUMNS = ["", "one", "two", "three", "four"];
-
 interface IContainerProps {
-  children: ReactNode,  
+  children?: ReactNode,  
+  columns?: 1 | 2 | 3 | 4 | 5,
   [x: string]: any,
 }
 
 export const ListColumCrosslinkContainer: React.FC<IContainerProps> = ({
   children = null,
+  columns = 3,
   ...props
 }) => {
+  if (!children) return null;
+  let rows: any = [];
+  let cols: any = [];
+  React.Children.forEach(children, (child: any) => {
+    if (child.type === ListColumnCrosslink ) {
+      cols.push(child);
+      if (cols.length >= columns) {
+        rows.push(React.createElement("div", { className: "if row"}, cols));
+        cols = [];
+      }
+    }
+  });
+  if (cols.length > 0) {
+    rows.push(React.createElement("div", { className: "if row"}, cols));
+  }
   return (
-      <div className="if container wide" {...props}>
-        {children}
+      <div className="if container" {...props}>
+        {rows}
       </div> 
   );
 }
-
-/*
-<div class="if [grid OR container] [fluid|across|wide]">
-  <div class="if row">
-    <div class="if col-[1-12]--[xxs|xs|smlr|sm|md|lg|xl|xxl|huge|huger]">..</div>
-  </div>
-</div>
-
-<div class="if row">
-      <div class="if col">
-        <h2 class="if heading medium">Innehålstittel</h2>
-        <ul role="presentation" class="if crosslinks list">
-          <li role="presentation" class="if">
-            <a class="if standalone" href="/asdsadsdsada222">Betalningsguide</a>
-          </li>
-          <li role="presentation" class="if">
-            <a class="if standalone" href="/asdsadsdsada222">Därfor väljer du If</a>
-          </li>
-          <li role="presentation" class="if">
-            <a class="if standalone" href="/asdsadsdsada222">Säkerhetsbutikken</a>
-          </li>
-          <li role="presentation" class="if">
-            <a class="if standalone" href="/asdsadsdsada222">Tryggare vardag</a>
-          </li>
-          <li role="presentation" class="if">
-            <a class="if standalone" href="/asdsadsdsada222">Inför pensionen</a>
-          </li>
-        </ul>
-      </div>
-      <div class="if col">
-        <h2 class="if heading medium">Innehålstittel</h2>
-        <ul role="presentation" class="if crosslinks list">
-          <li role="presentation" class="if">
-            <a class="if standalone" href="/asdsadsdsada222">Betalningsguide</a>
-          </li>
-          <li role="presentation" class="if">
-            <a class="if standalone" href="/asdsadsdsada222">Därfor väljer du If</a>
-          </li>
-          <li role="presentation" class="if">
-            <a class="if standalone" href="/asdsadsdsada222">Säkerhetsbutikken</a>
-          </li>
-          <li role="presentation" class="if">
-            <a class="if standalone" href="/asdsadsdsada222">Tryggare vardag</a>
-          </li>
-          <li role="presentation" class="if">
-            <a class="if standalone" href="/asdsadsdsada222">Inför pensionen</a>
-          </li>
-        </ul>
-      </div>
-      <div class="if col">
-        <h2 class="if heading medium">Innehålstittel</h2>
-        <ul role="presentation" class="if crosslinks list">
-          <li role="presentation" class="if">
-            <a class="if standalone" href="/asdsadsdsada222">Betalningsguide</a>
-          </li>
-          <li role="presentation" class="if">
-            <a class="if standalone" href="/asdsadsdsada222">Därfor väljer du If</a>
-          </li>
-          <li role="presentation" class="if">
-            <a class="if standalone" href="/asdsadsdsada222">Säkerhetsbutikken</a>
-          </li>
-          <li role="presentation" class="if">
-            <a class="if standalone" href="/asdsadsdsada222">Tryggare vardag</a>
-          </li>
-          <li role="presentation" class="if">
-            <a class="if standalone" href="/asdsadsdsada222">Inför pensionen</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-    */

@@ -31,7 +31,9 @@ import {
   LifestyleCrosslinkContainer,
   ListCrosslink,
   ListColumnCrosslink,
-  ListColumCrosslinkContainer
+  ListColumCrosslinkContainer,
+  ExpandableCrosslink,
+  ExpandableCrosslinksContainer,
 } from './components/If-Design-System/Crosslinks';
 
 /*
@@ -151,13 +153,16 @@ function App() {
           <LifestyleCrosslink  title="hello" href="/abc" imageSrc="https://v.imgi.no/gy5k43je86-MOODBOARD/2042"/>
         </LifestyleCrosslinkContainer>
 
+        <ExpandableCrosslinksContainer>
+          <ExpandableCrosslink title="hello" href="#" />
+        </ExpandableCrosslinksContainer>
+
         <br />
       </div>
     </div>
 
-    <div className="if block ">
+    <div className="if block">
       <ListColumCrosslinkContainer>
-        <div className="if row">
           <ListColumnCrosslink title="Innehålstittel" titleSize="medium">
               <ListCrosslink title="Betalningsguide" href="#"/>
               <ListCrosslink title="Därfor väljer du If" href="#"/>
@@ -170,8 +175,16 @@ function App() {
               <ListCrosslink title="Därfor väljer du If" href="#"/>
               <ListCrosslink title="Säkerhetsbutikken" href="#"/>
               <ListCrosslink title="Tryggare vardag" href="#"/>
-              <ListCrosslink title="En alldeles för lång rubrik som blir ännu längre" href="#"/>
+              <ListCrosslink title="En alldeles för lång rubrik" href="#"/>
             </ListColumnCrosslink>
+            <ListColumnCrosslink title="Innehålstittel" titleSize="medium">
+              <ListCrosslink title="Betalningsguide" href="#"/>
+              <ListCrosslink title="Därfor väljer du If" href="#"/>
+              <ListCrosslink title="Säkerhetsbutikken" href="#"/>
+              <ListCrosslink title="Tryggare vardag" href="#"/>
+              <ListCrosslink title="Inför pensionen" href="#"/>
+            </ListColumnCrosslink>
+      
             <ListColumnCrosslink title="Innehålstittel" titleSize="medium">
               <ListCrosslink title="Betalningsguide" href="#"/>
               <ListCrosslink title="Därfor väljer du If" href="#"/>
@@ -193,6 +206,7 @@ function App() {
               <ListCrosslink title="Tryggare vardag" href="#"/>
               <ListCrosslink title="Inför pensionen" href="#"/>
             </ListColumnCrosslink>
+  
             <ListColumnCrosslink title="Innehålstittel" titleSize="medium">
               <ListCrosslink title="Betalningsguide" href="#"/>
               <ListCrosslink title="Därfor väljer du If" href="#"/>
@@ -207,14 +221,7 @@ function App() {
               <ListCrosslink title="Tryggare vardag" href="#"/>
               <ListCrosslink title="Inför pensionen" href="#"/>
             </ListColumnCrosslink>
-            <ListColumnCrosslink title="Innehålstittel" titleSize="medium">
-              <ListCrosslink title="Betalningsguide" href="#"/>
-              <ListCrosslink title="Därfor väljer du If" href="#"/>
-              <ListCrosslink title="Säkerhetsbutikken" href="#"/>
-              <ListCrosslink title="Tryggare vardag" href="#"/>
-              <ListCrosslink title="Inför pensionen" href="#"/>
-            </ListColumnCrosslink>
-          </div>
+
       </ListColumCrosslinkContainer>
     </div>
   
