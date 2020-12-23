@@ -6,7 +6,7 @@ import { IFContent } from "../../components/If-Design-System/Content";
 export const PartnerBlock = () => {
     return (
       <Block>
-        <Heading size="larger">Partners</Heading>
+        <Heading size="larger" marginBottom="0px">Partners</Heading>
         <hr className="if" />
         <section className="if split small">
           <Container>
@@ -19,7 +19,7 @@ export const PartnerBlock = () => {
                 “Customer expectations are not simply that you’re able to sell across channels but also that the whole experience is intuitive and fluid.”
               </p>  
               <small className="if author"><b>John Doe ・</b> Product Owner</small><br /><br />
-              <a href="/asdasd" className="if standalone">Read case study</a>
+              <a href="/blog" className="if standalone">Read case study</a>
             </IFContent>
             <img src="https://www.volvia.se/globalassets/volvia/small/volvo-oppen-bagagelucka-vid-hus.jpg" alt="Vit Volvo med öppen bagagelucka " 
               style={{width: "50%"}}

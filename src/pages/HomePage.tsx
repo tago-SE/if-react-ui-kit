@@ -286,8 +286,6 @@ const HomePage = () => {
                             men administreras av föräldrarna. Vid barnets 18-årsdag övergår kontot helt till barnet.
                         </p> 
                     </Column>
-                    
-
                 </Row>
             </div>
         </div>
