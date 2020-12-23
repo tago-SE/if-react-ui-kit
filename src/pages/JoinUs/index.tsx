@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { IFBlock, IFContainer} from '../../components/If-Design-System/Container';
+import { Block, Container} from '../../components/If-Design-System/Container';
 import { IFContent } from "../../components/If-Design-System/Content";
-import { IFMain } from '../../components/If-Design-System/Main';
+import { Main } from '../../components/If-Design-System/Main';
 import { IFVideoContent } from '../../components/If-Design-System/Video';
 import { Heading } from '../../components/If-Design-System/Heading';
 import { IFSuccessNotification } from '../../components/If-Design-System/Notification';
@@ -39,7 +39,7 @@ const JoinUsPage = () => (
 
 
   // style={{paddingTop: "5%"}} inside container
-   <IFMain>
+   <Main>
     <section className="if hero">
       <div className="if container">
         <div className="if content">
@@ -216,7 +216,7 @@ const JoinUsPage = () => (
         
         <GrowthTreeMock />
 
-        <IFBlock>
+        <Block>
           <section className="if split">
             <div className="if container">
               <div className="if image" style={{backgroundImage: "url(https://test.developer.ifext.biz/content/grown_in_if.jpg)"}}></div>
@@ -234,7 +234,7 @@ const JoinUsPage = () => (
               </div>
             </div>
           </section>
-        </IFBlock>
+        </Block>
 
         <IFSuccessNotification>Hello there</IFSuccessNotification>
         <OurCoreValues />
@@ -266,9 +266,9 @@ const JoinUsPage = () => (
          */}
         <Heading size="large" rank={1}>This section should probably be in a different page "About If" or "Our Culture"</Heading>
 
-        <IFBlock>
+        <Block>
           <section className="if split small">
-            <IFContainer>
+            <Container>
               <IFContent>
               <Heading size="medium" rank={3}>Why If?</Heading>
                 <p className="if text body">
@@ -283,13 +283,13 @@ const JoinUsPage = () => (
                   coverTitle="If Drulleförsäkring"
                   coverDescription="Se hur If Drulleförsäkring förändrade Anna's vardag"
                 />
-            </IFContainer>
+            </Container>
           </section>
-        </IFBlock>
+        </Block>
         
         <div className="if block dark" style={{padding: "0px"}}>
           <section className="if split">
-            <IFContainer>
+            <Container>
               <IFContent>
                 <Heading size="largest" rank={1}>Purpose</Heading>
                 <p className="if text body">
@@ -305,7 +305,7 @@ const JoinUsPage = () => (
                   coverTitle="Purpose"
                   coverDescription="We give people confidence today to shape their tomorrow"
                 />
-            </IFContainer>
+            </Container>
           </section>
           
           <section className="if hero">
@@ -342,7 +342,7 @@ const JoinUsPage = () => (
           </div>
         </div>
 
-      </IFMain>
+      </Main>
 );
 
 export default JoinUsPage;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { IFBlock } from '../../components/If-Design-System/Container';
+import { Block } from '../../components/If-Design-System/Container';
 import { Heading } from '../../components/If-Design-System/Heading';
 
 import { Teaser, TeaserContainer } from '../../components/If-Design-System/Teasers'
@@ -47,7 +47,7 @@ Would you like to contribute? Get in touch with Per Ol-Ers.
   This would be a teaser section to the ArticleList page...
 </a>
 
-        <IFBlock>
+        <Block>
           <div className="if container center">
             <Heading rank={2} size="large" trailingClassName="center" style={{ bottomMargin: "4rem"}}>Community</Heading>
             <TeaserContainer>
@@ -59,7 +59,7 @@ Would you like to contribute? Get in touch with Per Ol-Ers.
               />)}
             </TeaserContainer>
           </div>    
-      </IFBlock>
+      </Block>
     </>);
 }
 

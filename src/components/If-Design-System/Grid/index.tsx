@@ -1,5 +1,5 @@
 import  Column  from './Column';
 import  Row  from './Row';
-import { IFContainer } from '../Container';
+import { Container } from '../Container';
 
-export { Column, Row, IFContainer as Grid };
+export { Column, Row, Container as Grid };

@@ -1,0 +1,1 @@
+export { PartnerLogoItem, PartnerLogoList } from './Banner.Partners';

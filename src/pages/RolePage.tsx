@@ -2,9 +2,9 @@ import React from 'react';
 
 
 
-import { IFMain } from '../components/If-Design-System/Main';
+import { Main } from '../components/If-Design-System/Main';
 import { Heading } from '../components/If-Design-System/Heading';
-import { IFBlock, IFContainer } from '../components/If-Design-System/Container';
+import { Block, Container } from '../components/If-Design-System/Container';
 import { IFClaimsBanner } from '../components/If-Design-System/Banner';
 import { Teaser, TeaserContainer} from '../components/If-Design-System/Teasers';
 
@@ -15,8 +15,8 @@ const role = {
 
 export const TwoColumTextBlock = () => {
     return (
-        <IFBlock>
-            <IFContainer>
+        <Block>
+            <Container>
                 <Heading size="largest" rank={1} trailingClassName="center" style={{marginBottom: "100px    "}}>{role.name}</Heading>
                 <p className="if text lead center">Spara till barnen och ge bort en tryggare framtid</p>
         
@@ -55,8 +55,8 @@ export const TwoColumTextBlock = () => {
                         </p>
                     </div>
                 </div>
-            </IFContainer>
-        </IFBlock>
+            </Container>
+        </Block>
     );
 }
 
@@ -69,7 +69,7 @@ const RolePage = () => {
         link: { name: "Read their story", path: "https://www.klarna.com/careers/personal-stories/alexandre-borel/"}
     };
       
-    return (<IFMain>
+    return (<Main>
         <div className="if block">
             <div className="if container" style={{width: "40%"}}>
                 <Heading size="largest" rank={1} trailingClassName="center">{role.name}</Heading>
@@ -95,7 +95,7 @@ const RolePage = () => {
                 </p>
             </div>
         </div>
-        <IFBlock>
+        <Block>
           <div className="if container center">
             <Heading rank={2} size="large" trailingClassName="center" style={{ bottomMargin: "4rem"}}>
                 Here you will meet all kinds of people
@@ -109,9 +109,9 @@ const RolePage = () => {
               />
             </TeaserContainer>
           </div>    
-        </IFBlock>
+        </Block>
         <IFClaimsBanner title={`Become a ${role.name} at If`} link={{name: "See the available jobs", path: `${role.path}`}}></IFClaimsBanner>
-    </IFMain>);
+    </Main>);
 }
 
 export default RolePage;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const IFMain : React.FC<{className?: string, children?: any, role?: string, id?: string, [x: string]: any}> = ({
+export const Main : React.FC<{className?: string, children?: any, role?: string, id?: string, [x: string]: any}> = ({
     className="",
     children=null,
     role="main",
@@ -10,13 +10,13 @@ export const IFMain : React.FC<{className?: string, children?: any, role?: strin
     {children}
 </main>);
 
-export const IFMainApp : React.FC<{className?: string, children?: any, role?: string, id?: string, [x: string]: any}> = ({
+export const MainApp : React.FC<{className?: string, children?: any, role?: string, id?: string, [x: string]: any}> = ({
     className="app",
     children=null,
     role="main",
     id="main",
     ...props
-}) => (<IFMain className={className} role={role} id={id} {...props}>{children}</IFMain>);
+}) => (<Main className={className} role={role} id={id} {...props}>{children}</Main>);
 
 
-export default IFMain;
+export default Main;

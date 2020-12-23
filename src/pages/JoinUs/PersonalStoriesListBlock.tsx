@@ -1,8 +1,12 @@
 import React from 'react';
 
-import { IFBlock } from '../../components/If-Design-System/Container';
+import { Block } from '../../components/If-Design-System/Container';
 import { Heading } from '../../components/If-Design-System/Heading';
 import { Teaser, TeaserContainer } from '../../components/If-Design-System/Teasers'
+
+/*
+  https://www.klarna.com/careers/personal-stories/alexandre-borel/
+*/
 
 const PersonalStoriesListBlock = () => {
 
@@ -28,7 +32,7 @@ const PersonalStoriesListBlock = () => {
     ]
   
     return (
-        <IFBlock className="dark">
+        <Block className="dark">
           <div className="if container center">
             <Heading rank={2} size="large" trailingClassName="center" style={{ bottomMargin: "4rem"}}>Here you will meet all kinds of people</Heading>
             <TeaserContainer>
@@ -40,7 +44,7 @@ const PersonalStoriesListBlock = () => {
               />)}
             </TeaserContainer>
           </div>    
-      </IFBlock>
+      </Block>
     );
 }
 

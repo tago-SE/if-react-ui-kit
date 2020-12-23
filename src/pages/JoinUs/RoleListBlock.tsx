@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { IFBlock, IFContainer} from '../../components/If-Design-System/Container';
+import { Block, Container} from '../../components/If-Design-System/Container';
 import { Heading } from '../../components/If-Design-System/Heading';
 
 
@@ -39,8 +39,8 @@ const RoleListBlock = () => {
     ]
   
     return (
-        <IFBlock>
-            <IFContainer>
+        <Block>
+            <Container>
                 <Heading rank={2} size="large" trailingClassName="center" style={{ bottomMargin: "4rem"}}>Roles that we usually look for</Heading>
                 <ul className="if crosslinks studio three" data-anatomy="outline right">
                     {roles.map(role => <>
@@ -66,8 +66,8 @@ const RoleListBlock = () => {
                     See all available roles
                     </a>
                 </div>
-        </IFContainer>
-      </IFBlock>
+        </Container>
+      </Block>
     );
 }
 

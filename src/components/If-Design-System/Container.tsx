@@ -1,66 +1,66 @@
 import React from 'react';
 
 interface IProps {
-  className?: string,
+  trailingClassName?: string,
   children?: any, 
   [x: string]: any
 };
 
 export const IFDiv : React.FC<IProps> = ({
-  className="",
+  trailingtrailingClassName="",
   children=null,
   ...props
 }) => {
-  return (<div className={`if${(className ? " " + className : "")}`} {...props}>{children}</div>);
+  return (<div className={`if${(trailingtrailingClassName ? " " + trailingtrailingClassName : "")}`} {...props}>{children}</div>);
 }
 
-export const IFContainer : React.FC<IProps> = ({
-  className="",
+export const Container : React.FC<IProps> = ({
+  trailingClassName="",
   children=null,
   ...props
 }) => {
-  return (<div className={`if container${(className ? " " + className : "")}`} {...props}>{children}</div>);
+  return (<div className={`if container${(trailingClassName ? " " + trailingClassName : "")}`} {...props}>{children}</div>);
 }
 
 
-export const IFBlock : React.FC<IProps> = ({
-  className="",
+export const Block : React.FC<IProps> = ({
+  trailingClassName="",
   children=null,
   ...props
 }) => {
-  return (<section className={`if block${className ? ` ${className}` : ""}`} {...props}>{children}</section>);
+  return (<section className={`if block${trailingClassName ? ` ${trailingClassName}` : ""}`} {...props}>{children}</section>);
 }
 
 export const IFMobileContainer : React.FC<IProps> = ({
-  className="",
+  trailingClassName="",
   children=null,
   ...props
 }) => {
-  return (<div className={`if mobile ${className}`} {...props}>{children}</div>);
+  return (<div className={`if mobile ${trailingClassName}`} {...props}>{children}</div>);
 };
 
 export const IFDesktopContainer : React.FC<IProps> = ({
-  className="",
+  trailingClassName="",
   children=null,
   ...props
 }) => {
-  return (<div className={`if desktop container ${className}`} {...props}>{children}</div>);
+  return (<div className={`if desktop container ${trailingClassName}`} {...props}>{children}</div>);
 };
 
 export const IFHolder: React.FC<IProps> = ({
-  className="",
+  trailingClassName="",
   children=null,
   ...props
 }) => {
-  return (<div className={`if holder ${className}`} {...props}>{children}</div>);
+  return (<div className={`if holder ${trailingClassName}`} {...props}>{children}</div>);
 };
 
 export const IFShowcase : React.FC<IProps> = ({
-  className="",
+  trailingClassName="",
   children=null,
   ...props
 }) => {
-  return (<div className={`if showcase ${className}`} {...props}>{children}</div>);
+  return (<div className={`if showcase ${trailingClassName}`} {...props}>{children}</div>);
 };  
 
 export default IFDiv;
