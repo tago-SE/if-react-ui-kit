@@ -1,4 +1,4 @@
-import { Heading } from "../../components/If-Design-System/Heading";
+import { Heading, TitleHeading } from "../../components/If-Design-System/Heading";
 import { Block, Container} from '../../components/If-Design-System/Container';
 import { IFContent } from "../../components/If-Design-System/Content";
 // import { Heading } from '../../components/If-Design-System/Heading';
@@ -11,7 +11,9 @@ export const PartnerBlock = () => {
         <section className="if split small">
           <Container>
             <IFContent>
-            <h3 className="if title heading small">Volvia</h3>
+              <TitleHeading size="small" rank={3}>
+                Volvia
+              </TitleHeading>
             {/* <Heading size="medium" rank={3}>Volvia</Heading> */}
               <p className="if text body">
                 “Customer expectations are not simply that you’re able to sell across channels but also that the whole experience is intuitive and fluid.”
