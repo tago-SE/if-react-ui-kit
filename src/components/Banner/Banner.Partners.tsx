@@ -25,14 +25,11 @@ const ListItem = styled.li`
 export const PartnerLogoItem: React.FC<{src: string}>= ({
     src,
 }) => {
-    return (<ListItem>
-        <LogoImage alt="Casper logo" src={src}
-            />
-            {/* <img alt={image.alt} src={image.path} className="if image  responsively-lazy" data-srcset={image.path} /> 
-            <h3 className="heading-smallest">{title}</h3> 
-            <p>{text}&nbsp;</p>
-            <a href={link.path} title={link.name} target="" className="if standalone">{link.name}</a> */}
-    </ListItem>);
+    return (
+        <ListItem>
+            <LogoImage alt="Casper logo" src={src}/>
+        </ListItem>
+    );
 };
 
 export const PartnerLogoList: React.FC<{[x: string]: any}>= (props) => {
