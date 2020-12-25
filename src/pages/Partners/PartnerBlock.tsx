@@ -6,7 +6,7 @@ import { IFContent } from "../../components/If-Design-System/Content";
 export const PartnerBlock = () => {
     return (
       <Block>
-        <Heading size="larger" marginBottom="0px">Partners</Heading>
+        <Heading size="larger" marginBottom="0px">Who is using our products?</Heading>
         <hr className="if" />
         <section className="if split small">
           <Container>

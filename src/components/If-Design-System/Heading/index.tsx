@@ -35,7 +35,7 @@ interface IProps {
 
 export const Heading: React.FC<IProps>= ({
   children,
-  rank = 1, 
+  rank = 1,
   size = "largest",
   marginBottom = "",
   justifyContent = "",
