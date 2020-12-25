@@ -1,10 +1,13 @@
 import React from 'react';
 
-import { Main } from '../components/If-Design-System/Main';
-import { Heading } from '../components/If-Design-System/Heading'
-import { Row, Column } from '../components/If-Design-System/Grid';
+import { Main } from '../../components/If-Design-System/Main';
+import { Heading } from '../../components/If-Design-System/Heading'
 
-import { ListMenu, ListMenuItem} from '../components/NavBar';
+import { ListMenu, ListMenuItem} from '../../components/NavBar';
+
+import { GridItem, GridRow, GridContainer } from '../../components/If-Design-System/Grid'
+
+import { ButtonPrimary, ButtonSecondary, ButtonTertiary } from '../../components/If-Design-System/Button/Button';
 
 import { 
   StudioCrosslink, 
@@ -18,12 +21,12 @@ import {
   ListColumCrosslinkContainer,
   ExpandableCrosslink,
   ExpandableCrosslinksContainer,
-} from '../components/If-Design-System/Crosslinks';
+} from '../../components/If-Design-System/Crosslinks';
 
-import { PartnerLogoItem, PartnerLogoList } from '../components/Banner';
-import { PartnerBlock } from './Partners/PartnerBlock';
+import { PartnerLogoItem, PartnerLogoList } from '../../components/Banner';
+import { PartnerBlock } from '../Partners/PartnerBlock';
 
-import { Block, Container } from '../components/If-Design-System/Container';
+import { Block, Container } from '../../components/If-Design-System/Container';
 
 
 const HomePage = () => {
@@ -94,10 +97,20 @@ const HomePage = () => {
       {items.map((item, index) => <ListMenuItem key={index} {...item} />)}
     </ListMenu>
 
-    {/*
-        Partner hero and case studies
-    */}
 
+    <GridContainer>
+      <GridRow>
+        <GridItem xs={3}>
+          <ButtonPrimary>Primary</ButtonPrimary>
+        </GridItem>
+        <GridItem xs={3}>
+          <ButtonSecondary>Secondary</ButtonSecondary>
+        </GridItem>
+        <GridItem xs={3}>
+          <ButtonTertiary>Tertiary</ButtonTertiary>
+        </GridItem>
+      </GridRow>
+    </GridContainer>
     
 
     <Block>
@@ -255,7 +268,7 @@ const HomePage = () => {
                     Body text modules
                 </Heading>
 
-                <Row>
+                {/* <Row>
                     <Column trailingClassName="-6--xs col-6--md">
                         <p className="if text body">
                             Nu är semestertiden över för de flesta av oss och förhoppningsvis har ni haft en härlig sommar. Utöver
@@ -286,7 +299,7 @@ const HomePage = () => {
                             men administreras av föräldrarna. Vid barnets 18-årsdag övergår kontot helt till barnet.
                         </p> 
                     </Column>
-                </Row>
+                </Row> */}
             </div>
         </div>
   </Main>

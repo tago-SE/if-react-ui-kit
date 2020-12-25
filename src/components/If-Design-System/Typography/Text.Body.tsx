@@ -12,3 +12,10 @@ export const TextBody : React.FC<IProps> = ({
     <p className="if text body" {...props}>{children}</p>
 );
 
+export const TextLead : React.FC<IProps> = ({
+  children=null,
+  ...props
+}) =>  (
+    <p className="if text lead" {...props}>{children}</p>
+);
+

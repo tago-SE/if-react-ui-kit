@@ -94,7 +94,7 @@ interface IProps {
   [x: string]: any
 }
 
-export const IFButton: React.FC<IProps>= ({
+export const Button: React.FC<IProps>= ({
   className = "",
   onKeyPress = null,
   onClick = null, 
@@ -125,54 +125,54 @@ interface IChildProp {
   [x: string]: any
 }
 
-export const IFButtonPrimary: React.FC<IChildProp>= ({
+export const ButtonPrimary: React.FC<IChildProp>= ({
   className = "",
   children = null,
 ...props
 }) => (
-  <IFButton className={`button primary ${className}`} {...props}>
+  <Button className={`button primary ${className}`} {...props}>
     {children}
-  </IFButton>
+  </Button>
 );
 
-export const IFButtonPrimaryCTA: React.FC<IChildProp>= ({
+export const ButtonPrimaryCTA: React.FC<IChildProp>= ({
   className = "",
   children = null,
 ...props
 }) => (
-  <IFButton className={`button primary large ${className}`} {...props}>
+  <Button className={`button primary large ${className}`} {...props}>
     {children}
-  </IFButton>
+  </Button>
 );
 
-export const IFButtonSecondary: React.FC<IChildProp>= ({
+export const ButtonSecondary: React.FC<IChildProp>= ({
   className = "",
   children = null,
 ...props
 }) => (
-  <IFButton className={`button secondary ${className}`} {...props}>
+  <Button className={`button secondary ${className}`} {...props}>
     {children}
-  </IFButton>
+  </Button>
 );
 
-export const IFButtonTertiary: React.FC<IChildProp>= ({
+export const ButtonTertiary: React.FC<IChildProp>= ({
   className = "",
   children = null,
 ...props
 }) => (
-  <IFButton className={`button tertiary ${className}`} {...props}>
+  <Button className={`button tertiary ${className}`} {...props}>
     {children}
-  </IFButton>
+  </Button>
 );
 
-export const IFButtonInfo: React.FC<IChildProp>= ({
+export const ButtonInfo: React.FC<IChildProp>= ({
   className = "",
   children = null,
 ...props
 }) => (
-  <IFButton className={`button info ${className}`} {...props}>
+  <Button className={`button info ${className}`} {...props}>
     {children}
-  </IFButton>
+  </Button>
 );
 
-export default IFButton;
+export default Button;

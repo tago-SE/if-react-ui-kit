@@ -1,12 +1,12 @@
 import React from 'react';
 import HorizontalLoader from './Loader/HorizontalLoader';
-import IFButton from './Button';
+import Button from './Button/Button';
 
 export const IFButtonSpinner = ({ children=null, className, isLoading = true, color = 'blue', ...props }) => (
-  <IFButton className={`button ${className} ${isLoading ? 'is-loading' : ''}`} {...props}>
+  <Button className={`button ${className} ${isLoading ? 'is-loading' : ''}`} {...props}>
     <HorizontalLoader isLoading={isLoading} color={color} className="small" /> 
     {children}
-  </IFButton>
+  </Button>
 );
 
 export const IFButtonSpinnerSecondary = ({ children=null, isLoading = true, ...props }) => (

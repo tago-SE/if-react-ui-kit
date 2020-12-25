@@ -14,6 +14,10 @@ export const IFDiv : React.FC<IProps> = ({
   return (<div className={`if${(trailingtrailingClassName ? " " + trailingtrailingClassName : "")}`} {...props}>{children}</div>);
 }
 
+/**
+ * The container centers your content horizontally. It's the most basic layout element.
+ * @param param0 
+ */
 export const Container : React.FC<IProps> = ({
   trailingClassName="",
   children=null,

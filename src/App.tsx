@@ -7,7 +7,7 @@ import {
 
 import './App.css';
 
-import HomePage from './pages/HomePage';
+import HomePage from './pages/Home/HomePage';
 import JoinUsPage from './pages/JoinUs';
 import WhyUsPage from './pages/WhyUsPage';
 import RolePage from './pages/RolePage';

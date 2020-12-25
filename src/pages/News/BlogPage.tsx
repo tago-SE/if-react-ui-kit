@@ -51,6 +51,9 @@ export const BlogPage = () => {
                     <TitleHeading size="smallest" rank={4}>
                         Blabla
                     </TitleHeading>
+                    <p className="if text lead">
+                        This is some leading text... not sure what it is about
+                    </p>
                     <TextBody>
                         Nu är semestertiden över för de flesta av oss och förhoppningsvis har ni haft en härlig sommar. Utöver
                         strand, hängmatta och grill så innebär ledigheten en möjlighet att reflektera och stanna upp. För mig
