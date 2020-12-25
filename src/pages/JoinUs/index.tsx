@@ -188,9 +188,7 @@ const JoinUsPage = () => (
               <p className="if text body">
                 Nu är semestertiden över för de flesta av oss och förhoppningsvis har ni haft en härlig sommar. Utöver
                 strand, hängmatta och grill så innebär ledigheten en möjlighet att reflektera och stanna upp. För mig
-                innebär höstterminen en möjlighet att sätta upp nya mål. Det är ett utmärkt tillfälle att ta tag i de
-                där sakerna som inte riktigt prioriterats de senaste månaderna. Jag ser över sparandet, försäkringar
-                och diverse andra viktiga saker som inte känns lika intressant under de varmaste sommarmånaderna.
+                innebär höstterminen en möjlighet att sätta upp nya mål.
               </p>
               <div className="if image" style={{backgroundImage: "url(\"https://if-brand-static-cdn.azureedge.net/images/documentation/If-lifestyle-comforting@3x.png\")", 
               width: "50%", backgroundSize: "contain", backgroundPosition: "right center"}}></div>
