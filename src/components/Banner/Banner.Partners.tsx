@@ -1,15 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-
-// interface IProps {
-//     // title: string,
-//     // text: string, 
-//     // image: { path: string, alt?: string}                    // Replace /w component
-//     // link: { name: string, path: string, target?: string }   // Replace /w component
-//     [x: string]: any
-//   }
-  
 const List = styled.ul`
   list-style: none;
   overflow-x: auto;
