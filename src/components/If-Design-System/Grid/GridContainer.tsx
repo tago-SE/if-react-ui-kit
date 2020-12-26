@@ -2,16 +2,16 @@ import React, { ReactNode } from "react";
 
 interface IProps {
     children?: ReactNode,
-    type?: "fluid" | "wide" | "across" | "default",
+    type?: "fluid" | "wide" | "across" | "",
     [x: string]: any
 }
 
 export const GridContainer : React.FC<IProps> = ({
     children = null,
-    type = "default",
+    type = "",
     ...props
   }) => {
-    return (<div className={`if grid${type === "default" ? "" : " " + type }`} {...props}>{children}</div>);
+    return (<div className={`if grid ${type}`} {...props}>{children}</div>);
 }
 
 export default GridContainer;

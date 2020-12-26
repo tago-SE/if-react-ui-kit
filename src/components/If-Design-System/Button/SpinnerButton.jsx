@@ -1,12 +1,12 @@
 import React from 'react';
-import HorizontalLoader from './Loader/HorizontalLoader';
-import Button from './Button/Button';
+import HorizontalLoader from '../Loader/HorizontalLoader';
+import ButtonWrapper from './Button';
 
-export const IFButtonSpinner = ({ children=null, className, isLoading = true, color = 'blue', ...props }) => (
-  <Button className={`button ${className} ${isLoading ? 'is-loading' : ''}`} {...props}>
-    <HorizontalLoader isLoading={isLoading} color={color} className="small" /> 
+export const IFButtonSpinner = ({ children=null, className = "", isLoading = true, color = "white", ...props }) => (
+  <ButtonWrapper className={`if button ${className} ${isLoading ? 'is-loading' : ''}`} {...props}>
+    <HorizontalLoader isLoading={isLoading} size="small" color={color} /> 
     {children}
-  </Button>
+  </ButtonWrapper>
 );
 
 export const IFButtonSpinnerSecondary = ({ children=null, isLoading = true, ...props }) => (

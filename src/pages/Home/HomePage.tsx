@@ -5,10 +5,6 @@ import { Heading } from '../../components/If-Design-System/Heading'
 
 import { ListMenu, ListMenuItem} from '../../components/NavBar';
 
-import { GridItem, GridRow, GridContainer } from '../../components/If-Design-System/Grid'
-
-import { ButtonPrimary, ButtonSecondary, ButtonTertiary } from '../../components/If-Design-System/Button/Button';
-
 import { 
   StudioCrosslink, 
   StudioCrosslinkContainer, 
@@ -28,6 +24,9 @@ import { PartnerBlock } from '../Partners/PartnerBlock';
 
 import { Block, Container } from '../../components/If-Design-System/Container';
 
+// Sections
+import ButtonSection from './Sections/ButtonSection';
+import LoaderSection from './Sections/LoaderSection';
 
 const HomePage = () => {
     const items = [
@@ -98,21 +97,9 @@ const HomePage = () => {
     </ListMenu>
 
 
-    <GridContainer>
-      <GridRow>
-        <GridItem xs={3}>
-          <ButtonPrimary>Primary</ButtonPrimary>
-        </GridItem>
-        <GridItem xs={3}>
-          <ButtonSecondary>Secondary</ButtonSecondary>
-        </GridItem>
-        <GridItem xs={3}>
-          <ButtonTertiary>Tertiary</ButtonTertiary>
-        </GridItem>
-      </GridRow>
-    </GridContainer>
-    
-
+    <ButtonSection />
+    <LoaderSection />
+  
     <Block>
         <Container>
             <PartnerBlock />
@@ -132,7 +119,6 @@ const HomePage = () => {
         </Container>
     </Block>
     
-
     <ListMenu focusColor="orange">
       <ListMenuItem name="my" href="#" icon="ui person">
         <ListMenuItem name="oh" href="#"/>
@@ -152,6 +138,7 @@ const HomePage = () => {
         </div>
     </div>
 
+    
     <div className="if block">
       <div className="if container">
 

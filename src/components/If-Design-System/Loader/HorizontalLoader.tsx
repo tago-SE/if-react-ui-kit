@@ -8,7 +8,7 @@ const colors = {
 
 interface IProps {
   isLoading?: boolean,
-  size?: "small" | "large" | "largest",
+  size?: "small" | "medium" | "large" | "largest",
   color?: "white" | "blue" | "brown",
   [x: string]: any
 }
@@ -19,6 +19,7 @@ export const HorizontalLoader: React.FC<IProps> = ({
   color = "brown",
   ...props
 }) => {
+  if (!isLoading) return null;
   return (
     <svg
       className={`if loader dots horizontal ${size}`}

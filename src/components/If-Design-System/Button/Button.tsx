@@ -1,105 +1,31 @@
 import React from 'react';
 
-/*
-import React from "react";
-// nodejs library to set properties for components
-import PropTypes from "prop-types";
-// nodejs library that concatenates classes
-import classNames from "classnames";
+import { HorizontalLoader } from '../Loader';
 
-// @material-ui/core components
-import makeStyles from "@material-ui/core/styles/makeStyles";
-import Button from "@material-ui/core/Button";
+/**
+ * TODO: 
+ * - Add round button shape
+ * - Add more size variation
+ * - Add different color configurations
+ */
 
-// core components
 
-import buttonStyle from "assets/jss/material-kit-react/components/buttonStyle.js";
-
-const makeComponentStyles = makeStyles(() => ({
-  ...buttonStyle
-}));
-
-const RegularButton = React.forwardRef((props, ref) => {
-  const {
-    color,
-    round,
-    children,
-    fullWidth,
-    disabled,
-    simple,
-    size,
-    block,
-    link,
-    justIcon,
-    className,
-    ...rest
-  } = props;
-
-  const classes = makeComponentStyles();
-
-  const btnClasses = classNames({
-    [classes.button]: true,
-    [classes[size]]: size,
-    [classes[color]]: color,
-    [classes.round]: round,
-    [classes.fullWidth]: fullWidth,
-    [classes.disabled]: disabled,
-    [classes.simple]: simple,
-    [classes.block]: block,
-    [classes.link]: link,
-    [classes.justIcon]: justIcon,
-    [className]: className
-  });
-  return (
-    <Button {...rest} ref={ref} className={btnClasses}>
-      {children}
-    </Button>
-  );
-});
-
-RegularButton.propTypes = {
-  color: PropTypes.oneOf([
-    "primary",
-    "info",
-    "success",
-    "warning",
-    "danger",
-    "rose",
-    "white",
-    "facebook",
-    "twitter",
-    "google",
-    "github",
-    "transparent"
-  ]),
-  size: PropTypes.oneOf(["sm", "lg"]),
-  simple: PropTypes.bool,
-  round: PropTypes.bool,
-  fullWidth: PropTypes.bool,
-  disabled: PropTypes.bool,
-  block: PropTypes.bool,
-  link: PropTypes.bool,
-  justIcon: PropTypes.bool,
-  children: PropTypes.node,
-  className: PropTypes.string
-};
-
-export default RegularButton;
-
-*/
 interface IProps {
+  disabled?: boolean,
   className?: string, 
   onKeyPress?: any,
   onClick?: any, 
   [x: string]: any
 }
 
-export const Button: React.FC<IProps>= ({
+export const ButtonWrapper: React.FC<IProps>= ({
+  disabled = false,
   className = "",
   onKeyPress = null,
   onClick = null, 
   ...props
 }) => {
+
   const handleKeyPress = (e: any) => {
     if (onKeyPress) {
       onKeyPress(e);
@@ -113,66 +39,70 @@ export const Button: React.FC<IProps>= ({
   };
   
   return (
-    <button onKeyPress={handleKeyPress} onClick={handleClick} type="button" className={`if ${className}`} {...props}>
+    <button onKeyPress={handleKeyPress} onClick={handleClick} disabled={disabled} type="button" className={className} {...props}>
       {props.children}
     </button>
   );
 };
 
-interface IChildProp {
-  className?: string, 
-  children?: any,
+interface IButton {
+  
+  styleType?: "primary" | "secondary" | "tertiary" | "info";
+  size?: "large",
+  loading?: boolean, 
+  disabled?: boolean,
+  onKeyPress?: any,
+  onClick?: any, 
   [x: string]: any
 }
 
-export const ButtonPrimary: React.FC<IChildProp>= ({
-  className = "",
-  children = null,
-...props
-}) => (
-  <Button className={`button primary ${className}`} {...props}>
-    {children}
-  </Button>
-);
+const styleLoadColors  = {
+  primary: "white",
+  secondary: "blue",
+  tertiary: "blue",
+  info: "white",
+} as const;
 
-export const ButtonPrimaryCTA: React.FC<IChildProp>= ({
-  className = "",
-  children = null,
-...props
-}) => (
-  <Button className={`button primary large ${className}`} {...props}>
-    {children}
-  </Button>
-);
+export const Button : React.FC<IButton> = ({
+  styleType = "primary",
+  size = "",
+  loading = false,
+  disabled = false,
+  onKeyPress = null,
+  onClick = null, 
+  ...props
+}) => {
+ 
+  return (
+    <ButtonWrapper className={`if button ${styleType} ${size}`} disabled={disabled} onKeyPress={onKeyPress} onClick={onClick} {...props}>
+      <HorizontalLoader isLoading={loading} size="small" color={styleLoadColors[styleType]} /> 
+      {props.children}
+    </ButtonWrapper>
+  );
+};
 
-export const ButtonSecondary: React.FC<IChildProp>= ({
-  className = "",
-  children = null,
-...props
-}) => (
-  <Button className={`button secondary ${className}`} {...props}>
-    {children}
-  </Button>
-);
+interface IIconButtonProps {
+  icon: string,
+  size?: "large",
+  disabled?: boolean,
+  onKeyPress?: any,
+  onClick?: any, 
+  [x: string]: any
+}
 
-export const ButtonTertiary: React.FC<IChildProp>= ({
-  className = "",
-  children = null,
-...props
-}) => (
-  <Button className={`button tertiary ${className}`} {...props}>
-    {children}
-  </Button>
-);
-
-export const ButtonInfo: React.FC<IChildProp>= ({
-  className = "",
-  children = null,
-...props
-}) => (
-  <Button className={`button info ${className}`} {...props}>
-    {children}
-  </Button>
-);
+export const IconButton : React.FC<IIconButtonProps> = ({
+  icon,
+  size = "",
+  disabled = false,
+  onKeyPress = null,
+  onClick = null, 
+  ...props
+}) => {
+  return (
+    <ButtonWrapper className={`if button icon ${icon} ${size} ${disabled ? "disabled" : ""}`} disabled={disabled} onKeyPress={onKeyPress} onClick={onClick} {...props}>
+      {props.children}
+    </ButtonWrapper>
+  );
+}
 
 export default Button;
