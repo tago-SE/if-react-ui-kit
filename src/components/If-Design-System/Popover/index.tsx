@@ -11,11 +11,6 @@ interface IProps {
     
 }
   
-/**
- * To pass in the position we use the props.style attribute. Example:
- * <Popover style={{position: "absolute", left: "150px", top: "auto", right: "auto", bottom: "-20px",  transform: "none"}} />
- * 
- */
 export const Popover: React.FC<IProps>= ({
     id = "",
     title = "",
