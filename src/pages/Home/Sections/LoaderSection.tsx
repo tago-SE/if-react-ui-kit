@@ -35,7 +35,7 @@ export const LoaderSection = () => {
                 <HorizontalLoader size="large" color="brown"/>
             </GridItem>
             <GridItem xs={3} style={{backgroundColor: "black"}}>
-                <HorizontalLoader size="medium" color="white"/>
+                <HorizontalLoader size="large" color="white"/>
             </GridItem>
             <GridItem xs={3}>
                 <HorizontalLoader size="large" color="blue"/>

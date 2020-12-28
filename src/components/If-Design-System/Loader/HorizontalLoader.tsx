@@ -8,7 +8,7 @@ const colors = {
 
 interface IProps {
   isLoading?: boolean,
-  size?: "small" | "medium" | "large" | "largest",
+  size?: "small" | "large" | "largest",
   color?: "white" | "blue" | "brown",
   [x: string]: any
 }

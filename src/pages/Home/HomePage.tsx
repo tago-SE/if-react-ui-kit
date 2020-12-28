@@ -27,6 +27,7 @@ import { Block, Container } from '../../components/If-Design-System/Container';
 // Sections
 import ButtonSection from './Sections/ButtonSection';
 import LoaderSection from './Sections/LoaderSection';
+import PopoverSection from './Sections/PopoverSection';
 
 const HomePage = () => {
     const items = [
@@ -98,6 +99,9 @@ const HomePage = () => {
 
 
     <ButtonSection />
+    <br />
+    <PopoverSection />
+    <br />
     <LoaderSection />
   
     <Block>

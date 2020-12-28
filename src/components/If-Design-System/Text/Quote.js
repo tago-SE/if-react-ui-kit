@@ -23,3 +23,16 @@
 //   text: PropTypes.node,
 //   author: PropTypes.node
 // };
+
+/*
+box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+    border-color: #e8e0d9;
+    margin-top: 1rem;
+    margin-bottom: 3.5rem;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom-width: 1pt;
+    */

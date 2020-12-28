@@ -1,17 +1,49 @@
 // import React from "react";
 import { Container, Block } from "../../components/If-Design-System/Container";
+import { GridContainer, GridRow, GridItem } from "../../components/If-Design-System/Grid";
+
 import { Main } from "../../components/If-Design-System/Main";
 import { Heading, TitleHeading } from "../../components/If-Design-System/Heading";
 import { Avatar } from "../../components/If-Design-System/Avatar";
 
-import { TextBody } from "../../components/If-Design-System/Typography/Text.Body";
+import { TextBody } from "../../components/If-Design-System/Text/Text.Body";
 
 export const BlogPage = () => {
 
     return (
         <Main>
             <Block trailingClassName="light">
-                <div className="if container" style={{width: "40%"}}>
+                
+                <Container>
+                    <GridContainer>
+                        <GridRow>
+                            <GridItem huger={12}>
+                                <Heading marginBottom="0px">Volvia case study</Heading>
+                                <hr className="if" style={{paddingBottom: "0px"}}/>
+                            </GridItem>
+                        </GridRow>
+                        <GridRow>
+                            <GridItem xs={1}>
+                                <Avatar/>
+                            </GridItem>
+                            <GridItem xs={10}>
+                                <p>Hiho</p>
+                            </GridItem>
+                        </GridRow>
+                        <GridRow>
+                            <GridItem huge={12}>
+                                <br />
+                                <img className="if image studio responsively-lazy" alt="" src="https://v.imgi.no/vsg3eefy2v-SQUARE/400" 
+                                data-srcset="https://v.imgi.no/vsg3eefy2v-SQUARE/400 400w, https://v.imgi.no/vsg3eefy2v-SQUARE/560 560w"
+                                style={{width: "95%"}}/>
+                                <p className="if preview">
+                                    Selv om skolene nå åpner opp er det mange barn som fortsatt ikke får møtt klassekameratene sine som
+                                    følge av koronapandemien. Derfor tar If klasserommet hjem til barna.
+                                </p>
+                            </GridItem>
+                        </GridRow>
+                    </GridContainer>
+                    
                     <div className="if content">
                         <Heading marginBottom="0px">Volvia</Heading>
                         <hr className="if" style={{paddingBottom: "0px"}}/>
@@ -19,6 +51,7 @@ export const BlogPage = () => {
                             Selv om skolene nå åpner opp er det mange barn som fortsatt ikke får møtt klassekameratene sine som
                             følge av koronapandemien. Derfor tar If klasserommet hjem til barna.
                         </p>
+                  
                         <div className="if meta">
                             <ul className="if tags">
                                 <li className="if">
@@ -32,7 +65,7 @@ export const BlogPage = () => {
                         </div>
                     </div>
                     <hr className="if" />
-                </div>
+                </Container>
             </Block>
 
 
@@ -43,7 +76,7 @@ export const BlogPage = () => {
             }
             <Block>
                 {/* The width must be default when the display is under a certain size*/}
-                <div className="if container" style={{width: "40%"}}>
+                <div className="if container">
                     <Heading size="largest" rank={1} trailingClassName="center">
                         Body text modules
                     </Heading>

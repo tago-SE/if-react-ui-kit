@@ -12,7 +12,7 @@ import JoinUsPage from './pages/JoinUs';
 import WhyUsPage from './pages/WhyUsPage';
 import RolePage from './pages/RolePage';
 
-import BlogPage from './pages/News/BlogPage';
+import BlogPage from './pages/Article/ArticlePage';
 
 // Boiler plates
 
