@@ -75,7 +75,9 @@ export const PopoverSection = () => {
                     <Tooltip 
                         text="This is a button. This is a very long tooltip. Disgusting. Ughh. Please." 
                         position="left" 
-                        underlineTarget
+                        width="240px"
+                        fadeInTime={1.0}
+                        underline
                     >
                         <Button styleType="tertiary" onClick={() => alert("left")}>Left</Button>
                     </Tooltip>

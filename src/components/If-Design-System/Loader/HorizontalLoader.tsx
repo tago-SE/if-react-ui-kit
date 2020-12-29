@@ -20,6 +20,7 @@ export const HorizontalLoader: React.FC<IProps> = ({
   ...props
 }) => {
   if (!isLoading) return null;
+  const fillColor = colors[color];
   return (
     <svg
       className={`if loader dots horizontal ${size}`}
@@ -27,9 +28,9 @@ export const HorizontalLoader: React.FC<IProps> = ({
       viewBox="0 0 64 64"
       {...props}>
       <g className="if svg g">
-        <circle className="if svg circle" fill={colors[color]} cx="8" cy="32" r="8" />
-        <circle className="if svg circle" fill={colors[color]} cx="32" cy="32" r="8" />
-        <circle className="if svg circle" fill={colors[color]} cx="56" cy="32" r="8" />
+        <circle className="if svg circle" fill={fillColor} cx="8" cy="32" r="8" />
+        <circle className="if svg circle" fill={fillColor} cx="32" cy="32" r="8" />
+        <circle className="if svg circle" fill={fillColor} cx="56" cy="32" r="8" />
       </g>
     </svg>
   );
