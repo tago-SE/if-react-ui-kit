@@ -79,16 +79,19 @@ const JoinUsPage = () => (
 
 <div className="if block">
   <div className="if container center"> 
-  <h2 className="if heading larger center">Benefits</h2>
-    <UspList>
-
-
+  <h2 className="if heading large">Benefits</h2>
+  <p className="if text">
+    At If, we value and strive for work-life balance. Here are just a few of the ways we attain that.
+  </p>
+    <UspList alignLeft>
       {/*
         Company wide bonus compensation policies
         Lunch contribution
         Support for parents
         
       */}
+      <UspItem title="Insurances" text="Reduced price on our insurances." />
+
       <UspItem title="Monthlty Developer Forum" text="Take part in our knowledge sharing events across our tech community." />
 
       <UspItem title="A generous personal development budget" text="We are always investing in our people." />
