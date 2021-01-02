@@ -34,7 +34,7 @@ const TooltipStyleWrapper = styled.div<{
         padding: 5px 10px;
         border-radius: 4px;
     
-        // Tooltip posiiton
+        // Tooltip position
         position: absolute;
         z-index: 1;
         &.right {  
@@ -59,7 +59,6 @@ const TooltipStyleWrapper = styled.div<{
             visibility: hidden;
             opacity: 0.0;
             transition: opacity ${props => props.fadeInTime};
-            background-color: red;
         }
         &.is-closed {
             visibility: hidden;
