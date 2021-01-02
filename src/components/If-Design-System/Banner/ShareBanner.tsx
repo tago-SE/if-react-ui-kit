@@ -29,8 +29,8 @@ export const ShareBanner: React.FC<IShareBanner> = ({
         <div className = "if banner share">
             <div className = "if content">
                 <ul className="if">
-                    {companies.map( (company: IShareBannerCompany) => (
-                        <ShareBannerCompany company={company.company} href={company.href} text={company.text}/>
+                    {companies.map( (item: IShareBannerCompany) => (
+                        <ShareBannerCompany company={item.company} href={item.href} text={item.text}/>
                     ))}
                 </ul>
             </div>
