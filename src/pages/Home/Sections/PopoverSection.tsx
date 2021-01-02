@@ -8,12 +8,15 @@ import { Heading } from '../../../components/If-Design-System/Heading';
 export const PopoverSection = () => {
     const [currentOpen, setCurrentOpen] = React.useState("");
 
+    const [tooltipOpen, setTooltipOpen] = React.useState(false);
+ 
     const toggleOpen = (name: string) => {
         if (currentOpen === name) setCurrentOpen("");
         else setCurrentOpen(name);
     }
 
     const isOpen = (name: string) => currentOpen === name;
+
 
     return (<>
     <div className="if block">
@@ -95,6 +98,24 @@ export const PopoverSection = () => {
                 <GridItem  xs={3}>
                     <Tooltip text="This." position="right">
                         <Button styleType="tertiary" onClick={() => alert("right")}>Right</Button>
+                    </Tooltip>
+                </GridItem>
+            </GridRow>
+
+            <GridRow>
+                <GridItem xs={3}>
+                    <Tooltip 
+                        text="This is a button. This is a very long tooltip. Disgusting. Ughh. Please." 
+                        position="left" 
+                        width="240px"
+                        fadeInTime={1.0}
+                        hoverable={false}
+                        isVisible={tooltipOpen}
+                        underline
+                    >
+                        <Button styleType="tertiary" onClick={() => {
+                            setTooltipOpen(tooltipOpen ? false : true);
+                        }}>Click Me</Button>
                     </Tooltip>
                 </GridItem>
             </GridRow>
