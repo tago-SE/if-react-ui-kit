@@ -24,6 +24,8 @@ import { PartnerBlock } from '../Partners/PartnerBlock';
 
 import { Block, Container } from '../../components/If-Design-System/Container';
 
+import { ShareBanner } from '../../components/If-Design-System/Banner/ShareBanner';
+
 // Sections
 import ButtonSection from './Sections/ButtonSection';
 import LoaderSection from './Sections/LoaderSection';
@@ -130,15 +132,18 @@ const HomePage = () => {
     </ListMenu>
     <div className="if block">
         <div className="if container">
-            <div className="if banner share">
-                <div className="if content">
-                    <ul className="if">
-                        <li className="if facebook"><a className="if" href="https://wwww.google.com">Share on Facebook</a></li>
-                        <li className="if linkedin"><a className="if" href="https://wwww.google.com">Share on LinkedIn</a></li>
-                        <li className="if twitter"><a className="if" href="https://wwww.google.com">Share on Twitter</a></li>
-                    </ul>
-                </div>
-            </div>
+          <ShareBanner companies={[
+            {
+              company: "facebook", href: "https://wwww.google.com", text: "Share on Facebook"
+            },
+            {
+              company: "twitter", href: "https://wwww.google.com", text: "Share on Twitter"
+            },
+            {
+              company: "linkedin", href: "https://wwww.google.com", text: "Share on LinkedIn"
+            }
+          ]}>
+          </ShareBanner>
         </div>
     </div>
 
