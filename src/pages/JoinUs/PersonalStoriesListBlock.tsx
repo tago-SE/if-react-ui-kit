@@ -2,7 +2,8 @@ import React from 'react';
 
 import { Block } from '../../components/If-Design-System/Container';
 import { Heading } from '../../components/If-Design-System/Heading';
-import { Teaser, TeaserContainer } from '../../components/If-Design-System/Teasers'
+import { Teaser } from '../../components/If-Design-System/Card/Teaser'
+import { TeaserContainer } from '../../components/If-Design-System/Card';
 
 /*
   https://www.klarna.com/careers/personal-stories/alexandre-borel/

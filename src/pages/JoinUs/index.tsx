@@ -3,7 +3,7 @@ import React from 'react';
 import { Block, Container} from '../../components/If-Design-System/Container';
 import { IFContent } from "../../components/If-Design-System/Content";
 import { Main } from '../../components/If-Design-System/Main';
-import { IFVideoContent } from '../../components/If-Design-System/Video';
+import { VideoContent } from '../../components/If-Design-System/Video/Video';
 import { Heading } from '../../components/If-Design-System/Heading';
 import { IFSuccessNotification } from '../../components/If-Design-System/Notification';
 import GrowthTreeMock, { GrowthTreeMockColumn } from '../../components/Custom/GrowthTree';
@@ -278,7 +278,7 @@ const JoinUsPage = () => (
                 </p>  
                 <a href="/asdasd" className="if standalone">Läs mer om vår drulleförsäkring</a>
               </IFContent>
-              <IFVideoContent 
+              <VideoContent 
                   url="https://www.dreambroker.com/channel/qtauayyk/v8ukrs97/get/fullhd.mp4" 
                   posterUrl="https://v.imgi.no/cxb3sdbcsn-MOODBOARD/2042"
                   coverTitle="If Drulleförsäkring"
@@ -300,7 +300,7 @@ const JoinUsPage = () => (
                 <a href="/asdasd" className="if standalone">Läs mer om vår drulleförsäkring</a>
               </IFContent>
 
-                <IFVideoContent 
+                <VideoContent 
                   url="https://www.dreambroker. /channel/qtauayyk/v8ukrs97/get/fullhd.mp4" 
                   posterUrl="https://v.imgi.no/cxb3sdbcsn-MOODBOARD/2042"
                   coverTitle="Purpose"
@@ -319,7 +319,7 @@ const JoinUsPage = () => (
                 </p>
                 <a href="/asdasd" className="if standalone">Läs mer om vår drulleförsäkring</a>
               </div>
-              <IFVideoContent 
+              <VideoContent 
                 url="https://www.youtube.com/watch?v=VAC-5BQnuXI&amp;list=PL2satA_B-xnSAxmFXHgb1tsaVJ_Pfhrg2" 
                 coverTitle="The Almighty Loaf"
                 coverDescription="We are all yeast m'lady"

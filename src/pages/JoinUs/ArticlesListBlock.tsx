@@ -3,7 +3,7 @@ import React from 'react';
 import { Block } from '../../components/If-Design-System/Container';
 import { Heading } from '../../components/If-Design-System/Heading';
 
-import { Teaser, TeaserContainer } from '../../components/If-Design-System/Teasers'
+import { Teaser, TeaserContainer, VideoTeaser } from '../../components/If-Design-System/Card'
 
 const ArticlesListBlock = () => {
 
@@ -52,6 +52,12 @@ Would you like to contribute? Get in touch with Per Ol-Ers.
             <Heading rank={2} size="large" trailingClassName="center" style={{ bottomMargin: "4rem"}}>Community</Heading>
             <TeaserContainer>
               {profiles.map(profile => <Teaser 
+                  title={profile.name} 
+                  text={profile.workRole}
+                  image={ { path: profile.imageUrl} }
+                  link={{ name: profile.link.name, path: profile.link.path, target: ""}}
+              />)}
+               {profiles.map(profile => <VideoTeaser 
                   title={profile.name} 
                   text={profile.workRole}
                   image={ { path: profile.imageUrl} }

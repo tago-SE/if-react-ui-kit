@@ -20,7 +20,7 @@ enum VideoState {
   Playing = "is-active",
 }
 
-export const IFVideoContent : React.FC<IProps> = ({
+export const VideoContent : React.FC<IProps> = ({
   url,
   preload=false,
   controls=true,
