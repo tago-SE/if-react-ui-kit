@@ -55,7 +55,7 @@ Would you like to contribute? Get in touch with Per Ol-Ers.
                   heading={{children: profile.name}}
                   text={profile.workRole}
                   image={ { src: profile.imageUrl} }
-                  link={{ name: profile.link.name, href: profile.link.path, target: ""}}
+                  link={{ title: profile.link.name, href: profile.link.path, target: ""}}
               />)}
                {profiles.map(profile => <VideoTeaser 
                   title={profile.name} 

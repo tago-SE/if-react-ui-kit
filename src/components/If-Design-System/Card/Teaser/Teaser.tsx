@@ -18,7 +18,7 @@ interface IImage {
 }
 
 interface ILink {
-  name: string,
+  title: string,
   href: string,
   target?: string, 
 }
@@ -30,7 +30,6 @@ interface ITeaser {
   image?: IImage, 
   linkImage?: boolean,                  
   link: ILink,
-  maxWidth?: number,
   [x: string]: any
 }
 
@@ -41,7 +40,6 @@ export const Teaser: React.FC<ITeaser>= ({
     image = null,
     link,
     linkImage = false,
-    maxWidth = 500,
     ...props
 }) => {
 
@@ -58,11 +56,13 @@ export const Teaser: React.FC<ITeaser>= ({
   }
 
   return (
-      <li className="if teaser" {...props} style={{maxWidth: maxWidth}}>
+      <li className="if teaser" {...props}>
         {imageContent()}
         <Heading {...heading} />
         <p className="if">{text}&nbsp;</p>
-        <a href={link.href} title={link.name} target="" className="if standalone">{link.name}</a>
+        {link ? (
+          <a href={link.href} title={link.title} target={link.target} className="if standalone">{link.title}</a>
+        ) : null}
       </li>
   );
 };
