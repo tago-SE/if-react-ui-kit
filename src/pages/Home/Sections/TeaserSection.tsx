@@ -1,6 +1,7 @@
 import { Container, Block } from '../../../components/If-Design-System/Container';
 import { Heading } from '../../../components/If-Design-System/Heading';
 import { TeaserList, Teaser } from '../../../components/If-Design-System/Card/Teaser';
+import { Modal } from '../../../components/If-Design-System/Modal';
 
 //  <Image type="default" responsivelyLazy src={image.src} />
 
@@ -69,8 +70,9 @@ export const TeaserSection = () => {
                     />
     
                 </TeaserList>
-                    
+                <Modal title="My Video" closableTitle={true} meta={{description: "video modal"}}/>
             </Container>
+            
         </Block>
     );
 }

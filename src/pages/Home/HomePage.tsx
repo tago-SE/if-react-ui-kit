@@ -33,6 +33,7 @@ import PopoverSection from './Sections/PopoverSection';
 import ArticleSection from './Sections/ArticleSection';
 import TeaserSection from './Sections/TeaserSection';
 
+// import { Backdrop } from '../../components/If-Design-System/Modal/index';
 
 const HomePage = () => {
     const items = [
@@ -95,8 +96,9 @@ const HomePage = () => {
         }
     ];
     return (
+      <>
     <Main>
-
+    
         
     <ListMenu focusColor="blue">
       {items.map((item, index) => <ListMenuItem key={index} {...item} />)}
@@ -309,7 +311,7 @@ const HomePage = () => {
             </div>
         </div>
   </Main>
-    );
+  </>);
 }
 
 export default HomePage;
