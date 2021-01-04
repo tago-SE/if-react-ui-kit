@@ -30,6 +30,7 @@ import { ShareBanner } from '../../components/If-Design-System/Banner/ShareBanne
 import ButtonSection from './Sections/ButtonSection';
 import LoaderSection from './Sections/LoaderSection';
 import PopoverSection from './Sections/PopoverSection';
+import ArticleSection from './Sections/ArticleSection';
 
 const HomePage = () => {
     const items = [
@@ -105,6 +106,9 @@ const HomePage = () => {
     <PopoverSection />
     <br />
     <LoaderSection />
+
+    <br />
+    <ArticleSection />
   
     <Block>
         <Container>

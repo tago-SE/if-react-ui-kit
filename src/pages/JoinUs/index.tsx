@@ -3,7 +3,7 @@ import React from 'react';
 import { Block, Container} from '../../components/If-Design-System/Container';
 import { Content } from "../../components/If-Design-System/Content";
 import { Main } from '../../components/If-Design-System/Main';
-import { VideoContent } from '../../components/If-Design-System/Video/Video';
+import { VideoContent } from '../../components/If-Design-System/Video';
 import { Heading } from '../../components/If-Design-System/Heading';
 import { IFSuccessNotification } from '../../components/If-Design-System/Notification';
 import GrowthTreeMock, { GrowthTreeMockColumn } from '../../components/Custom/GrowthTree';
@@ -32,8 +32,6 @@ const OurCoreValues = () => {
     <PersonalStoriesListBlock />
   </>);
 }
-
-
 
 const JoinUsPage = () => (
 
