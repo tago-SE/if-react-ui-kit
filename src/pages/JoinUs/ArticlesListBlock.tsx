@@ -52,10 +52,10 @@ Would you like to contribute? Get in touch with Per Ol-Ers.
             <Heading rank={2} size="large" trailingClassName="center" style={{ bottomMargin: "4rem"}}>Community</Heading>
             <TeaserList>
               {profiles.map(profile => <Teaser 
-                  title={profile.name} 
+                  heading={{children: profile.name}}
                   text={profile.workRole}
-                  image={ { path: profile.imageUrl} }
-                  link={{ name: profile.link.name, path: profile.link.path, target: ""}}
+                  image={ { src: profile.imageUrl} }
+                  link={{ name: profile.link.name, href: profile.link.path, target: ""}}
               />)}
                {profiles.map(profile => <VideoTeaser 
                   title={profile.name} 

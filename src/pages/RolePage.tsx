@@ -102,10 +102,10 @@ const RolePage = () => {
             </Heading>
             <TeaserList>
               <Teaser 
-                  title={profile.name} 
+                    heading={{children: profile.name}}
                   text={profile.workRole}
-                  image={ { path: profile.imageUrl} }
-                  link={{ name: profile.link.name, path: profile.link.path, target: ""}}
+                  image={ { src: profile.imageUrl} }
+                  link={{ name: profile.link.name, href: profile.link.path, target: ""}}
               />
             </TeaserList>
           </div>    

@@ -1,35 +1,31 @@
 import React from 'react';
 
-export interface ImageProps {
-  fluid?: boolean;
-  rounded?: boolean;
-  roundedCircle?: boolean;
-  thumbnail?: boolean;
+export interface IImage {
+  type?: "default" | "studio"; // "lifestyle" does not work outside a span...
+  responsivelyLazy?: boolean,
+  src: string,
   alt?: string,
+  [x: string]: any
 }
-const Image = React.forwardRef<HTMLImageElement, ImageProps>(
-    (
-      { fluid, rounded, roundedCircle, thumbnail, ...props }, 
-      ref, 
-      alt = ""
-    ) => {
-    //   bsPrefix = useBootstrapPrefix(bsPrefix, 'img');
-  
-    //   const classes = classNames(
-    //     fluid && `${bsPrefix}-fluid`,
-    //     rounded && `rounded`,
-    //     roundedCircle && `rounded-circle`,
-    //     thumbnail && `${bsPrefix}-thumbnail`,
-    //   );
-  
-      return (
-        <img
-          ref={ref}
-          alt = {alt}
-          {...props}
-        />
-      );
-    },
+
+export const Image = React.forwardRef<HTMLImageElement, IImage>(
+  (
+    { 
+      type = "", 
+      responsivelyLazy, 
+      ...props }, 
+    ref, 
+    alt = ""
+  ) => {
+    return (
+      <img
+        className={`if image${type === "default" ? "" : " " + type}${responsivelyLazy ? " responsively-lazy" : ""}`}
+        ref={ref}
+        alt={alt}
+        {...props}
+      />
+    );
+  },
 );
 
 export default Image;

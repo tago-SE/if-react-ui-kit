@@ -8,12 +8,11 @@ interface IStyleProps {
   marginBottom: string,
 };
 
-const HeadingStyle = styled.section<IStyleProps>`
+const HeadingStyle = styled.span<IStyleProps>`
   display: flex;
+  margin: 0;
   justify-content: ${props => props.justifyContent};
   & .if.heading {
-    max-width: fit-content;
-    max-height: fit-content;
     margin-bottom: ${props => props.marginBottom};
     display: auto;
     &:hover {
@@ -22,7 +21,7 @@ const HeadingStyle = styled.section<IStyleProps>`
   }
 `
 
-interface IProps {
+export interface IHeading {
   children: ReactNode,
   size?: 'largest' | 'larger' | 'large' | 'medium' | 'small' | 'smallest',
   rank?: 1 | 2 | 3 | 4 | 5 | 6,
@@ -33,9 +32,18 @@ interface IProps {
   [x: string]: any
 }
 
-export const Heading: React.FC<IProps>= ({
+const rankMap = {
+  "largest": 1,
+  "larger": 2,
+  "large": 3,
+  "medium": 4,
+  "small": 5,
+  "smallest": 6,
+}
+
+export const Heading: React.FC<IHeading>= ({
   children,
-  rank = 1,
+  rank = undefined,
   size = "largest",
   marginBottom = "",
   justifyContent = "",
@@ -43,7 +51,7 @@ export const Heading: React.FC<IProps>= ({
   focusColor = "",
   ...props
 }) => {
-  const Heading: any = "h" + rank;
+  const Heading: any = "h" + (rank ? rank : rankMap[size]);
   return (
     <HeadingStyle marginBottom={marginBottom} textColor={textColor} focusColor={focusColor} justifyContent={justifyContent}>
       <Heading className={`if heading ${size}`} {...props}>
@@ -53,9 +61,9 @@ export const Heading: React.FC<IProps>= ({
   );
 };
 
-export const TitleHeading: React.FC<IProps>= ({
+export const TitleHeading: React.FC<IHeading>= ({
   children,
-  rank = 1, 
+  rank = undefined,
   size = "largest",
   marginBottom = "",
   justifyContent = "",
@@ -63,7 +71,7 @@ export const TitleHeading: React.FC<IProps>= ({
   focusColor = "",
   ...props
 }) => {
-  const Heading: any = "h" + rank;
+  const Heading: any = "h" + (rank ? rank : rankMap[size]);
   return (
     <HeadingStyle marginBottom={marginBottom} textColor={textColor} focusColor={focusColor} justifyContent={justifyContent}>
       <Heading className={`if title heading ${size}`} {...props}>
