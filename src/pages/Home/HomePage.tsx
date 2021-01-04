@@ -108,6 +108,7 @@ const HomePage = () => {
   
     <Block>
         <Container>
+            {/* Who is using our products volvia*/}
             <PartnerBlock />
             <PartnerLogoList>
                 <PartnerLogoItem src="./images/volvia.svg"/>

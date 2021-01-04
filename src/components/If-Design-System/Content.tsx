@@ -7,7 +7,7 @@ interface IProps {
   [x: string]: any
 };
 
-export const IFContent : React.FC<IProps> = ({
+export const Content : React.FC<IProps> = ({
   className="",
   children=null,
   ...props
@@ -15,4 +15,4 @@ export const IFContent : React.FC<IProps> = ({
   return (<div className={`if content${(className ? " " + className : "")}`} {...props}>{children}</div>);
 }
 
-export default IFContent;
+export default Content;

@@ -1,6 +1,6 @@
 import { Heading, TitleHeading } from "../../components/If-Design-System/Heading";
 import { Block, Container} from '../../components/If-Design-System/Container';
-import { IFContent } from "../../components/If-Design-System/Content";
+import { Content } from "../../components/If-Design-System/Content";
 // import { Heading } from '../../components/If-Design-System/Heading';
 
 export const PartnerBlock = () => {
@@ -10,7 +10,7 @@ export const PartnerBlock = () => {
         <hr className="if" />
         <section className="if split small">
           <Container>
-            <IFContent>
+            <Content>
               <TitleHeading size="small" rank={3}>
                 Volvia
               </TitleHeading>
@@ -20,7 +20,7 @@ export const PartnerBlock = () => {
               </p>  
               <small className="if author"><b>John Doe ・</b> Product Owner</small><br /><br />
               <a href="/blog" className="if standalone">Read case study</a>
-            </IFContent>
+            </Content>
             <img src="https://www.volvia.se/globalassets/volvia/small/volvo-oppen-bagagelucka-vid-hus.jpg" alt="Vit Volvo med öppen bagagelucka " 
               style={{width: "50%"}}
             />

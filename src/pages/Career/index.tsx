@@ -1,11 +1,16 @@
 // import React from 'react';
 
+import { Block, Container } from '../../components/If-Design-System/Container';
 
 export const CareerPage = () => {
     return (
-        <p>
-           This is my career page
-        </p>
+        <Block>
+            <Container>
+                <p>
+                    Hello
+                </p>
+            </Container>
+        </Block>
     );  
 }
 
