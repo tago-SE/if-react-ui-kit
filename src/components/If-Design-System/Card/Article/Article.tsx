@@ -15,14 +15,21 @@ interface ILink {
     target?: string, 
 }
 
+interface IExtras {
+    dateTime?: string,
+    likes?: number,
+    comments?: number,    
+}
+
 interface IProps {
     title: string,
     text: string, 
     image: IImage,  
-    author?: string,
+    link: ILink,  
     categoryName?: string,
-    tags?: Array<ITag>             
-    link: ILink   
+    author?: string,
+    tags?: Array<ITag>,
+    extras?: IExtras,
     type?: "across" | "default" | "reverse",
     [x: string]: any
 }
@@ -34,6 +41,7 @@ export const Article: React.FC<IProps>= ({
     image,
     categoryName = null,
     tags = [],
+    extras = null,
     link,
     type = "default",
     ...props
@@ -69,6 +77,12 @@ export const Article: React.FC<IProps>= ({
                         ))}
                     </ul>
                     <small className="if author text meta">{author}</small>
+                    {extras ? (
+                        <small className="if extras">
+                            <time className="if" dateTime="2020-04-20">{extras?.dateTime}</time><span className="if likes">{extras?.likes}</span>
+                            <span className="if comments">{extras?.comments}</span>
+                        </small>
+                    ) : null}
                 </div>
             </div>
             <span className="if image lifestyle" style={{height: "auto"}}>

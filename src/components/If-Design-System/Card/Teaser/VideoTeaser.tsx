@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { VideoContent } from '../Video';
+import { VideoContent } from '../../Video';
 
 interface IProps {
     title: string,

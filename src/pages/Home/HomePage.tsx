@@ -31,6 +31,8 @@ import ButtonSection from './Sections/ButtonSection';
 import LoaderSection from './Sections/LoaderSection';
 import PopoverSection from './Sections/PopoverSection';
 import ArticleSection from './Sections/ArticleSection';
+import TeaserSection from './Sections/TeaserSection';
+
 
 const HomePage = () => {
     const items = [
@@ -109,6 +111,9 @@ const HomePage = () => {
 
     <br />
     <ArticleSection />
+
+    <br />
+    <TeaserSection />
   
     <Block>
         <Container>

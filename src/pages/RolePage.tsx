@@ -6,7 +6,7 @@ import { Main } from '../components/If-Design-System/Main';
 import { Heading } from '../components/If-Design-System/Heading';
 import { Block, Container } from '../components/If-Design-System/Container';
 import { IFClaimsBanner } from '../components/If-Design-System/Banner';
-import { Teaser, TeaserContainer } from '../components/If-Design-System/Card';
+import { Teaser, TeaserContainer } from '../components/If-Design-System/Card/Teaser';
 
 const role = {
     name: "Full stack developer",

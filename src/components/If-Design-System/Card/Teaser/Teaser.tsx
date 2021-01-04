@@ -1,5 +1,15 @@
 import React from 'react';
 
+/*
+
+With square image
+With studio image
+With text only
+With call to action button
+With large title
+
+*/
+
 interface IProps {
     title: string,
     text: string, 

@@ -3,7 +3,7 @@ import React from 'react';
 import { Block } from '../../components/If-Design-System/Container';
 import { Heading } from '../../components/If-Design-System/Heading';
 
-import { Teaser, TeaserContainer, VideoTeaser } from '../../components/If-Design-System/Card'
+import { Teaser, TeaserContainer, VideoTeaser } from '../../components/If-Design-System/Card/Teaser'
 
 const ArticlesListBlock = () => {
 
