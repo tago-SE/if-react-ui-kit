@@ -161,7 +161,7 @@ const HomePage = () => {
     <div className="if block">
       <div className="if container">
 
-        <Heading rank={1} size="largest" focusColor="blue" justifyContent="center" onClick={() => { alert("hello");}}>Largest</Heading>
+        <Heading rank={1} size="largest" focusColor="blue" center onClick={() => { alert("hello");}}>Largest</Heading>
         <Heading size="larger" focusColor="blue" justifyContent="center" onClick={() => { alert("hello");}}>Larger</Heading>
         <Heading size="large" focusColor="blue" justifyContent="center" onClick={() => { alert("hello");}}>Large</Heading>
         <Heading size="medium" focusColor="blue" justifyContent="center" onClick={() => { alert("hello");}}>Medium</Heading>

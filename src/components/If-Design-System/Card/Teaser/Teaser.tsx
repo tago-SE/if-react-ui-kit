@@ -48,7 +48,7 @@ export const Teaser: React.FC<ITeaser>= ({
   const { size } = heading;
 
   if (!size) 
-    heading.size = "small";
+    heading.size = "smallest";
   
 
   const imageContent = () => {
