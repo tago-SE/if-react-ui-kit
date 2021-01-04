@@ -3,7 +3,7 @@ import React from 'react';
 import { Block } from '../../components/If-Design-System/Container';
 import { Heading } from '../../components/If-Design-System/Heading';
 import { Teaser } from '../../components/If-Design-System/Card/Teaser'
-import { TeaserContainer } from '../../components/If-Design-System/Card/Teaser';
+import { TeaserList } from '../../components/If-Design-System/Card/Teaser';
 
 /*
   https://www.klarna.com/careers/personal-stories/alexandre-borel/
@@ -36,14 +36,14 @@ const PersonalStoriesListBlock = () => {
         <Block className="dark">
           <div className="if container center">
             <Heading rank={2} size="large" trailingClassName="center" style={{ bottomMargin: "4rem"}}>Here you will meet all kinds of people</Heading>
-            <TeaserContainer>
+            <TeaserList>
               {profiles.map(profile => <Teaser 
                   title={profile.name} 
                   text={profile.workRole}
                   image={ { path: profile.imageUrl} }
                   link={{ name: profile.link.name, path: profile.link.path, target: ""}}
               />)}
-            </TeaserContainer>
+            </TeaserList>
           </div>    
       </Block>
     );

@@ -3,7 +3,7 @@ import React from 'react';
 import { Block } from '../../components/If-Design-System/Container';
 import { Heading } from '../../components/If-Design-System/Heading';
 
-import { Teaser, TeaserContainer, VideoTeaser } from '../../components/If-Design-System/Card/Teaser'
+import { Teaser, TeaserList, VideoTeaser } from '../../components/If-Design-System/Card/Teaser'
 
 const ArticlesListBlock = () => {
 
@@ -50,7 +50,7 @@ Would you like to contribute? Get in touch with Per Ol-Ers.
         <Block>
           <div className="if container center">
             <Heading rank={2} size="large" trailingClassName="center" style={{ bottomMargin: "4rem"}}>Community</Heading>
-            <TeaserContainer>
+            <TeaserList>
               {profiles.map(profile => <Teaser 
                   title={profile.name} 
                   text={profile.workRole}
@@ -63,7 +63,7 @@ Would you like to contribute? Get in touch with Per Ol-Ers.
                   image={ { path: profile.imageUrl} }
                   link={{ name: profile.link.name, path: profile.link.path, target: ""}}
               />)}
-            </TeaserContainer>
+            </TeaserList>
           </div>    
       </Block>
     </>);

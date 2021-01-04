@@ -6,7 +6,7 @@ import { Main } from '../components/If-Design-System/Main';
 import { Heading } from '../components/If-Design-System/Heading';
 import { Block, Container } from '../components/If-Design-System/Container';
 import { IFClaimsBanner } from '../components/If-Design-System/Banner';
-import { Teaser, TeaserContainer } from '../components/If-Design-System/Card/Teaser';
+import { Teaser, TeaserList } from '../components/If-Design-System/Card/Teaser';
 
 const role = {
     name: "Full stack developer",
@@ -100,14 +100,14 @@ const RolePage = () => {
             <Heading rank={2} size="large" trailingClassName="center" style={{ bottomMargin: "4rem"}}>
                 Here you will meet all kinds of people
             </Heading>
-            <TeaserContainer>
+            <TeaserList>
               <Teaser 
                   title={profile.name} 
                   text={profile.workRole}
                   image={ { path: profile.imageUrl} }
                   link={{ name: profile.link.name, path: profile.link.path, target: ""}}
               />
-            </TeaserContainer>
+            </TeaserList>
           </div>    
         </Block>
         <IFClaimsBanner title={`Become a ${role.name} at If`} link={{name: "See the available jobs", path: `${role.path}`}}></IFClaimsBanner>

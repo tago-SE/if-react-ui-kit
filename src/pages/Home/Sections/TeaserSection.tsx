@@ -1,6 +1,7 @@
 
 import { Container, Block } from '../../../components/If-Design-System/Container';
 import { Heading } from '../../../components/If-Design-System/Heading';
+import { TeaserList } from '../../../components/If-Design-System/Card/Teaser';
 
 export const TeaserSection = () => {
     return (
@@ -8,7 +9,7 @@ export const TeaserSection = () => {
             <Container> 
                 <Heading size="largest">Teasers</Heading>
                 <Heading size="medium">With square images</Heading>
-                <ul className="if teasers">
+                <TeaserList>
                     <li className="if teaser">
                         <img src="https://v.imgi.no/6bmln7xatt-MOODBOARD/2042" className="if image" />
                         <span className="if heading smallest">Hemförsäkring</span>
@@ -38,7 +39,7 @@ export const TeaserSection = () => {
                         </p>
                         <a href="/aasd" className="if standalone">Till hemsförsäkringar</a>
                     </li>
-                </ul>
+                </TeaserList>
 
 
                 <Heading size="medium">With linked square images</Heading>
