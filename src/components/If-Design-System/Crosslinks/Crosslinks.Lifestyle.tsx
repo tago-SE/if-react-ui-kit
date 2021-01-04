@@ -2,6 +2,7 @@ import React from 'react';
 
 interface ILifestyleProps {
     title: string,
+    text?: string,
     href: string
     imageSrc: string,
     alt?: string,               // Accessability: Should be empty if the image is decoration, otherwise provide an image description
@@ -13,6 +14,7 @@ export const LifestyleCrosslink: React.FC<ILifestyleProps> = ({
     href,
     imageSrc,
     alt = "",
+    text = "",
     ...props
 }) => {
     return (
@@ -20,6 +22,7 @@ export const LifestyleCrosslink: React.FC<ILifestyleProps> = ({
             <a className="if crosslink image" href={href}>
                 <img className="if image" alt={alt} src={imageSrc}/>
                 <p className="if text body">{title}</p>
+                <p className="if text">{text}</p>
             </a>
         </li>
     );

@@ -11,7 +11,7 @@ import HomePage from './pages/Home/HomePage';
 import JoinUsPage from './pages/JoinUs';
 import WhyUsPage from './pages/WhyUsPage';
 import RolePage from './pages/RolePage';
-
+import CareerPage from './pages/Career';
 import BlogPage from './pages/Article/ArticlePage';
 
 // Boiler plates
@@ -47,17 +47,21 @@ function App() {
           path="/join-us/role"
           component={RolePage} 
         />
-         <Route 
+        <Route 
           path="/join-us/story"
           component={PersonalStoryPage} 
         />
-          <Route 
+        <Route 
           path="/join-us/why"
           component={WhyUsPage} 
         />
-         <Route 
+        <Route 
           path="/join-us"
           component={JoinUsPage} 
+        />
+        <Route 
+          path="/career"
+          component={CareerPage} 
         />
         <Route 
           path='/' 
