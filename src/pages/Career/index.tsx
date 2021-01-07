@@ -3,13 +3,16 @@
 import { Block, Container } from '../../components/If-Design-System/Container';
 import { Content } from '../../components/If-Design-System/Content';
 import { VideoContent } from '../../components/If-Design-System/Video';
-
+import { HeaderBanner } from '../../components/If-Design-System/Banner/HeaderBanner'
 export const CareerPage = () => {
     return (
+        <>
+        <HeaderBanner />
+        {}
         <Block>
             <Container>
                 <p>
-                    Hello
+                    Career Page
                 </p>
             
                 {/*<Content>
@@ -20,18 +23,21 @@ export const CareerPage = () => {
                     </p>  
                     <a href="/asdasd" className="if standalone">Läs mer om vår drulleförsäkring</a>
                 </Content> */}
+
+                
                 <Content>
                     <VideoContent 
                         url="https://www.dreambroker.com/channel/qtauayyk/v8ukrs97/get/fullhd.mp4" 
                         posterUrl="https://v.imgi.no/cxb3sdbcsn-MOODBOARD/2042"
                         coverTitle="If Drulleförsäkring"
-                        coverDescription="Se hur If Drulleförsäkring förändrade Anna's vardag"
+                        coverDescription="If Drulleförsäkring förändrade Anna's vardag"
                         />
                 </Content>
                 
            
             </Container>
         </Block>
+        </>
     );  
 }
 

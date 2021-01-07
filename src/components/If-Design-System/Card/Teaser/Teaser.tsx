@@ -48,7 +48,6 @@ export const Teaser: React.FC<ITeaser>= ({
   if (!size) 
     heading.size = "smallest";
   
-
   const imageContent = () => {
     if (image === null) return null;
     if (linkImage) return (<a href={link.href} className="if"><Image {...image} /></a>);

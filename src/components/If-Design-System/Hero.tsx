@@ -13,5 +13,9 @@ className="",
 children=null,
 ...props
 }) => {
-return (<div className={`if content${(className ? " " + className : "")}`} {...props}>{children}</div>);
+return (
+    <div className={`if content${(className ? " " + className : "")}`} {...props}>
+        {children}
+    </div>
+    );
 }

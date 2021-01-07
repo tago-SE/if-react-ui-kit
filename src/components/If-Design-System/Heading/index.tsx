@@ -22,9 +22,6 @@ export const Heading: React.FC<IHeading>= ({
   rank = undefined,
   size = "largest",
   center = false,
-  marginBottom = "",
-  justifyContent = "",
-  textColor = "",
   focusColor = "",
   ...props
 }) => {
@@ -40,10 +37,6 @@ export const TitleHeading: React.FC<IHeading>= ({
   children,
   rank = undefined,
   size = "largest",
-  marginBottom = "",
-  justifyContent = "",
-  textColor = "",
-  focusColor = "",
   ...props
 }) => {
   const Heading: any = "h" + (rank ? rank : rankMap[size]);

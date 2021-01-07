@@ -19,7 +19,7 @@ import {
   ExpandableCrosslinksContainer,
 } from '../../components/If-Design-System/Crosslinks';
 
-import { PartnerLogoItem, PartnerLogoList } from '../../components/Banner';
+import { PartnerLogoItem, PartnerLogoList } from '../../components/If-Design-System/Banner'
 import { PartnerBlock } from '../Partners/PartnerBlock';
 
 import { Block, Container } from '../../components/If-Design-System/Container';
@@ -213,7 +213,7 @@ const HomePage = () => {
     </div>
 
     <div className="if block">
-      <ListColumCrosslinkContainer>
+      <ListColumCrosslinkContainer columns={3}>
           <ListColumnCrosslink title="Innehålstittel" titleSize="medium">
               <ListCrosslink title="Betalningsguide" href="#"/>
               <ListCrosslink title="Därfor väljer du If" href="#"/>

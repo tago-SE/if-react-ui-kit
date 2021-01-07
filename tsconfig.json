@@ -24,7 +24,7 @@
   },
   "include": [
     "src"
-  ],
+, "src/components/If-Design-System/Banner/HeaderBanner.tsx"  ],
   "exclude": [
     "node_modules", 
     "build"]
