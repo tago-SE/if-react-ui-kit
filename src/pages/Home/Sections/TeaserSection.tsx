@@ -1,9 +1,6 @@
 import { Container, Block } from '../../../components/If-Design-System/Container';
 import { Heading } from '../../../components/If-Design-System/Heading';
 import { TeaserList, Teaser } from '../../../components/If-Design-System/Card/Teaser';
-import { Modal } from '../../../components/If-Design-System/Modal';
-
-//  <Image type="default" responsivelyLazy src={image.src} />
 
 export const TeaserSection = () => {
     return (
@@ -61,16 +58,14 @@ export const TeaserSection = () => {
 
                 <Heading size="medium">With large title</Heading>
                 <TeaserList>
-                    <Teaser 
-                        heading={{children: "Hemförsäkring", size: "small" }}
-                        image={{src: "https://v.imgi.no/6bmln7xatt-MOODBOARD/2042", type: "studio", alt: ""}}
-                        text="When it came near enough he perceived that it was not grass; there were no blades, but only purple roots. The
-                        roots were revolving, for each small plant in the whole patch, like the spokes of a rimless wheel."
-                        link={{href: "/aasd", title:"Till hemförsäkring", target: ""}}
-                    />
-    
+                    {[1].map( _ => <Teaser 
+                         heading={{children: "Hemförsäkring", size: "small" }}
+                         image={{src: "https://v.imgi.no/6bmln7xatt-MOODBOARD/2042", type: "studio", alt: ""}}
+                         text="When it came near enough he perceived that it was not grass; there were no blades, but only purple roots. The
+                         roots were revolving, for each small plant in the whole patch, like the spokes of a rimless wheel."
+                         link={{href: "/aasd", title:"Till hemförsäkring", target: ""}}
+                    />)}
                 </TeaserList>
-                <Modal title="My Video" closableTitle={true} meta={{description: "video modal"}}/>
             </Container>
             
         </Block>

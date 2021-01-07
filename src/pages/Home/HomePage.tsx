@@ -32,6 +32,8 @@ import LoaderSection from './Sections/LoaderSection';
 import PopoverSection from './Sections/PopoverSection';
 import ArticleSection from './Sections/ArticleSection';
 import TeaserSection from './Sections/TeaserSection';
+import VideoSection from './Sections/VideoSection';
+
 
 // import { Backdrop } from '../../components/If-Design-System/Modal/index';
 
@@ -112,10 +114,14 @@ const HomePage = () => {
     <LoaderSection />
 
     <br />
+    <VideoSection />
+    
+    <br />
     <ArticleSection />
 
     <br />
     <TeaserSection />
+    
   
     <Block>
         <Container>
