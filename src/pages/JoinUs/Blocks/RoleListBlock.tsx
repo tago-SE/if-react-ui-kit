@@ -40,7 +40,7 @@ const RoleListBlock = () => {
     return (
         <Block>
             <Container>
-                <Heading rank={2} size="large" trailingClassName="center" style={{ bottomMargin: "4rem"}}>Roles that we usually look for</Heading>
+                <Heading rank={2} size="medium" trailingClassName="center" style={{ bottomMargin: "4rem"}}>Roles that we usually look for</Heading>
                 <StudioCrosslinkContainer>
                   {roles.map(role => <>
                   <StudioCrosslink 

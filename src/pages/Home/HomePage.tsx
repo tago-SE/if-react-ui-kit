@@ -34,6 +34,7 @@ import ArticleSection from './Sections/ArticleSection';
 import TeaserSection from './Sections/TeaserSection';
 import VideoSection from './Sections/VideoSection';
 
+import PageTemplatesCrosslinks from './PagesCrosslinks';
 
 // import { Backdrop } from '../../components/If-Design-System/Modal/index';
 
@@ -100,6 +101,8 @@ const HomePage = () => {
     return (
       <>
     <Main>
+
+      <PageTemplatesCrosslinks />
     
         
     <ListMenu focusColor="blue">

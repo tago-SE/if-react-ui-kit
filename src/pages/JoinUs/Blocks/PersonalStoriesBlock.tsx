@@ -33,21 +33,21 @@ const PersonalStoriesBlock = () => {
     ]
   
     return (
-        <Block className="dark">
-          <Container>
-            <Heading rank={2} size="larger" trailingClassName="center" style={{ marginBottom: "25px"}}>Here you will meet all kinds of people</Heading>
-            <p className="if text" style={{width: "76%", marginBottom: "60px"}}>
-              You’ll meet all kinds of people here. Every day they move If forward. They shape our products. They shape our identity. That makes them our biggest assets. Here are just a few of them.
-            </p>
-            <TeaserList>
-              {profiles.map(profile => <Teaser 
-                  heading={{children: profile.name}}
-                  text={profile.workRole}
-                  image={ { src: profile.imageUrl} }
-                  link={{ title: profile.link.name, href: profile.link.path, target: ""}}
-              />)}
-            </TeaserList>
-          </Container>    
+      <Block className="dark">
+        <Container>
+          <Heading rank={2} size="medium" trailingClassName="center" style={{ marginBottom: "25px"}}>Meet our developers</Heading>
+          <p className="if text" style={{width: "76%", marginBottom: "60px"}}>
+            You’ll meet all kinds of people here. Every day they move If forward. They shape our products. They shape our identity. That makes them our biggest assets. Here are just a few of them.
+          </p>
+          <TeaserList>
+            {profiles.map(profile => <Teaser 
+                heading={{children: profile.name}}
+                text={profile.workRole}
+                image={ { src: profile.imageUrl} }
+                link={{ title: profile.link.name, href: profile.link.path, target: ""}}
+            />)}
+          </TeaserList>
+        </Container>    
       </Block>
     );
 }
