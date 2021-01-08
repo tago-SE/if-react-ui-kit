@@ -49,13 +49,13 @@ Would you like to contribute? Get in touch with Per Ol-Ers.
 
         <Block>
           <div className="if container center">
-            <Heading rank={2} size="large" trailingClassName="center" style={{ bottomMargin: "4rem"}}>Community</Heading>
+            <Heading rank={2} size="medium" trailingClassName="center" style={{ bottomMargin: "4rem"}}>Community</Heading>
             <TeaserList>
               {profiles.map(profile => <Teaser 
                   heading={{children: profile.name}}
                   text={profile.workRole}
                   image={ { src: profile.imageUrl} }
-                  link={{ name: profile.link.name, href: profile.link.path, target: ""}}
+                  link={{ title: profile.link.name, href: profile.link.path, target: ""}}
               />)}
                {profiles.map(profile => <VideoTeaser 
                   title={profile.name} 

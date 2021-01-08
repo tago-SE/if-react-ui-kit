@@ -19,7 +19,7 @@ import {
   ExpandableCrosslinksContainer,
 } from '../../components/If-Design-System/Crosslinks';
 
-import { PartnerLogoItem, PartnerLogoList } from '../../components/Banner';
+import { PartnerLogoItem, PartnerLogoList } from '../../components/If-Design-System/Banner'
 import { PartnerBlock } from '../Partners/PartnerBlock';
 
 import { Block, Container } from '../../components/If-Design-System/Container';
@@ -32,7 +32,11 @@ import LoaderSection from './Sections/LoaderSection';
 import PopoverSection from './Sections/PopoverSection';
 import ArticleSection from './Sections/ArticleSection';
 import TeaserSection from './Sections/TeaserSection';
+import VideoSection from './Sections/VideoSection';
 
+import PageTemplatesCrosslinks from './PagesCrosslinks';
+
+// import { Backdrop } from '../../components/If-Design-System/Modal/index';
 
 const HomePage = () => {
     const items = [
@@ -95,8 +99,11 @@ const HomePage = () => {
         }
     ];
     return (
+      <>
     <Main>
 
+      <PageTemplatesCrosslinks />
+    
         
     <ListMenu focusColor="blue">
       {items.map((item, index) => <ListMenuItem key={index} {...item} />)}
@@ -110,10 +117,14 @@ const HomePage = () => {
     <LoaderSection />
 
     <br />
+    <VideoSection />
+    
+    <br />
     <ArticleSection />
 
     <br />
     <TeaserSection />
+    
   
     <Block>
         <Container>
@@ -161,7 +172,7 @@ const HomePage = () => {
     <div className="if block">
       <div className="if container">
 
-        <Heading rank={1} size="largest" focusColor="blue" justifyContent="center" onClick={() => { alert("hello");}}>Largest</Heading>
+        <Heading rank={1} size="largest" focusColor="blue" center onClick={() => { alert("hello");}}>Largest</Heading>
         <Heading size="larger" focusColor="blue" justifyContent="center" onClick={() => { alert("hello");}}>Larger</Heading>
         <Heading size="large" focusColor="blue" justifyContent="center" onClick={() => { alert("hello");}}>Large</Heading>
         <Heading size="medium" focusColor="blue" justifyContent="center" onClick={() => { alert("hello");}}>Medium</Heading>
@@ -205,7 +216,7 @@ const HomePage = () => {
     </div>
 
     <div className="if block">
-      <ListColumCrosslinkContainer>
+      <ListColumCrosslinkContainer columns={3}>
           <ListColumnCrosslink title="Innehålstittel" titleSize="medium">
               <ListCrosslink title="Betalningsguide" href="#"/>
               <ListCrosslink title="Därfor väljer du If" href="#"/>
@@ -309,7 +320,7 @@ const HomePage = () => {
             </div>
         </div>
   </Main>
-    );
+  </>);
 }
 
 export default HomePage;

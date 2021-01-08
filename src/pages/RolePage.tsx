@@ -1,11 +1,13 @@
 import React from 'react';
 
-
+/*
+    Remove
+*/
 
 import { Main } from '../components/If-Design-System/Main';
 import { Heading } from '../components/If-Design-System/Heading';
 import { Block, Container } from '../components/If-Design-System/Container';
-import { IFClaimsBanner } from '../components/If-Design-System/Banner';
+import { IFClaimsBanner } from '../components/If-Design-System/Banner/Banner';
 import { Teaser, TeaserList } from '../components/If-Design-System/Card/Teaser';
 
 const role = {
@@ -105,7 +107,7 @@ const RolePage = () => {
                     heading={{children: profile.name}}
                   text={profile.workRole}
                   image={ { src: profile.imageUrl} }
-                  link={{ name: profile.link.name, href: profile.link.path, target: ""}}
+                  link={{ title: profile.link.name, href: profile.link.path, target: ""}}
               />
             </TeaserList>
           </div>    

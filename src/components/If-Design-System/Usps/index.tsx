@@ -19,7 +19,7 @@ export const UspItem: React.FC<IProps>= ({
     ...props
 }) => {
     return (
-        <li className="if usp">
+        <li className="if usp" {...props}>
             {title ? <span className="if heading smallest">{title}</span> : null}
             <p className="if">{text}{props.children}</p>
         </li>

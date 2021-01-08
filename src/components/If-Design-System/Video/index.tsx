@@ -20,6 +20,14 @@ enum VideoState {
   Playing = "is-active",
 }
 
+/*
+ <div className="if video is-paused">
+            <video className="if player" poster="https://v.imgi.no/cxb3sdbcsn-MOODBOARD/2042" src="https://www.dreambroker.com/channel/qtauayyk/v8ukrs97/get/fullhd.mp4" aria-labelledby="video-0-title">Sorry, your browser doesn't support embedded videos, but don't worry, you can <a href="https://archive.org/details/BigBuckBunny_124">download it</a> and watch it with your favorite video player!</video>
+            <div className="if overlay">
+              <span className="if title" id="video-0-title">If Villaförsäkring</span> <span className="if description">Se hur If Villaförsäkring förändrade Anna’s vardag</span> <button className="if play button secondary" type="button">Spela up filmen</button>
+            </div>
+          </div>
+          */
 export const VideoContent : React.FC<IProps> = ({
   url,
   preload=false,

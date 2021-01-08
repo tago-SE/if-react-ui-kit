@@ -8,56 +8,35 @@ import {
 import './App.css';
 
 import HomePage from './pages/Home/HomePage';
-import JoinUsPage from './pages/JoinUs';
-import WhyUsPage from './pages/WhyUsPage';
+import CareerPage from './pages/JoinUs';
 import RolePage from './pages/RolePage';
-import CareerPage from './pages/Career';
-import BlogPage from './pages/Article/ArticlePage';
+import ArticlePage from './pages/Article';
+import ArticleListPage from './pages/ArticleList';
 
 // Boiler plates
-
-import About from './boiler-plates/BAbout';
 import Home from './boiler-plates/BHome';
-
-// Styled components test
-
 import { Navbar } from './components/NavBar';
-
-import PersonalStoryPage from './pages/PersonalStoryPage';
 
 function App() {
 
   return (<Router>
     <Navbar />  
-      {/* A <Switch> looks through its children <Route>s and renders the first one that matches the current URL. */}
       <Switch>
       <Route 
           path="/boiler/home"
           component={Home} 
         />
         <Route 
-          path="/boiler/about"
-          component={About} 
+          path="/article"
+          component={ArticlePage} 
+        />
+         <Route 
+          path="/life-at-if"
+          component={ArticleListPage} 
         />
         <Route 
-          path="/blog"
-          component={BlogPage} 
-        />
-        <Route 
-          path="/join-us/role"
+          path="/career/role"  
           component={RolePage} 
-        />
-        <Route 
-          path="/join-us/story"
-          component={PersonalStoryPage} 
-        />
-        <Route 
-          path="/join-us/why"
-          component={WhyUsPage} 
-        />
-        <Route 
-          path="/join-us"
-          component={JoinUsPage} 
         />
         <Route 
           path="/career"
