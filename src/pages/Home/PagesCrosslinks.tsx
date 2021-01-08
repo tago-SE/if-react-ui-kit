@@ -13,10 +13,11 @@ export const PageTemplatesCrosslinks = () => {
     return (
         <Block>
             <Container>
-                    <Heading rank={1} size="large">Page Templates</Heading>
+                <Heading rank={1} size="large">Page Templates</Heading>
                 <ButtonCrosslinkContainer columns={4}>
                     <ButtonCrosslink title="Career" href="/career"  />
                     <ButtonCrosslink title="Article" href="/article" />
+                    <ButtonCrosslink title="Article List Page" href="/life-at-if" />
                 </ButtonCrosslinkContainer>
             </Container>
             

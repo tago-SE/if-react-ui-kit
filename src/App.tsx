@@ -10,7 +10,8 @@ import './App.css';
 import HomePage from './pages/Home/HomePage';
 import CareerPage from './pages/JoinUs';
 import RolePage from './pages/RolePage';
-import ArticlePage from './pages/Article/ArticlePage';
+import ArticlePage from './pages/Article';
+import ArticleListPage from './pages/ArticleList';
 
 // Boiler plates
 import Home from './boiler-plates/BHome';
@@ -28,6 +29,10 @@ function App() {
         <Route 
           path="/article"
           component={ArticlePage} 
+        />
+         <Route 
+          path="/life-at-if"
+          component={ArticleListPage} 
         />
         <Route 
           path="/career/role"  
