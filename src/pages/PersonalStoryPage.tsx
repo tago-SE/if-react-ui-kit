@@ -1,9 +1,12 @@
-// I.E Article page
+// I.E Alternative article page
+/*
+    Remove
+*/
 export const PersonalStoryPage = () => {
 
     return (
         <p>
-            Hello
+            To-do
         </p>
     );
 }

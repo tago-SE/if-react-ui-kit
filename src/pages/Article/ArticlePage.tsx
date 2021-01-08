@@ -8,7 +8,7 @@ import { Avatar } from "../../components/If-Design-System/Avatar";
 
 import { TextBody } from "../../components/If-Design-System/Text/Text.Body";
 
-export const BlogPage = () => {
+export const ArticlePage = () => {
 
     return (
         <Main>
@@ -165,4 +165,4 @@ export const BlogPage = () => {
     );
 }
 
-export default BlogPage;
+export default ArticlePage;

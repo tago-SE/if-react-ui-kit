@@ -9,26 +9,17 @@ import './App.css';
 
 import HomePage from './pages/Home/HomePage';
 import CareerPage from './pages/JoinUs';
-import WhyUsPage from './pages/WhyUsPage';
 import RolePage from './pages/RolePage';
-import BlogPage from './pages/Article/ArticlePage';
+import ArticlePage from './pages/Article/ArticlePage';
 
 // Boiler plates
-
-import About from './boiler-plates/BAbout';
 import Home from './boiler-plates/BHome';
-
-// Styled components test
-
 import { Navbar } from './components/NavBar';
-
-import PersonalStoryPage from './pages/PersonalStoryPage';
 
 function App() {
 
   return (<Router>
     <Navbar />  
-      {/* A <Switch> looks through its children <Route>s and renders the first one that matches the current URL. */}
       <Switch>
       <Route 
           path="/boiler/home"
@@ -36,20 +27,12 @@ function App() {
         />
         <Route 
           path="/article"
-          component={BlogPage} 
+          component={ArticlePage} 
         />
         <Route 
-          path="/join-us/role"  
+          path="/career/role"  
           component={RolePage} 
         />
-        {/* <Route 
-          path="/join-us/story"
-          component={PersonalStoryPage} 
-        />
-        <Route 
-          path="/join-us/why"
-          component={WhyUsPage} 
-        /> */}
         <Route 
           path="/career"
           component={CareerPage} 

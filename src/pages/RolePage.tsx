@@ -1,6 +1,8 @@
 import React from 'react';
 
-
+/*
+    Remove
+*/
 
 import { Main } from '../components/If-Design-System/Main';
 import { Heading } from '../components/If-Design-System/Heading';
