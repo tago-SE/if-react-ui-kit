@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import {
   BrowserRouter as Router,
   Switch,
@@ -13,16 +13,19 @@ import RolePage from './pages/RolePage';
 import ArticlePage from './pages/Article';
 import ArticleListPage from './pages/ArticleList';
 
+import { MockHeader } from './MockHeader';
+
+
 // Boiler plates
 import Home from './boiler-plates/BHome';
-import { Navbar } from './components/NavBar';
 
 function App() {
 
-  return (<Router>
-    <Navbar />  
+  return (
+    <Router>
+      <MockHeader />  
       <Switch>
-      <Route 
+        <Route 
           path="/boiler/home"
           component={Home} 
         />
@@ -30,7 +33,7 @@ function App() {
           path="/article"
           component={ArticlePage} 
         />
-         <Route 
+        <Route 
           path="/life-at-if"
           component={ArticleListPage} 
         />

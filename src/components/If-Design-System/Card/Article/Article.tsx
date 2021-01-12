@@ -23,7 +23,7 @@ interface IExtras {
 
 interface IProps {
     title: string,
-    text: string, 
+    text?: string, 
     image: IImage,  
     link: ILink,  
     categoryName?: string,
@@ -31,18 +31,20 @@ interface IProps {
     tags?: Array<ITag>,
     extras?: IExtras,
     type?: "across" | "default" | "reverse",
+    titleMarginBottom?: string,
     [x: string]: any
 }
 
 export const Article: React.FC<IProps>= ({
     title,
-    text,
+    text = "",
     author = "",
     image,
     categoryName = null,
     tags = [],
     extras = null,
     link,
+    titleMarginBottom = "",
     type = "default",
     ...props
 }) => {
@@ -52,14 +54,21 @@ export const Article: React.FC<IProps>= ({
         if (type === "reverse") return "if card reverse article across";
         return "if card article";
     }
-    
+
+    const shouldHideLikesAndcomments = () => {
+        return !(extras?.likes) || (extras?.comments);
+    }    
+
     return (
         <li className={getClassName()} {...props}>
             <div className="if content">
+                {/*
+                    Replace with link if category is active
+                */}
                 <span className="if category">
                     {categoryName}
                 </span>
-                <h3 className="if title heading small">
+                <h3 className="if title heading smallest" style={{marginBottom: titleMarginBottom}}> 
                     <a href={link.href} target={link?.target} className="if">
                         {title}
                         <span className="if inline-nowrap">
@@ -67,7 +76,7 @@ export const Article: React.FC<IProps>= ({
                         </span>
                     </a>
                 </h3>
-                <p className="if preview">{text}</p>
+                {text ? (<p className="if preview">{text}</p>): null}
                 <div className="if meta">
                     <ul className="if tags">
                         {tags.map((tag: ITag) => (
@@ -79,8 +88,15 @@ export const Article: React.FC<IProps>= ({
                     <small className="if author text meta">{author}</small>
                     {extras ? (
                         <small className="if extras">
-                            <time className="if" dateTime="2020-04-20">{extras?.dateTime}</time><span className="if likes">{extras?.likes}</span>
-                            <span className="if comments">{extras?.comments}</span>
+                            { /* TODO: fix the date-time formatting */ }
+                            {shouldHideLikesAndcomments() ? (
+                                <time className="if" dateTime="2020-04-20"  style={{borderRight: "none"}}>{extras?.dateTime}</time>
+                            ) : (<>
+                                <time className="if" dateTime="2020-04-20" >{extras?.dateTime}</time>
+                                <span className="if likes">{extras?.likes}</span>
+                                <span className="if comments">{extras?.comments}</span>
+                            </>)}
+                        
                         </small>
                     ) : null}
                 </div>

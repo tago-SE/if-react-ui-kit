@@ -20,13 +20,15 @@ const ShareBannerCompany: React.FC<IShareBannerCompany> = ({
 
 interface IShareBanner {
     companies: Array<IShareBannerCompany>,
+    [x: string]: any,
 }
 
 export const ShareBanner: React.FC<IShareBanner> = ({
     companies,
+    ...props
 }) => {
     return (
-        <div className = "if banner share">
+        <div className = "if banner share" {...props}>
             <div className = "if content">
                 <ul className="if">
                     {companies.map( (item: IShareBannerCompany) => (

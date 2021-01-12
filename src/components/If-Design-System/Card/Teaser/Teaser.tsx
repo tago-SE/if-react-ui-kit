@@ -21,6 +21,7 @@ interface ILink {
   title: string,
   href: string,
   target?: string, 
+  // style?: "standalone" | "primary" | "secondary"
 }
 
 interface ITeaser {
@@ -60,7 +61,7 @@ export const Teaser: React.FC<ITeaser>= ({
         <Heading {...heading} />
         <p className="if">{text}&nbsp;</p>
         {link ? (
-          <a href={link.href} title={link.title} target={link.target} className="if standalone">{link.title}</a>
+          <a href={link.href} title={link.title} target={link.target} className="if">{link.title}</a>
         ) : null}
       </li>
   );

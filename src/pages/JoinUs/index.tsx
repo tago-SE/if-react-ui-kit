@@ -13,19 +13,9 @@ https://www.klarna.com/careers/personal-stories/alexandre-borel/
 
 import RoleListBlock from './Blocks/RoleListBlock';
 import PersonalStoriesBlock from './Blocks/PersonalStoriesBlock';
-import ArticlesListBlock from './ArticlesListBlock';
 import BenefitsListBlock from './Blocks/UspBenefitsListBlock';
 import GrowthListBlock from './Blocks/UspGrowthListBlock';
 import QAListBlock from './Blocks/QAListBlock';
-
-const OurCoreValues = () => {
-  return (<>
-    <ArticlesListBlock />
-    <br />
-    <br />
-  
-  </>);
-}
 
 const CareerPage = () => (
    <Main>

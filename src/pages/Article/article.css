@@ -1,0 +1,200 @@
+.article-header .meta {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+/* 
+.article-header .meta .category {
+    font-size: 16px;
+    color: rgb(0, 64, 128);
+    text-decoration: none;
+    font-weight: 600;
+    font-family: Arial,sans-serif;
+    
+} */
+.article-header .meta .date {
+    font-size: 16px;
+    line-height: 25px;
+    font-weight: 700;
+    font-family: Arial,sans-serif;
+}
+
+.article-header .if.heading {
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.article-header .profile {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin: 10px 0;
+}
+
+.article-header .if.avatar {
+    margin: 10px;
+}
+
+.article-header .profile .username {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 25px;
+}
+
+.article-content {
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+/* .articale-box {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+  .articale-box .left-side {
+    min-width: 100px;
+  }
+  .articale {
+    max-width: 840px;
+  }
+  .articale .articale-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .articale .articale-bar .link {
+    font-size: 16px;
+    color: #487b94;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  
+  .articale .articale-bar h5 {
+    font-size: 16px;
+    color: #000000;
+    text-decoration: none;
+    font-weight: 700;
+  }
+  
+  .articale-heading {
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 55px;
+  }
+  .articale .profile {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin: 10px 0;
+  }
+  
+  .articale .profile .avatar {
+    background-color: #ffb3c7;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    border-radius: 100px;
+    font-size: 22px;
+    font-weight: 700;
+  }
+  .articale .profile .user-name {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 25px;
+  }
+  
+  .articale-content {
+    padding: 5%;
+  }
+  .articale-content p {
+    font-size: 16px;
+    line-height: 25px;
+    margin: 2% 0;
+  }
+  .articale-content h2 {
+    font-size: 28px;
+    line-height: 25px;
+    margin: 4% 0;
+    font-weight: 500;
+  }
+  
+  .articale-content .link {
+    font-size: 28px;
+    line-height: 25px;
+    margin: 4% 0;
+    font-weight: 700;
+    text-decoration: none;
+    color: #487b94;
+  }
+  .articale-content .button {
+    display: block;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 4% 0;
+    padding: 1% 2%;
+    border-radius: 20px;
+    color: #fff;
+    background-color: #000000;
+  }
+  .social-btn-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 1em;
+  }
+  .social-btn {
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 5px;
+    color: #fff;
+    background-color: #000000;
+    width: 40px;
+    height: 40px;
+  }
+  .articale .footer-profile {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin: 10px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 1em;
+  }
+  
+  .articale .footer-profile .avatar {
+    background-color: #ffb3c7;
+    height: 70px;
+    width: 70px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    border-radius: 100px;
+    font-size: 22px;
+    font-weight: 700;
+  }
+  .articale .footer-profile .user-name {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 25px;
+  }
+  
+  .articale .footer-profile .user {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+  }
+  
+  @media only screen and (max-width: 900px) {
+    .articale-box .left-side {
+      display: none;
+    }
+  }
+   */

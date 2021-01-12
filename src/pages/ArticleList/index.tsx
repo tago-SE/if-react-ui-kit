@@ -1,7 +1,7 @@
 import React from "react";
 
-import { Container, Block } from "../../components/If-Design-System/Container";
-import { GridContainer, GridRow, GridItem } from "../../components/If-Design-System/Grid";
+// import { Container, Block } from "../../components/If-Design-System/Container";
+// import { GridContainer, GridRow, GridItem } from "../../components/If-Design-System/Grid";
 
 import { Main } from "../../components/If-Design-System/Main";
 import { Heading } from "../../components/If-Design-System/Heading";

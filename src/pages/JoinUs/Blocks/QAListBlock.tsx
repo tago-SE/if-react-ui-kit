@@ -1,4 +1,3 @@
-import { UspItem, UspList } from '../../../components/If-Design-System/Usps';
 import { Block, Container} from '../../../components/If-Design-System/Container';
 import { Heading } from '../../../components/If-Design-System/Heading';
 import { GridContainer, GridRow, GridItem } from '../../../components/If-Design-System/Grid';

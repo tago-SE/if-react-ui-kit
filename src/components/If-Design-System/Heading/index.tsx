@@ -22,7 +22,6 @@ export const Heading: React.FC<IHeading>= ({
   rank = undefined,
   size = "largest",
   center = false,
-  focusColor = "",
   ...props
 }) => {
   const Heading: any = "h" + (rank ? rank : rankMap[size]);

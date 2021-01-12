@@ -3,8 +3,6 @@ import React from 'react';
 import { Main } from '../../components/If-Design-System/Main';
 import { Heading } from '../../components/If-Design-System/Heading'
 
-import { ListMenu, ListMenuItem} from '../../components/NavBar';
-
 import { 
   StudioCrosslink, 
   StudioCrosslinkContainer, 
@@ -33,71 +31,73 @@ import PopoverSection from './Sections/PopoverSection';
 import ArticleSection from './Sections/ArticleSection';
 import TeaserSection from './Sections/TeaserSection';
 import VideoSection from './Sections/VideoSection';
+import TagsSection from './Sections/TagsSection';
+import TypographySection from './Sections/Typography';
 
 import PageTemplatesCrosslinks from './PagesCrosslinks';
 
 // import { Backdrop } from '../../components/If-Design-System/Modal/index';
 
 const HomePage = () => {
-    const items = [
-        {
-           name: "A",
-           icon: "ui house",
-           list: [
-               {
-                   name: "B", 
-                   href: "#",
-                   icon: "ui house",
-                   list: [
-                    {
-                        name: "C", 
-                        href: "#",
-                    }
-                ] 
-               },
-               {
-                name: "D", 
-                href: "#",
-                list: [
-                 {
-                     name: "E", 
-                     href: "#",
-                 }
-             ] 
-            },
-            {
-              name: "F", 
-              href: "#",
-              list: [
-               {
-                   name: "G", 
-                   href: "#",
-               }
-           ] 
-          }
-          ] 
-        },
-        {
-            name: "H",
-            href: "#",
-            list: [
-              {
-                  name: "G", 
-                  href: "#",
-              }
-          ] 
-        },
-        {
-            name: "I",
-            href: "#",  
-            list: [
-              {
-                  name: "G", 
-                  href: "#",
-              }
-          ] 
-        }
-    ];
+    // const items = [
+    //     {
+    //        name: "A",
+    //        icon: "ui house",
+    //        list: [
+    //            {
+    //                name: "B", 
+    //                href: "#",
+    //                icon: "ui house",
+    //                list: [
+    //                 {
+    //                     name: "C", 
+    //                     href: "#",
+    //                 }
+    //             ] 
+    //            },
+    //            {
+    //             name: "D", 
+    //             href: "#",
+    //             list: [
+    //              {
+    //                  name: "E", 
+    //                  href: "#",
+    //              }
+    //          ] 
+    //         },
+    //         {
+    //           name: "F", 
+    //           href: "#",
+    //           list: [
+    //            {
+    //                name: "G", 
+    //                href: "#",
+    //            }
+    //        ] 
+    //       }
+    //       ] 
+    //     },
+    //     {
+    //         name: "H",
+    //         href: "#",
+    //         list: [
+    //           {
+    //               name: "G", 
+    //               href: "#",
+    //           }
+    //       ] 
+    //     },
+    //     {
+    //         name: "I",
+    //         href: "#",  
+    //         list: [
+    //           {
+    //               name: "G", 
+    //               href: "#",
+    //           }
+    //       ] 
+    //     }
+    // ];
     return (
       <>
     <Main>
@@ -105,12 +105,17 @@ const HomePage = () => {
       <PageTemplatesCrosslinks />
     
         
-    <ListMenu focusColor="blue">
+    {/* <ListMenu focusColor="blue">
       {items.map((item, index) => <ListMenuItem key={index} {...item} />)}
-    </ListMenu>
+    </ListMenu> */}
 
-
+    <TagsSection />
     <ButtonSection />
+
+    <br />
+    <TypographySection />
+
+
     <br />
     <PopoverSection />
     <br />
@@ -125,6 +130,7 @@ const HomePage = () => {
     <br />
     <TeaserSection />
     
+
   
     <Block>
         <Container>
@@ -146,11 +152,11 @@ const HomePage = () => {
         </Container>
     </Block>
     
-    <ListMenu focusColor="orange">
+    {/* <ListMenu focusColor="orange">
       <ListMenuItem name="my" href="#" icon="ui person">
         <ListMenuItem name="oh" href="#"/>
       </ListMenuItem>
-    </ListMenu>
+    </ListMenu> */}
     <div className="if block">
         <div className="if container">
           <ShareBanner companies={[
