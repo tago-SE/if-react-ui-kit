@@ -1,7 +1,9 @@
 // import { GridItem, GridRow, GridContainer } from '../../../components/If-Design-System/Grid'
 import { Container, Block } from '../../../components/If-Design-System/Container';
-import { Heading } from '../../../components/If-Design-System/Heading';
-import { CategoryTag, TagContainer } from '../../../components/If-Design-System/Tag';
+import { Heading } from '../../../components/If-Design-System/Layout/Typography/Heading';
+import { StatusTag, LinkTag, TagContainer } from '../../../components/If-Design-System/Tag';
+
+import SpacingBuilder, { LargestSpacing } from '../../../components/If-Design-System/Utils/Spacing';
 
 
 export const TagsSection = () => {
@@ -10,14 +12,28 @@ export const TagsSection = () => {
             <Container> 
                 <Heading size="largest">Tags</Heading>
                 <TagContainer>
-                    <CategoryTag name="hi" href="/link/to/category" color="mint"></CategoryTag>
-                    <CategoryTag name="hi" href="/link/to/category" color="pink"></CategoryTag>
-                    <CategoryTag name="hi" href="/link/to/category" color="yellow"></CategoryTag>
-                    <CategoryTag name="hi" href="/link/to/category" color="aquamarine" ></CategoryTag>
-                    <CategoryTag name="hi" href="/link/to/category"></CategoryTag>
+                    <LinkTag name="hi" href="/link/to/category" color="mint" spacing={{  padding: { bottom: LargestSpacing }, margin: { bottom: 12 } }}></LinkTag>
+                    <LinkTag name="hi" href="/link/to/category" color="pink"></LinkTag>
+                    <LinkTag name="hi" href="/link/to/category" color="yellow"></LinkTag>
+                    <LinkTag name="hi" href="/link/to/category" color="aquamarine" ></LinkTag>
+                    <LinkTag name="hi" href="/link/to/category"></LinkTag>
                 </TagContainer>
+                <TagContainer>
+                    <StatusTag name="Warning" status="warning" spacing={{  padding: { bottom: LargestSpacing }, margin: { bottom: 12 } }}></StatusTag>
+                    <StatusTag name="Error" status="error" spacing={{  padding: { bottom: 20}, margin: { bottom: 12 } }}></StatusTag>
+                    <StatusTag name="Success" status="success" spacing={{  padding: { bottom: 20}, margin: { bottom: 12 } }}></StatusTag>
+                </TagContainer>
+                <Heading size="smallest">Small</Heading>
+                <TagContainer>
+                    <StatusTag name="Warning" status="warning" small />
+                    <LinkTag name="hi" href="/link/to/category" color="mint" small />
+                </TagContainer>
+                {SpacingBuilder.buildPaddingClass({})}
+                {SpacingBuilder.buildPaddingClass({bottom: 0})}
+                {SpacingBuilder.buildPaddingClass({bottom: 4})}
             </Container>
         </Block>
+    
     );
 }
 

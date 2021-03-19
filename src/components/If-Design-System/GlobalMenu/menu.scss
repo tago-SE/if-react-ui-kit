@@ -1,0 +1,82 @@
+// @import '@if-design-system/color/src/color-variables.scss';
+
+// nav.if.secondary {
+//     background-color: $color-darkBlue-interaction !important;
+//     color: red;
+// }
+
+/*
+https://codepen.io/SJdV/pen/gwqgZb  <-- cool sidebar menu open/close
+
+https://www.w3schools.com/cssref/tryit.asp?filename=trycss_func_cubic-bezier
+https://www.w3schools.com/cssref/func_cubic-bezier.asp
+
+// animation stuff https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame    
+*/
+
+
+// .if.desktop.container .if.tertiary {
+//     overflow: hidden;
+
+//     &.is-open {
+//         height: auto;
+//         overflow: hidden;
+
+//         & .if.container .if.holder .if.description {
+//             overflow: hidden;
+//         }
+//     }
+// }
+
+
+// .greeting {
+//     width: 300px;
+// }
+// .example-enter {
+//     transform: scale(.1);
+// }
+// .example-enter.example-enter-active {
+
+// }
+// .example-leave {
+//     transform: scale(1);
+// }
+// .example-leave.example-leave-active {
+//     transform: scale(0);
+//     transition: all .5s ease-in-out;
+// }
+
+/* This fires as soon as the element enters the dorm */
+.if.tertiary.is-open.enter,
+.if.tertiary.is-open.appear {
+  /*We give the list the initial dimension of the list button*/
+  transform: scale(.1);
+//   top: 45px;
+//   width: 120px;
+//   max-height: 40px;
+//   color: transparent;
+//   background-color: #5a564c;
+}
+/* This is where we can add the transition*/
+.if.tertiary.is-open.appear-active {
+    transform: scale(1) !important;
+    transition: all 2s ease-in-out;
+//   top: 45px;
+//   width: 200px;
+//   max-height: 200px;
+//   background-color: #9e8949;
+//   transition: all 400ms;
+}
+.if.tertiary.is-open.enter-done {
+    
+}
+
+/* This fires as soon as the this.state.showList is false */
+.if.tertiary.is-open-exit {
+    transform: scale(1);
+}
+/* fires as element leaves the DOM*/
+.if.tertiary.is-open-exit-active {
+    transform: scale(0);
+    transition: all 1s ease-in-out;
+}

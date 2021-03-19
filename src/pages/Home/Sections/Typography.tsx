@@ -1,5 +1,5 @@
 import { Container, Block } from '../../../components/If-Design-System/Container';
-import { Heading, IHeading } from '../../../components/If-Design-System/Heading';
+import { Heading, IHeading, TitleHeading } from '../../../components/If-Design-System/Layout/Typography/Heading';
 
 
 export const TypographySection = () => {
@@ -44,8 +44,8 @@ export const TypographySection = () => {
                     {headers.map(header => (<>
                         <Heading {...header} />
                         <Heading center {...header}/>
-            
-
+                        <TitleHeading {...header} />
+                        <TitleHeading center {...header} />
                     </>))}
         
             </Container>

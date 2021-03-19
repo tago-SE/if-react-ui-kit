@@ -1,6 +1,6 @@
 
 import { Container, Block } from '../../components/If-Design-System/Container';
-import { Heading } from '../../components/If-Design-System/Heading';
+import { Heading } from '../../components/If-Design-System/Layout/Typography/Heading';
 
 
 import { 

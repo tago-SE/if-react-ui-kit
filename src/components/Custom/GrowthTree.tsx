@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heading } from '../If-Design-System/Heading';
+import { Heading } from '../If-Design-System/Layout/Typography/Heading';
 
 /*
     Todo add clickable mini buttons as is shown under

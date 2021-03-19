@@ -1,0 +1,11 @@
+g.plot-area {
+    
+    rect.bar:focus {
+        fill: green;
+        color: rgb(121, 182, 121);
+    }
+    rect.bar:active {
+        fill: blue;
+        // color: rgb(121, 182, 121);
+    }
+}

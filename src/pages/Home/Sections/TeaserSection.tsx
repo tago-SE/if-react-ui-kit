@@ -1,5 +1,5 @@
 import { Container, Block } from '../../../components/If-Design-System/Container';
-import { Heading } from '../../../components/If-Design-System/Heading';
+import { Heading } from '../../../components/If-Design-System/Layout/Typography/Heading';
 import { TeaserList, Teaser } from '../../../components/If-Design-System/Card/Teaser';
 
 export const TeaserSection = () => {
@@ -29,8 +29,6 @@ export const TeaserSection = () => {
                         linkImage
                     />))}
                 </TeaserList>
-
-
                 <Heading size="medium">With studio images</Heading>
                 <TeaserList>
                     {[1, 2].map( _ => (<Teaser 

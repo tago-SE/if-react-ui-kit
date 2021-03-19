@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Block, Container } from '../../../components/If-Design-System/Container';
-import { Heading } from '../../../components/If-Design-System/Heading';
+import { Heading } from '../../../components/If-Design-System/Layout/Typography/Heading';
 import { Teaser } from '../../../components/If-Design-System/Card/Teaser'
 import { TeaserList } from '../../../components/If-Design-System/Card/Teaser';
 

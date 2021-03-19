@@ -4,7 +4,7 @@ interface ILifestyleProps {
     title: string,
     text?: string,
     href: string
-    imageSrc: string,
+    imgSrc: string,
     alt?: string,               // Accessability: Should be empty if the image is decoration, otherwise provide an image description
     [x: string]: any,
 }
@@ -12,7 +12,7 @@ interface ILifestyleProps {
 export const LifestyleCrosslink: React.FC<ILifestyleProps> = ({
     title,
     href,
-    imageSrc,
+    imgSrc,
     alt = "",
     text = "",
     ...props
@@ -20,7 +20,7 @@ export const LifestyleCrosslink: React.FC<ILifestyleProps> = ({
     return (
         <li className="if" role="presentation" {...props}>
             <a className="if crosslink image" href={href}>
-                <img className="if image" alt={alt} src={imageSrc}/>
+                <img className="if image" alt={alt} src={imgSrc}/>
                 <p className="if text body">{title}</p>
                 <p className="if text">{text}</p>
             </a>

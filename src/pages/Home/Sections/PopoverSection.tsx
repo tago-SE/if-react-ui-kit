@@ -3,7 +3,7 @@ import React from 'react';
 import { GridItem, GridRow, GridContainer } from '../../../components/If-Design-System/Grid'
 import { Popover, Tooltip } from '../../../components/If-Design-System/Popover';
 import { Button } from '../../../components/If-Design-System/Button/Button';
-import { Heading } from '../../../components/If-Design-System/Heading';
+import { Heading } from '../../../components/If-Design-System/Layout/Typography/Heading';
 
 export const PopoverSection = () => {
     const [currentOpen, setCurrentOpen] = React.useState("");

@@ -1,6 +1,6 @@
 import { UspItem, UspList } from '../../components/If-Design-System/Usps';
 import { Block, Container} from '../../components/If-Design-System/Container';
-import { Heading } from '../../components/If-Design-System/Heading';
+import { Heading } from '../../components/If-Design-System/Layout/Typography/Heading';
 
 export const KeyBenefitsBlockMock = () => {
 

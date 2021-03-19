@@ -1,0 +1,66 @@
+// @import '@if-design-system/color/src/color-variables.scss';
+
+// nav.if.secondary {
+//     background-color: $color-darkBlue-interaction !important;
+//     color: red;
+// }
+
+/*
+https://codepen.io/SJdV/pen/gwqgZb  <-- cool sidebar menu open/close
+
+https://www.w3schools.com/cssref/tryit.asp?filename=trycss_func_cubic-bezier
+https://www.w3schools.com/cssref/func_cubic-bezier.asp
+
+// animation stuff https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame    
+*/
+
+.if.desktop.container .if.tertiary {
+    
+    // with auto: http://jsfiddle.net/catharsis/n5XfG/17/
+    overflow:hidden;
+    background-color: red;
+    // height:0;
+    // padding: 0 18px;
+    // -webkit-transition: all .5s ease;
+    // -moz-transition: all .5s ease;
+
+    // This works for opening nohing more required..
+    // transition: all 1s ease-in, opacity 0.1 linear;
+
+    &.invisible {
+        opacity: 0;
+    }
+
+    &.is-open {
+        // transition: all 1s ease-out, opacity 0.01s;
+        height: auto;
+        max-height: 1500px;
+        // transition: all 1s ease-in;
+
+        
+       // transition: all 1s ease-out;
+        // background-color: lightgreen;
+        // height: auto;
+        // padding: 24px 18px;
+    }
+    &.is-opening {
+        // with play animation
+        //animation: openanimation 1s forwards;
+
+        // with auto
+        // background-color: lightcoral;
+        // height:auto;
+        // padding: 24px 18px;
+
+        // max-height: 0 !important;
+        // transition: max-height 1s ease-out !important;
+        // overflow: hidden;
+    }
+    &.is-closing {
+        //background-color: lightgoldenrodyellow;
+    }
+
+    // &:active {
+    //     background-color: red;
+    // }
+}

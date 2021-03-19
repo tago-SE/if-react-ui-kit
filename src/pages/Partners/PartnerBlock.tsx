@@ -1,4 +1,4 @@
-import { Heading, TitleHeading } from "../../components/If-Design-System/Heading";
+import { Heading, TitleHeading } from "../../components/If-Design-System/Layout/Typography/Heading";
 import { Block, Container} from '../../components/If-Design-System/Container';
 import { Content } from "../../components/If-Design-System/Content";
 // import { Heading } from '../../components/If-Design-System/Heading';

@@ -1,0 +1,30 @@
+.arc {
+    opacity: 1;
+    transition: opacity 0.5s 0s ease; 
+    transition: fill 0.5s 0s ease; 
+    &.active {
+        opacity: 1;
+    }
+    &.inactive {
+        opacity: 0.4;
+    }
+    &.selected {
+        fill: blue; 
+        opacity: 1; 
+    }
+}
+
+
+.label-text {
+    alignment-baseline: middle;
+    font-size: 12px;
+    font-family: arial,helvetica,"sans-serif";
+    fill: #393939;
+}
+.label-line {
+    stroke-width: 1;
+    stroke: #393939;
+}
+.label-circle {
+    fill: #393939;
+}

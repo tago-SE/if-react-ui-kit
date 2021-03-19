@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Image from '../../Image';
-import Heading, { IHeading } from '../../Heading';
+import Heading, { IHeading } from '../../Layout/Typography/Heading';
 /*
 
 With square image

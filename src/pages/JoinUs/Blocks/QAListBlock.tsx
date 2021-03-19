@@ -1,5 +1,5 @@
 import { Block, Container} from '../../../components/If-Design-System/Container';
-import { Heading } from '../../../components/If-Design-System/Heading';
+import { Heading } from '../../../components/If-Design-System/Layout/Typography/Heading';
 import { GridContainer, GridRow, GridItem } from '../../../components/If-Design-System/Grid';
 import { Expandable } from '../../../components/If-Design-System/Expandable';
 

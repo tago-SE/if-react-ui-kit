@@ -1,0 +1,133 @@
+
+$color-blue-accent: rgb(0, 84, 240);
+// $color-lightestBeige-text = rgb(250, 249, 247)
+// $color-brown-text = rgb(51, 30, 17)
+// $color-lightBrown-text = rgb(110, 98, 94)
+// $color-darkBeige-background = rgb(232, 224, 217)
+// $color-beige-background = rgb(237, 230, 225)
+// $color-lightBeige-background = rgb(241, 236, 232)
+// $color-lighterBeige-background = rgb(246, 243, 240)
+// $color-lightestBeige-background = rgb(250, 249, 247)
+// $color-green-status = rgb(33, 115, 49)
+// $color-red-status = rgb(187, 50, 12)
+// $color-darkRed-infographic = rgb(128, 92, 92)
+// $color-red-infographic = rgb(255, 133, 105)
+// $color-lightRed-infographic = rgb(255, 201, 166)
+// $color-darkYellow-infographic = rgb(176, 135, 89)
+// $color-yellow-infographic = rgb(252, 199, 79)
+// $color-lightYellow-infographic = rgb(255, 224, 130)
+// $color-darkGreen-infographic = rgb(107, 153, 148)
+// $color-green-infographic = rgb(135, 199, 186)
+// $color-lightGreen-infographic = rgb(181, 237, 232)
+// $color-darkBlue-infographic = rgb(83, 146, 178)
+// $color-blue-infographic = rgb(76, 176, 211)
+// $color-lightBlue-infographic = rgb(151, 226, 247)
+// $color-darkBlue-interaction = rgb(0, 64, 128)
+// $color-text-wcag-ratio = 5
+// $color-alpha = 0.5
+// $color-alpha-light = 0.85
+$color-beige-background: rgb(237, 230, 225);
+$color-darkBeige-background: rgb(232, 224, 217);
+$color-beige-background: rgb(237, 230, 225);
+$color-lightBeige-background: rgb(241, 236, 232);
+$color-lighterBeige-background: rgb(246, 243, 240);
+$color-lightestBeige-background: rgb(250, 249, 247);
+
+// Slider track color
+$track-color: $color-beige-background;
+$track-progress-color: $color-blue-accent;
+
+.highcharts-button {
+    .highcharts-button-hover {
+        rect {
+           // fill: red;    
+        }
+    }
+}
+
+
+// .chartContainer {
+//     height: 500px;
+//     width: 100%;
+//     // background-color: $color-beige-background;
+
+//     .highcharts-navigator-handle {
+//         .highcharts-navigator-handle-right {
+//             fill: red;  
+//         }
+//     }
+// }
+
+.chartContainer {
+    height: 600px;
+    width: 100%;
+
+
+    .highcharts {
+        .highcharts-container  {
+            .highcharts-root {
+                // background-color: red;
+                g.highcharts-legend {
+                    .highcharts-legend-box {
+                        fill: $color-lightBeige-background;
+                    }
+                }
+                g.highcharts-navigator {
+                    .highcharts-navigator-mask-inside {
+                        // fill: $color-blue-accent;
+                        // opacity: 0.1;
+                    }
+                    .highcharts-navigator-handle {
+                        &.highcharts-navigator-handle-right {
+                            // fill: $track-progress-color; //$color-darkBeige-background;
+                            // stroke: white;
+                        }
+                        &.highcharts-navigator-handle-left {
+                            // fill: $track-progress-color; //$color-darkBeige-background;
+                            // stroke: white;
+                            
+                        }
+                    }
+                }
+                .highcharts-scrollbar {
+
+                    .highcharts-scrollbar-thumb {
+                        // fill: $track-progress-color;
+                        // opacity: 0.2;
+                        // height: 15px;
+                    }
+                    .highcharts-scrollbar-track {
+                        // opacity: 0;
+                        // height: 5px;
+                        // fill: $track-color;
+                        // border: none;
+                    }
+                    .highcharts-scrollbar-rifles {
+                        // stroke: white;
+                    }
+                    // clickable left & right side scroll button positioned at the sides
+                    .highcharts-scrollbar-button {
+                        // fill: $track-progress-color;
+                    }
+                    .highcharts-scrollbar-arrow {
+                        //fill: white;
+                    }
+                    
+                }
+
+                .highcharts-exporting-group {
+                    .highcharts-button.highcharts-contextbutton {
+                        &.highcharts-button-hover {
+                            .highcharts-button-box {
+                                fill: #e6e6e6;
+                            }
+                        }
+                        .highcharts-button-box {
+                            fill: none;
+                         }
+                    }
+                }
+            } // highchart-root 
+        }
+    }
+}

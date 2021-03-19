@@ -1,4 +1,4 @@
-// import React from 'react';
+import React from 'react';
 import {
   BrowserRouter as Router,
   Switch,
@@ -18,13 +18,14 @@ import { MockHeader } from './MockHeader';
 
 // Boiler plates
 import Home from './boiler-plates/BHome';
+import { MockMaximalFooter } from './MockFooter';
 
 function App() {
-
   return (
     <Router>
-      <MockHeader />  
+      {/* <MockHeader />  */}
       <Switch>
+        
         <Route 
           path="/boiler/home"
           component={Home} 
@@ -50,6 +51,7 @@ function App() {
           component={HomePage} 
         />
       </Switch>
+      {/* <MockMaximalFooter /> */}
   </Router>);
 }
 

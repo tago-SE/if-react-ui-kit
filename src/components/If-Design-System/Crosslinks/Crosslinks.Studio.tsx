@@ -1,26 +1,26 @@
 import React from 'react';
-import { Image, IImage } from '../Image';
 
-interface IStudioProps {
+interface IStudioCrosslink {
     title:string,
     description: string,
     href: string
-    image?: IImage,
-    alt?: string,               // Accessability: Should be empty if the image is decoration, otherwise provide an image description
+    imgSrc?: string, 
+    alt?: string,
     [x: string]: any,
 }
 
-export const StudioCrosslink: React.FC<IStudioProps> = ({
+export const StudioCrosslink: React.FC<IStudioCrosslink> = ({
     title,
     description,
     href,
-    image = undefined,
+    imgSrc = undefined,
+    alt = "",
     ...props
 }) => {
     return (
         <li role="presentation" className="if" {...props}>
             <a className="if crosslink studio" href={href}>
-                {image ? <Image {...image} /> : null}
+                <img src={imgSrc} alt={alt} className="if image" height="300" width="477"></img>
                 <p className="if text lead">
                     <span className="if">
                         {title}

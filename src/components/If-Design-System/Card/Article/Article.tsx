@@ -10,66 +10,52 @@ interface IImage {
     alt?: string,
 }
 
-interface ILink {
-    href: string,
-    target?: string, 
-}
-
-interface IExtras {
-    dateTime?: string,
-    likes?: number,
-    comments?: number,    
-}
-
-interface IProps {
+interface IArticle {
     title: string,
+    href: string,  
     text?: string, 
     image: IImage,  
-    link: ILink,  
     categoryName?: string,
     author?: string,
     tags?: Array<ITag>,
-    extras?: IExtras,
-    type?: "across" | "default" | "reverse",
+    dateTime?: string,
+    likes?: number,
+    comments?: number
+    variant?: "" | "across" | "list",
+    reverse?: boolean,
     titleMarginBottom?: string,
     [x: string]: any
-}
+};
 
-export const Article: React.FC<IProps>= ({
+export const Article: React.FC<IArticle>= ({
     title,
+    href,
     text = "",
     author = "",
     image,
+    reverse = false,
     categoryName = null,
     tags = [],
-    extras = null,
-    link,
+    dateTime = undefined,
+    likes = undefined,
+    comments = undefined,
     titleMarginBottom = "",
-    type = "default",
+    variant = "",
     ...props
 }) => {
-
-    const getClassName = () => {
-        if (type === "across") return "if card article across";
-        if (type === "reverse") return "if card reverse article across";
-        return "if card article";
-    }
-
     const shouldHideLikesAndcomments = () => {
-        return !(extras?.likes) || (extras?.comments);
-    }    
-
+        return !(likes || comments);
+    }
     return (
-        <li className={getClassName()} {...props}>
-            <div className="if content">
-                {/*
-                    Replace with link if category is active
-                */}
-                <span className="if category">
+        <li className={`if card ${reverse ? "reverse " : ""}article ${variant}`} {...props}>
+            <div className="if content" style={{paddingTop: "2rem"}}>
+                {categoryName ? (
+                    <span className="if category">
                     {categoryName}
                 </span>
-                <h3 className="if title heading smallest" style={{marginBottom: titleMarginBottom}}> 
-                    <a href={link.href} target={link?.target} className="if">
+                ) : null}
+                <h3 className="if title heading smallest"> 
+                    <a href={href} target="" className="if">
                         {title}
                         <span className="if inline-nowrap">
                             ﻿<span className="if icon ui arrow-right"/>
@@ -77,28 +63,24 @@ export const Article: React.FC<IProps>= ({
                     </a>
                 </h3>
                 {text ? (<p className="if preview">{text}</p>): null}
-                <div className="if meta">
+                <div className="if meta" style={{marginTop: "0px", paddingTop: "0.5rem"}}>
                     <ul className="if tags">
                         {tags.map((tag: ITag) => (
-                            <li className="if">
+                            <li className="if" key={tag.name}>
                                 <a href={tag.href} className="if tag passive">{tag.name}</a>
                             </li>
                         ))}
                     </ul>
-                    <small className="if author text meta">{author}</small>
-                    {extras ? (
-                        <small className="if extras">
-                            { /* TODO: fix the date-time formatting */ }
-                            {shouldHideLikesAndcomments() ? (
-                                <time className="if" dateTime="2020-04-20"  style={{borderRight: "none"}}>{extras?.dateTime}</time>
-                            ) : (<>
-                                <time className="if" dateTime="2020-04-20" >{extras?.dateTime}</time>
-                                <span className="if likes">{extras?.likes}</span>
-                                <span className="if comments">{extras?.comments}</span>
-                            </>)}
-                        
-                        </small>
-                    ) : null}
+                    <small className="if author text meta" style={{marginBottom: "0px"}}>{author}</small>
+                    <small className="if extras">
+                        {shouldHideLikesAndcomments() ? (
+                            <time className="if" style={{borderRight: "none"}}>{dateTime}</time>
+                        ) : (<>
+                            <time className="if">{dateTime}</time>
+                            <span className="if likes">{likes}</span>
+                            <span className="if commen  ts">{comments}</span>
+                        </>)}
+                    </small>
                 </div>
             </div>
             <span className="if image lifestyle" style={{height: "auto"}}>

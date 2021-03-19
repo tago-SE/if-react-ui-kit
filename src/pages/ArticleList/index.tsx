@@ -4,59 +4,27 @@ import React from "react";
 // import { GridContainer, GridRow, GridItem } from "../../components/If-Design-System/Grid";
 
 import { Main } from "../../components/If-Design-System/Main";
-import { Heading } from "../../components/If-Design-System/Heading";
+import { Heading } from "../../components/If-Design-System/Layout/Typography/Heading";
 import { Article, ArticleList, BlogBlock } from '../../components/If-Design-System/Card/Article';
 
-const articles = [
+const article =
     {
         title: "Lorem ipsum",
         text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
         image: { src: "https://www.if.no/magasinet/imageshop/img_shp_img_zkexuttycm-780x470.jpeg", alt: "image of puppy" },
-        link: "/link/to/article",
+        href: "/link/to/article",
         tags:  [
             {name: "Blog", href: "/articles/valp"},
         ],
         author: "Cicero",
-        category: "Blog",
-        extras: {dateTime: "21.05.2020", likes: 10, comments: 2}
-    },
-    {
-        title: "Lorem ipsum",
-        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
-        image: { src: "https://www.if.no/magasinet/imageshop/img_shp_img_zkexuttycm-780x470.jpeg", alt: "image of puppy" },
-        link: "/link/to/article",
-        tags:  [
-            {name: "Blog", href: "/articles/category"},
-        ],
-        author: "Cicero",
-        category: "Blog",
-        extras: {dateTime: "21.05.2020", likes: 10, comments: 2}
-    },
-    {
-        title: "Lorem ipsum",
-        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
-        image: { src: "https://www.if.no/magasinet/imageshop/img_shp_img_zkexuttycm-780x470.jpeg", alt: "image of puppy" },
-        link: "/link/to/article",
-        tags:  [
-            {name: "Use case", href: "/articles/category"},
-        ],
-        author: "Cicero",
-        category: "Use case",
-        extras: {dateTime: "21.05.2020" }
-    },
-    {
-        title: "Lorem ipsum",
-        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
-        image: { src: "https://www.if.no/magasinet/imageshop/img_shp_img_zkexuttycm-780x470.jpeg", alt: "image of puppy" },
-        link: "/link/to/article",
-        tags:  [
-            {name: "Developer story", href: "/articles/category"},
-        ],
-        author: "Cicero",
-        category: "Developer story",
-        extras: {dateTime: "21.05.2020" }
-    }
-];
+        category: "",
+        dateTime: "21.05.2020", 
+        likes: 10, 
+        comments: 2
+    };
+
+const articles = [article, article, article];
+
 
 export const ArticleListPage = () => {
     // const [filter, setFilter] = React.useState("all articles");
@@ -64,18 +32,20 @@ export const ArticleListPage = () => {
         <Main>
             <BlogBlock>
             <Heading>Life at If</Heading>
-            <ArticleList>
+            <ArticleList style={{gridAutoRows: "1fr", gridTemplateRows: "1fr"}}>
                 {articles.map(article => (
                     <Article 
-                        type="default"
+                        type="across"
                         title={article.title}
                         text={article.text}
                         image={article.image}
-                        link={{href: article.link}}
+                        href="/link/to/article"
                         tags={article.tags}
                         author={article.author}
                         categoryName={article.category}
-                        extras={article.extras}
+                        dateTime={article.dateTime}
+                        comments={article.comments}
+                        likes={article.likes}
                     />
                 ))}
             </ArticleList>

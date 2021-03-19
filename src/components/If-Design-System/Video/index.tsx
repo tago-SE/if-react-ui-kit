@@ -30,9 +30,9 @@ enum VideoState {
           */
 export const VideoContent : React.FC<IProps> = ({
   url,
-  preload=false,
-  controls=true,
-  posterUrl="",
+  // preload=false,
+  // controls=true,
+  // posterUrl="",
   coverTitle="",
   coverDescription="",
   playButtonTooltip="Play",
@@ -66,7 +66,16 @@ export const VideoContent : React.FC<IProps> = ({
       <div className="if image live">
           <div className={`if video ${state}`}>
             {/* {isPlaying() || hasNoPoster() ? ( */}
-            <ReactPlayer 
+
+            <video 
+              controls 
+              width="500"
+              // poster="https://www.if.no/magasinet/images/2020/04/av1-in-group-work-1560x900.jpg"
+            >
+              <source src={url} type="video/mp4" />
+              Sorry, your browser doesn't support embedded videos.
+            </video>
+            {/* <ReactPlayer 
               url={url}
               playing={isPlaying()}
               preload={preload}
@@ -75,7 +84,7 @@ export const VideoContent : React.FC<IProps> = ({
               controls={controls && hasStarted()}
               poster={`url(${posterUrl})`}
           
-            />
+            /> */}
             {!hasStarted() ? (
               <span className="if image lifestyle" style={{height:"100%", width: "100%"}}>
                 <img src="https://www.if.no/magasinet/images/2020/04/av1-in-group-work-1560x900.jpg" alt="video-poster" className="if " style={{height:"100%", width: "100%"}}/>

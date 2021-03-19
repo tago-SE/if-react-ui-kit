@@ -1,9 +1,20 @@
-
-
+import React from 'react';
+import { GlobalHeader, SecondaryNavbar, SecondaryParentItem } from './components/If-Design-System/GlobalMenu';
+import { GlobalHeaderStore } from './components/If-Design-System/GlobalMenu/GlobalHeaderContext';
+import { Container, Holder } from './components/If-Design-System/Container';
+import { MockProductsMenu } from './components/If-Design-System/GlobalMenu/MockProductsMenu';
 
 export const MockHeader = () => {
+
+    // React.useEffect(() => {
+    //     window.addEventListener("dblclick", handleClick);
+
+    //     return ();
+    //   }, []);
+    return null;
     return (
-    <header className="if global-header">
+    <GlobalHeaderStore>
+    <GlobalHeader isSticky style={{backgroundColor: "red"}}>
     <a href="#content" className="if axe skip-to-content">Skip to content</a>
     <nav className="if primary">
         <div className="if mobile">
@@ -180,7 +191,7 @@ export const MockHeader = () => {
         <div className="if desktop container">
         <ul className="if desktop-menu-list">
             <li className="if desktop-menu-item">
-            <a href="/" className="if desktop-menu-action button is-active">Privat</a>
+              <a href="/" className="if desktop-menu-action button is-active">Privat</a>
             </li>
             <li className="if desktop-menu-item">
             <a href="/" className="if desktop-menu-action button desktop-menu-action">Företag</a>
@@ -239,44 +250,69 @@ export const MockHeader = () => {
         </ul>
         </div>
     </nav>
-    <nav className="if secondary">
+    <SecondaryNavbar>
         <div className="if desktop container">
-        <div className="if desktop-search">
-            <form className="if">
-            <input
-                type="search"
-                placeholder="Sök If.se"
-                className="if input-field large-search js-if-desktop-search"
-                name="if-desktop-search"
-            />
-            <label htmlFor="if-desktop-search" className="if"><span className="if axe sr-only">Search If</span></label>
-            <button type="button" className="if close" title="Closes the search">
-                <span className="if axe sr-only">Close search</span>
-            </button>
-            </form>
-            <div className="if tertiary is-open" style={{width: "360px"}}>
-            <div className="if container">
-                <div className="if quick-links-holder">
-                <p className="if text meta">Snabblenkär</p>
-                <ul className="if quick-links">
-                    <li className="if"><a href="/" className="if">Buy insurance</a></li>
-                    <li className="if"><a href="/" className="if">Buy insurance</a></li>
-                    <li className="if"><a href="/" className="if">Buy insurance</a></li>
-                    <li className="if"><a href="/" className="if">Buy insurance</a></li>
-                    <li className="if"><a href="/" className="if">Buy insurance</a></li>
-                    <li className="if"><a href="/" className="if">Buy insurance</a></li>
-                </ul>
+            {/* <div className="if desktop-search is-open">
+                <form className="if">
+                <input
+                    type="search"
+                    placeholder="Sök If.se"
+                    className="if input-field large-search js-if-desktop-search"
+                    name="if-desktop-search"
+                />
+                <label htmlFor="if-desktop-search" className="if"><span className="if axe sr-only">Search If</span></label>
+                <button type="button" className="if close" title="Closes the search">
+                    <span className="if axe sr-only">Close search</span>
+                </button>
+                </form>
+                <div className="if tertiary is-open" style={{width: "360px"}}>
+                    <div className="if container">
+                        <div className="if quick-links-holder">
+                        <p className="if text meta">Snabblenkär</p>
+                        <ul className="if quick-links">
+                            <li className="if"><a href="/" className="if">Buy insurance</a></li>
+                            <li className="if"><a href="/" className="if">Buy insurance</a></li>
+                            <li className="if"><a href="/" className="if">Buy insurance</a></li>
+                            <li className="if"><a href="/" className="if">Buy insurance</a></li>
+                            <li className="if"><a href="/" className="if">Buy insurance</a></li>
+                            <li className="if"><a href="/" className="if">Buy insurance</a></li>
+                        </ul>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            </div>
+            </div> */}
+            <ul className="if desktop-menu-list">
+                <li className="if desktop-menu-item logo-holder">
+                    <a href="/" className="if desktop-menu-action logo small"><span className="if axe sr-only">Home</span></a>
+                </li>
+                <SecondaryParentItem displayName="Cars">
+                    <Container>
+                        <MockProductsMenu />
+                        <div className="if holder">
+            
+                        </div>
+                    </Container>
+                </SecondaryParentItem>
+                <SecondaryParentItem displayName="Cars">
+                    <Container>
+                        <MockProductsMenu />
+                        <div className="if holder">
+            
+                        </div>
+                    </Container>
+                </SecondaryParentItem>
+                {/* <li className="if desktop-menu-item is-parent is-active">
+                    <button type="button" className="if desktop-menu-action">
+                        Products
+                    </button>
+                    <div className="if tertiary is-open">
+                        
+                    </div>
+                </li> */}
+            </ul>
         </div>
-        <ul className="if desktop-menu-list">
-            <li className="if desktop-menu-item logo-holder">
-            <a href="/" className="if desktop-menu-action logo small"><span className="if axe sr-only">Home</span></a>
-            </li>
-        </ul>
-        </div>
-    </nav>
-    </header>
+        </SecondaryNavbar>
+    </GlobalHeader>
+    </GlobalHeaderStore>
     );
 }

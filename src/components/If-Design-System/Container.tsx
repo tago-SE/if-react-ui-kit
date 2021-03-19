@@ -51,7 +51,7 @@ export const IFDesktopContainer : React.FC<IProps> = ({
   return (<div className={`if desktop container ${trailingClassName}`} {...props}>{children}</div>);
 };
 
-export const IFHolder: React.FC<IProps> = ({
+export const Holder: React.FC<IProps> = ({
   trailingClassName="",
   children=null,
   ...props

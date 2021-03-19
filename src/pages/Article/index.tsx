@@ -3,21 +3,21 @@ import { Main } from "../../components/If-Design-System/Main";
 import { Container, Block } from "../../components/If-Design-System/Container";
 // import { GridContainer, GridRow, GridItem } from "../../components/If-Design-System/Grid";
 // import { Main } from "../../components/If-Design-System/Main";
-import { Heading } from "../../components/If-Design-System/Heading";
+import { Heading } from "../../components/If-Design-System/Layout/Typography/Heading";
 // import { Heading, TitleHeading } from "../../components/If-Design-System/Heading";
 import { Avatar } from "../../components/If-Design-System/Avatar";
 import { TextBody } from "../../components/If-Design-System/Text/Text.Body";
 
 // import { TextBody } from "../../components/If-Design-System/Text/Text.Body";
-import { CategoryTag, TagContainer } from "../../components/If-Design-System/Tag";
+import { LinkTag, TagContainer } from "../../components/If-Design-System/Tag";
 import { ShareBanner } from "../../components/If-Design-System/Banner/ShareBanner";
 import { Article, ArticleList } from '../../components/If-Design-System/Card/Article';
 import { TeaserList, Teaser } from '../../components/If-Design-System/Card/Teaser';
-
 import { KeyBenefitsBlockMock } from './KeyBenefitsArticle';
 
-import './article.css';
 
+import './article.css';
+import { ArticleFooter as AuthorSection } from './ArticleFooter'; 
 
 const ArticleHeader = () => {
 
@@ -118,7 +118,7 @@ const ArticleFooter = () => {
     title: "By Miles pay-by-mile car insurance",
     // text: "",
     image: { src: "https://www.if.no/magasinet/imageshop/img_shp_img_zkexuttycm-780x470.jpeg", alt: "image of puppy" },
-    link: "/link/to/article",
+    href: "/link/to/article",
     category: "Case study",
     extras: {dateTime: "Nov 3, 2020"}
   };
@@ -129,7 +129,7 @@ const ArticleFooter = () => {
     <footer className="article-footer">
 
       <TagContainer>
-          <CategoryTag href="link/to/category" name="Case study"/>
+          <LinkTag href="link/to/category" name="Case study"/>
       </TagContainer>
 
       <Heading size="smallest">Share Article</Heading>
@@ -143,14 +143,20 @@ const ArticleFooter = () => {
       />
        <hr className="if" style={{marginTop: " 0px" }} />
 
+      <p className="if meta"></p>
+
+      
+      <AuthorSection />
+      
+
       <Heading size="smallest">Related Articles</Heading>
       <ArticleList style={{ display: "flex", flexDirection: "row", gap: "10px", flexWrap: "wrap"}}>
         {articles.map(article => (
           <Article 
-              type="default"
+              type=""
               title={article.title}
               image={article.image}
-              link={{href: article.link}}
+              href={article.href}
               titleMarginBottom="0px"
               categoryName={article.category}
               extras={article.extras}

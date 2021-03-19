@@ -1,0 +1,39 @@
+.pie-chart {
+
+    .recharts-sector {
+        transition: opacity 0.5s 0s ease; 
+        &:focus {
+            
+        }
+    }
+    // g.pie {
+    //     &:focus {
+    //         opacity: "0.2";
+    //         fill: blue;
+    //     }
+    //     &.is-active {
+    //         path {
+    //             fill: red;
+
+    //             &:focus {
+    //                 fill: green;
+    //                 opacity: 0.4;
+    //             }
+    //         }
+    //     }
+    // }
+}
+
+/*
+ opacity: 1;
+    transition: opacity 0.5s 0s ease; 
+    &.is-active {
+        opacity: 1;
+    }
+    &.is-inactive {
+        opacity: 0.2;
+    }
+    &.is-selected {
+        fill: blue; 
+    }
+    */
