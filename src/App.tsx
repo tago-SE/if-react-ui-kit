@@ -12,7 +12,7 @@ import CareerPage from './pages/JoinUs';
 import RolePage from './pages/RolePage';
 import ArticlePage from './pages/Article';
 import ArticleListPage from './pages/ArticleList';
-
+import { ReportPage } from './pages/Reports';
 import { MockHeader } from './MockHeader';
 
 
@@ -45,6 +45,10 @@ function App() {
         <Route 
           path="/career"
           component={CareerPage} 
+        />
+        <Route 
+          path="/reports"
+          component={ReportPage}
         />
         <Route 
           path='/' 

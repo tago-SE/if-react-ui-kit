@@ -1,15 +1,16 @@
+/* eslint-disable import/first */
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 import { format, formatDistance, formatRelative, subDays } from 'date-fns';
 import HighchartsReact from 'highcharts-react-official';
 import Highcharts from "highcharts/highstock";
+// Load Highcharts modules
+require("highcharts/modules/exporting")(Highcharts);
 import { allColors, selectedBlue, primaryBlue, primaryRed, primaryYellow, primaryGreen } from '../Colors';
 import './highcharts.scss';
 
 
 
-// Load Highcharts modules
-require("highcharts/modules/exporting")(Highcharts);
 
 const scrollbarColor = "#0054f0";
 const trackColor = "#ede6e1";
