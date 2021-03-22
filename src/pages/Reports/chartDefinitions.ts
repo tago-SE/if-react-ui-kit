@@ -14,6 +14,9 @@ export const reponseTimeChartConfig = {
             rangeDescription: "Range: Jul 1st 2009 to Jul 31st 2009",
         }
     },
+    rangeSelector: {
+        selected: -1
+    },
     tooltip: {
         crosshairs: true,
         shared: true,
@@ -54,7 +57,7 @@ export const bandwidthChartOptions = {
     navigator: { enabled: false },
     exporting: { enabled: false },
     rangeSelector: {
-        selected: 1
+        selected: -1
       },
   
       title: {
@@ -75,6 +78,7 @@ export const bandwidthChartOptions = {
           valueDecimals: 2
         }
     }],
+    
     plotOptions: {
         series: {
             events: {
@@ -100,6 +104,9 @@ export const callStatusChartOptions = {
         accessibility: {
             rangeDescription: "Range: Jul 1st 2009 to Jul 31st 2009",
         }
+    },
+    rangeSelector: {
+        selected: -1
     },
     tooltip: {
         crosshairs: true,
@@ -151,6 +158,9 @@ export const callsStatusTotalPieChart = {
         accessibility: {
             rangeDescription: "Range: Jul 1st 2009 to Jul 31st 2009",
         }
+    },
+    rangeSelector: {
+        selected: -1
     },
     tooltip: {
         crosshairs: true,

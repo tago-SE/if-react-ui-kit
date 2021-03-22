@@ -75,10 +75,10 @@ export class ReportPanel extends React.Component<any, State> {
             console.log("result-2", result, result.values[0].timestamp);
         }
         
-        let index = this.state.valueCount === -1 ? result.count : this.state.valueCount/2;
-        let newValues = result.values.slice(0, index);
-        result.values = newValues;
-        console.log("values", result.values);
+        // let index = this.state.valueCount === -1 ? result.count : this.state.valueCount/2;
+        // let newValues = result.values.slice(0, index);
+        // result.values = newValues;
+        // console.log("values", result.values);
 
         let 
             callCountSuccessTotal = 0, 
@@ -259,23 +259,31 @@ export class ReportPanel extends React.Component<any, State> {
                 highcharts={Highstocks}
                 options={_callsChartOptions}
                 constructorType={"stockChart"}
+                allowChartUpdate={true}
+                updateArgs={[true, true, true]}
                 callback={(chart: any) => this.saveChartReference(CALLS_CHART_ID, chart)}
             />
              <HighchartsReact
                 highcharts={Highcharts}
                 options={_callsTotalChartOptions}
+                allowChartUpdate={true}
+                updateArgs={[true, true, true]}
                 callback={(chart: any) => this.saveChartReference(CALLS_SUMMARY_CHART_ID, chart)}
             />
             <HighchartsReact
                 highcharts={Highstocks}
                 options={_bandwidthChartOptions}
                 constructorType={"stockChart"}
+                allowChartUpdate={true}
+                updateArgs={[true, true, true]}
                 callback={(chart: any) => this.saveChartReference(BANDIWDTH_CHART_ID, chart)}
             />
             <HighchartsReact
                 highcharts={Highstocks}
                 options={_responseTimeOptions}
                 constructorType={"stockChart"}
+                allowChartUpdate={true}
+                updateArgs={[true, true, true]}
                 callback={(chart: any) => this.saveChartReference(RESPONSE_TIME_CHART_ID, chart)}
             />
         </div>);
