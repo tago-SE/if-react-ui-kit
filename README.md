@@ -1,6 +1,7 @@
+
 # About
 
-This is a react component library made for the [If Design System](https://design.if.eu).
+This is just a react playground used for creating components used in the If Developer Portal. 
 
 
 # Getting Started with Create React App

@@ -161,7 +161,7 @@ export const StockMarketColumnChart = ({
     return (<>
       <DatePicker
         selected={startDate}
-        onChange={date => handleStartDateClick(date)}
+        onChange={(date: Date) => handleStartDateClick(date)}
         selectsStart
         startDate={startDate}
         endDate={endDate}
@@ -169,7 +169,7 @@ export const StockMarketColumnChart = ({
       />
       <DatePicker
         selected={endDate}
-        onChange={date => handleEndDateClick(date)}
+        onChange={(date: Date) => handleEndDateClick(date)}
         selectsEnd
         startDate={startDate}
         endDate={endDate}

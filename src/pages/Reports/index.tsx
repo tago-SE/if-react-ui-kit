@@ -6,19 +6,6 @@ import SynchronisedCharts  from './Examples/SyncrhonizedChart';
 import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
 
-// HighchartsReact 
-//                 highcharts={Highcharts}
-//                 options={this.state.options}
-//                 callback={(chart) => {
-//                     this.chart = chart;
-//                     if (this.props.callback) {
-//                         this.props.callback(chart);
-//                     }
-//                 }}
-//             />
-
-
-
 export const ReportPage = () => {
     return (
       <Block>

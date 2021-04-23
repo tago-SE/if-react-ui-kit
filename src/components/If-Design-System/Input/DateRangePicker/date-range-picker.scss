@@ -1,0 +1,207 @@
+@import '@if-design-system/color/src/color-variables.scss';
+@import '@if-design-system/util/src/variables.scss';
+@import '@if-design-system/util/src/mixins/util.scss';
+@import '@if-design-system/breakpoint/src/breakpoint-variables.scss';
+@import '@if-design-system/breakpoint/src/variables.scss';
+@import '@if-design-system/breakpoint/src/mixins/breakpoint.scss';
+@import '@if-design-system/typography/src/typography-variables.scss';
+@import '@if-design-system/typography/src/font-face.scss';
+@import '@if-design-system/typography/src/mixins/typography.scss';
+@import '@if-design-system/icons/src/mixins/ui_icons.scss';
+
+.dateRangeToggleButtons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 1rem;
+    width: auto;
+    height: auto;
+}
+
+.dateTimeRangePickerContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(392px, 1fr)) !important;
+    border: 2px solid $color-lightBeige-background;
+    background-color: $color-lightestBeige-background;
+    position: absolute;
+    z-index: 1000;
+    width: 100%;
+}
+
+.dateTimeRangePickerItem {
+    height: fit-content !important;
+    min-height: 400px;
+    padding: 0.1rem;
+    margin: 0.4rem;
+}
+
+.dateTimeRangePickerContent {
+    padding-top: 1rem;
+    // border: 2px solid $color-lightBeige-background;
+    min-height: 420px;
+}   
+
+// {border:2px red solid;padding:2px;width:500px;flex-direction:row;display:flex;
+//     justify-content:flex-start}
+
+.header__dateRangePicker {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 1rem;
+    padding: 0.5rem;
+    @include fontFamilySans;
+    font-size: $font-size-18;
+    background-color: $color-lightestBeige-background;
+    border: 1px solid $color-lightBrown-text;
+    color: rgba($color-brown-text, 0.9);
+    max-width: fit-content;
+    flex-wrap: wrap;
+}
+
+.date__dateRangePicker {
+    
+}
+
+// input[type="date"]::-webkit-inner-spin-button,
+// input[type="date"]::-webkit-calendar-picker-indicator {
+//     display: none;
+//     -webkit-appearance: none;
+// }
+
+/*
+The following eight pseudo-elements are made available by WebKit for customizing a date input’s textbox:
+
+::-webkit-datetime-edit
+::-webkit-datetime-edit-fields-wrapper
+::-webkit-datetime-edit-text
+::-webkit-datetime-edit-month-field
+::-webkit-datetime-edit-day-field
+::-webkit-datetime-edit-year-field
+::-webkit-inner-spin-button
+::-webkit-calendar-picker-indicator
+*/
+
+.customDateInput {
+    width: auto;
+    
+    & input {
+        // This font messes with the input size of the field    
+        @include fontFamilySans;
+        //
+        font-size: $font-size-18;
+        background-color: $color-lightestBeige-background;
+        border: none;
+        color: rgba($color-brown-text, 0.9);
+        width: auto;
+        // max-width: fit-content;
+        // flex-wrap: wrap;
+    }
+    // // & input[type="date"] {
+    // //     width: fit-content;
+    // // }
+    // // & input[type="time"] {
+    // //     width: fit-content;
+    // // }
+    // // & input[type="datetime-local"] {
+    // //     width: fit-content;
+    // // }
+    // & > input[type="datetime-local"] {
+    //     &::-webkit-datetime-edit-fields-wrapper { 
+    //         // display: none;
+    //         // background: red;
+    //         // width: fit-content;
+    //     }
+    //     &::-webkit-calendar-picker-indicator {
+    //         background-color: green;
+    //         margin-left: -20px;
+    //         margin-right: 0px;
+    //         display: none;
+    //         // left: 40px;
+    //     }
+    //     &::-webkit-datetime-edit {
+    //         background-color: pink;
+    //         margin: 0px;
+    //         margin-right: -25px;
+    //         width: auto;
+    //     }
+    //     &::-webkit-datetime-edit-text {
+    //         // background-color: orange;
+    //     }
+    //     &::-webkit-clear-button {
+    //         background-color: papayawhip;
+    //     }
+    // }
+
+
+    & > input[type="datetime-local"] {
+        margin: auto;
+        padding: 0;
+        &::-webkit-calendar-picker-indicator {
+            margin-left: 10px;
+            margin-right: 0px;
+            display: none;
+        }
+        &::-webkit-datetime-edit {
+
+            margin: 0 auto;
+            margin-right: -10px;
+            padding-left: 4px;
+            padding-right: 4px;
+            // background-color: red;
+            width: auto;
+            block-size: auto;
+        }
+        // &::-webkit-datetime-edit-year-field {
+        // }
+        // &::-webkit-datetime-edit-fields-wrapper { 
+        // }
+        // &::-webkit-datetime-edit-text {
+        // }
+        // &::-webkit-clear-button {
+        // }
+    }
+
+
+    & > input[type="date"] {
+        margin: auto;
+        padding: 0;
+        &::-webkit-calendar-picker-indicator {
+            margin-left: 10px;
+            margin-right: 0px;
+            display: none;
+        }
+        &::-webkit-datetime-edit {
+            margin: 0 auto;
+            padding-left: 4px;
+            padding-right: 4px;
+            // background-color: red;
+            width: auto;
+            block-size: auto;
+        }
+        // &::-webkit-datetime-edit-year-field {
+        // }
+        // &::-webkit-datetime-edit-fields-wrapper { 
+        // }
+        // &::-webkit-datetime-edit-text {
+        // }
+        // &::-webkit-clear-button {
+        // }
+    }
+
+    & > input[type="time"] {
+        &::-webkit-calendar-picker-indicator {
+            display: none;
+        }
+        &::-webkit-datetime-edit {
+            padding-left: 4px;
+            padding-right: 4px;
+        }
+        // &::-webkit-datetime-edit-fields-wrapper { 
+        // }
+        // &::-webkit-datetime-edit-text {
+        // }
+        // &::-webkit-clear-button {
+        // }
+    }
+}

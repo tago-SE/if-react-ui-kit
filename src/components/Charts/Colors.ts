@@ -20,9 +20,9 @@ export const secondaryColors = [secondaryBlue, secondaryGreen, secondaryRed, sec
 let colors: string[] = [];
 for (let i = 2; i > 0; i--) {
     colors.push(greenColors[i]);
+    colors.push(blueColors[i]);
     colors.push(yellowColors[i]);
     colors.push(redColors[i]);
-    colors.push(blueColors[i]);
 }
 for (let i = 3; i < greenColors.length; i++) {
     colors.push(greenColors[i]);

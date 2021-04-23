@@ -39,7 +39,13 @@ export const ButtonWrapper: React.FC<IProps>= ({
   };
   
   return (
-    <button onKeyPress={handleKeyPress} onClick={handleClick} disabled={disabled} type="button" className={className} {...props}>
+    <button onKeyPress={handleKeyPress} 
+      disabled={disabled} 
+      type="button" 
+      className={className}
+      onClick={onClick} 
+      {...props}
+    >
       {props.children}
     </button>
   );

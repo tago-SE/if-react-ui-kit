@@ -1,3 +1,2 @@
-import { Expandable } from './Expandable';
-
-export { Expandable };
+export { ExpandablePanel as Expandable } from './ExpandablePanel';
+export { PanelGroup } from './PanelGroup';

@@ -1,3 +1,2 @@
-import HorizontalLoader from './HorizontalLoader';
-
-export { HorizontalLoader };
+export { HorizontalLoader } from './HorizontalLoader';
+export type { ILoaderProps } from './HorizontalLoader';

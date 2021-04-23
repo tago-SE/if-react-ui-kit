@@ -1,67 +1,53 @@
-import React, { ReactNode } from 'react';
-import SpacingBuilder, { ISpacing } from '../Utils/Spacing';
+import React, { ReactNode, Key } from 'react';
 
-interface ILinkTag {
+export { FilterTag } from './FilterTag';
+export { InputTag } from './InputTag';
+export { StatusTag } from './StatusTag';
+export { LinkTag } from './LinkTag'
+
+export interface IDefaultTagProps {
     name: string,
-    href: string,
+    id?: string,
     small?: boolean,
-    color?: "yellow" | "mint" | "pink" | "aquamarine",
-    passive?: boolean, // not sure how passive works...
-    onClick?: any,
-    spacing?: ISpacing,
     [x: string]: any,
-}
+};
 
-export const LinkTag: React.FC<ILinkTag> = ({
+interface ITagProps extends IDefaultTagProps {
+    color?: "yellow" | "mint" | "pink" | "aquamarine",
+    onClick?: any,
+};
+
+export const Tag: React.FC<ITagProps> = ({
     name,
-    href,
-    passive = true,
+    id,
     color = "",
     small = false,
-    onClick = null,
-    spacing = undefined, 
+    onClick = undefined,
     ...props
 }) => {
     return (
-        <li className={`if ${SpacingBuilder.buildSpacingClass(spacing)}`}>
-            <a href={href} className={`if tag${small ? " small" : ""}${passive ? " passive" : ""} ${color}`} {...props}>{name}</a>
+        <li key={id || name}>
+            <span 
+                className={`if tag${small ? " small" : ""} ${color}`} 
+                onClick={(e) => {
+                    if (onClick) onClick(e);
+                }}
+                {...props}
+            >
+                {name}
+            </span>
         </li>
     );
-}
+};
 
-interface IStatusTag {
-    name: string,
-    status: "error" | "warning" | "success",
-    small?: boolean,
-    spacing?: ISpacing,
-    [x: string]: any,
-}
-
-export const StatusTag: React.FC<IStatusTag> = ({
-    name,
-    status,
-    small = false,
-    spacing = undefined,
-    ...props
-}) => {
-    return (
-        <li className={`if${SpacingBuilder.buildSpacingClass(spacing)}`} {...props}>
-            <span className={`if tag status${small ? " small" : ""} ${status}`} {...props} >{name}</span>
-        </li>
-    );
-}
-
-interface ITags {
+interface ITagContainerProps {
     children: ReactNode,
     [x: string]: any,
 }
 
-export const TagContainer: React.FC<ITags> = ({
+export const TagContainer : React.FC<ITagContainerProps> = ({
     children,
     ...props
-}) => {
-    return (
-        <ul className="if tags" {...props}>{children}</ul>
-    );
-}
-
+}) => (
+    <ul className="if tags" {...props}>{children}</ul>
+);

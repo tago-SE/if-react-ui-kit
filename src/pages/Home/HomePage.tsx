@@ -5,8 +5,11 @@ import { Main } from '../../components/If-Design-System/Main';
 import TeaserSection from './Sections/TeaserSection';
 import CrosslinkSection from './Sections/CrosslinkSection';
 import ArticleSection from './Sections/ArticleSection';
+import InputSection from './Sections/InputSection';
+import ButtonSection from './Sections/ButtonSection';
 import {MockCharts} from '../../components/Charts/MockCharts';
 import './react-responsive-modal-styles.css';
+import { ReportsContextProvider } from '../../components/If-Design-System/Modal/context/reportsContext';
 
 
 
@@ -177,12 +180,16 @@ import './react-responsive-modal-styles.css';
 const HomePage = () => {
     return (
      <Main>
-        <MockCharts />
+         <ReportsContextProvider>
+            
+        {/* <MockCharts /> */}
+        <ButtonSection />
+        <InputSection />
        {/* <VideoSection /> */}
        {/* <ArticleSection />
        <CrosslinkSection />
        <TeaserSection /> */}
-      
+       </ReportsContextProvider>
     </Main>
     );
 }

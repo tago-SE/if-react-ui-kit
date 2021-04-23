@@ -1,0 +1,8 @@
+div.if.title::after {
+    @if var(--color) != null {
+        background-color: var(--color);
+    }
+    @if var(--right) != null {
+        right: var(--right) !important;
+    }
+}

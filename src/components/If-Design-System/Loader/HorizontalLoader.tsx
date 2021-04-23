@@ -1,4 +1,5 @@
 import React from 'react';
+import s from './horizontal-loader.module.scss';
 
 const colors = {
   white: "#faf9f7",
@@ -6,14 +7,14 @@ const colors = {
   brown: "#331e11",
 }
 
-interface IProps {
+export interface ILoaderProps {
   isLoading?: boolean,
   size?: "small" | "large" | "largest",
   color?: "white" | "blue" | "brown",
   [x: string]: any
 }
 
-export const HorizontalLoader: React.FC<IProps> = ({
+export const HorizontalLoader: React.FC<ILoaderProps> = ({
   isLoading = true,
   size = "small",
   color = "brown",
@@ -23,7 +24,7 @@ export const HorizontalLoader: React.FC<IProps> = ({
   const fillColor = colors[color];
   return (
     <svg
-      className={`if loader dots horizontal ${size}`}
+      className={`if loader dots horizontal ${size} ${s.center}`}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 64 64"
       {...props}>
